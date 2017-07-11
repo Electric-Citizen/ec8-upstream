@@ -1,0 +1,148 @@
+/**
+ * Default Page Styles
+ */
+
+/*  UNPANELIZED PAGES
+--------------------- */
+html > body:not(.is-front):not(.path-node):not(.node-type-page){
+	.layout-content{
+		max-width: 840px;
+		@include auto;
+		padding: 2em 20px 3em;
+		//allow more room if posts by tags
+		&.blog-tags{
+			max-width: 1200px;
+		}
+	}
+	.block-page-title-block{
+		margin-bottom: 2em;
+	}
+
+}//end unpanelized pages
+
+
+/* SEARCH PAGE
+----------------- */
+.path-search{
+	//search page form
+	.search-page-form{
+		margin-bottom: 3em;
+		//keyword
+		.form-item-keys{
+			label{
+				display: block;
+			}
+			input.form-search{
+				display: inline-block;
+				border: 1px solid $light-grey;
+				font-size: 15px;
+				max-width: 400px;
+				padding: 7px 10px;
+				margin-bottom: 1em;
+			}
+		}
+		input.form-submit{
+			background: $link;
+			text-transform: uppercase;
+			font-size: 18px;
+			padding: 1px 2em;
+			border: none;
+			position: relative;
+			top: -1px;
+			&:hover{
+				background: $hover-link;
+			}
+		}
+		a.search-help-link{
+			display: none;
+		}
+	}//end form
+
+	//search results
+	h2{
+		@include font-size(32px);
+		text-transform: none;
+		text-align: left;
+		border-bottom:1px solid $light-grey;
+		padding-bottom:3px;
+		&:after{
+			width: 100%;
+			left: 0;
+		}
+	}
+
+	//no results
+	.no-results{
+		ul{
+			padding-left: 30px;
+			margin: 0 0 2em;
+			& > li{
+				list-style: disc;
+				ul{
+					padding: 0 0 0 1em;
+				}
+				ol{
+					padding: 0 0 0 1em;
+					list-style: decimal;
+				}
+			}
+		}
+	}
+	
+
+}//end search page
+
+
+/* TAGS TERM PAGES
+-------------------- */
+.path-taxonomy .blog-tags{ //blog-tags coems from js
+	.view-content{
+		margin: 40px 0;
+		font-size: 0;
+	}
+	.views-row{
+		@include inline-setup;
+		padding: 1em 1.5em;
+		margin-bottom: 3em;
+		border: 1px solid $grey;
+		position: relative;
+		width: 100%;
+		@include inline-three;
+	}//end global views rows
+
+	.date{
+		@include adjust-font-size-to(15px);
+		font-family: $serif;
+		font-style: italic;
+	}
+	.field-author{
+		display: inline;
+		a{
+			@include adjust-font-size-to(15px);
+			font-family: $serif;
+			font-style: italic;
+		}
+	}
+	.body{
+		margin: .5em 0 2em;
+		@include font-size(15px);
+	}
+	.post-link{
+		display: block;
+		position: absolute;
+		bottom: -1em;
+		left: 50%;
+		@include translateX(-50%);
+		padding: 6px 2em 8px;
+		background: $link;
+		color: $black;
+		white-space: pre;
+		&:hover{
+			background: $hover-link;
+		}
+	}
+
+	a.feed-icon{
+		display: none;
+	}
+}//end tags term page

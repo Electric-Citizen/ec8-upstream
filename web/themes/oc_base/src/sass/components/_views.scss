@@ -1,0 +1,87 @@
+/**
+ * DEFAULT VIEWS CLASSES
+ */
+
+/* VIEWS EXPOSED FORMS
+------------------------ */
+
+.views-exposed-form{
+	font-size: 0;
+	text-align: center;
+	@include breakpoint ($smalltab, true){
+		text-align: left;
+	}
+	.form-item{
+		@include inline-setup;
+		label{
+			display: block;
+		}
+	}
+	.form-actions{
+		@include inline-setup;
+	}
+
+	//hide optgroup safari bug fix
+  	optgroup:empty{
+    	display: none;
+  	}
+
+	//hide custom optgroup labels (ios10 bug fix)
+	.select2-results__group{
+  		display: none !important;
+	}
+
+
+	/*----- Select Inputs  ----- */
+	.select2-container--default{
+		width: 100% !important;
+
+		//single filter
+		.select2-selection--single{
+
+			//rendered selection
+			.select2-selection__rendered{
+				text-align: left;
+			}
+			.select2-selection__arrow{
+				height: 100%;
+				top: 0;
+				right: 0;
+				b{
+					display: none;
+				}
+			}
+
+		}//end single
+
+		//multi filter
+		.select2-selection--multiple{
+			position: relative;
+			//selection input
+			.select2-search--inline{ 
+				&:after{
+					content: '';
+					display: block;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					right: 0;
+					cursor: pointer;
+				}
+			}
+
+		}//end multi
+
+	}//end .select2-container--default (select inputs)	
+
+}//end views exposed form
+
+
+/*----- Select Dropdowns  ----- */
+.select2-container{
+	.select2-search--dropdown{
+		padding: 0;
+		display: none;
+	}
+}
+

@@ -1,0 +1,238 @@
+/*----------------------------------
+   SUPERFISH:
+   Sensible Default Styles
+ ----------------------------------*/   
+
+  /* DESK FISH
+  ---------------- */
+  @include breakpoint ($deskmenu, true){
+  
+  .sf-main{
+
+    %deskdrop{
+      &.menuparent{
+        width: auto;
+        & > ul{
+          padding: 10px 0;
+          left: 100%;
+          top: -10px;
+          position: absolute;
+        }
+      }
+    }
+
+    /* ====  sf main links ==== */
+    text-align: right;
+    font-size: 0;
+    &.sf-menu > li{
+      float: none;
+      @include inline-setup;
+      width: auto;
+      & > a{
+        span{
+          display: none;
+        }
+      }
+    }
+
+
+    /* ====  sf main dropdown (multicolumn) ==== */
+    & > li.sf-depth-1{
+      //main dropdown
+      & > ul{
+       right: -1px;
+       left: auto !important;
+       top: 100% !important;
+       text-align: left;
+       width: 250px;
+      }
+      //single column dropdown only
+      &:not(.justification){
+        & > ul{
+          *{
+            box-sizing: border-box;
+            width: 100% !important;
+            float: none;
+            display: inline-block;
+            position: relative;
+          }
+        }
+      }
+
+      //multicolumn dropdown only
+      &.justification{
+        position: static !important;
+        & > ul{
+          width: auto;
+          //this should the width of the screen minus any room desired on the side of the menu
+          //for width a header constraint of 1200px, set to max width 100vw (minus room) and use a breakpoint
+          //to change the max when the constraint is hit.
+          max-width: 930px;
+          right: 0;
+          padding: 20px 20px 0;
+          box-sizing: border-box;
+          font-size: 0;
+          left: auto;
+        }
+        li.sf-depth-2{
+          //this should be the total menu width divided by max number of columns desired
+          width: 222px;
+          float: none;
+          @include inline-block-top;
+          font-size: $base-font-size;
+          box-sizing: border-box;
+        }
+
+      }//end multicolumn justified
+    }//end main dropdown
+
+
+    /* ====  Level 2 ==== */
+    //force children open when justified
+    li.sf-depth-1.justification{
+      .sf-depth-2{
+        & > a{
+          .sf-sub-indicator{
+            display: none;
+          }
+        }
+        & > ul{
+          position: relative !important;
+          height: auto !important;
+          top: auto !important;
+          width: 100% !important;
+          opacity: 1 !important;
+          left: 0;
+        }
+      }
+    }
+    
+
+    /* ====  Level 3 ==== */
+    li.sf-depth-2 li{
+      clear: left;
+      @extend %deskdrop;
+      & > a{
+        display: inline-block;
+      }
+  
+    }//end a.level 3
+
+    /* ====  Level 4 ==== */
+    li.sf-depth-4{
+      clear: left;
+      @extend %deskdrop;
+    }
+
+
+  }//end sf-main
+
+  }//end desk fish
+
+
+
+
+  /* MOBILE FISH
+  ----------------- */
+  @include breakpoint ($mobilemenu, true){
+
+    /* ====  sf toggler ====*/
+    #superfish-main-toggle{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        span{
+          display: none;
+        }
+        &:before{
+          content: '\2630';
+          color: inherit;
+          display: block;
+          position: absolute;
+          line-height: 1;
+        }
+    }//end hamburger
+
+    //styled in layouts _base.scss
+
+
+    /* ====  sf main dropdown ====*/
+    ul.sf-menu.sf-accordion.sf-expanded.sf-main{
+      position: absolute;
+      left: 0 !important;
+      top: 100% !important;
+      text-align: left;
+      overflow: hidden;
+    }
+
+    /* ====  global links ====*/
+    ul,li,a{
+      box-sizing: border-box;
+    }
+
+    //parents, expanders & dropdowns
+    ul.sf-menu.sf-accordion.sf-accordion-with-buttons li{
+      & > .sf-accordion-button{
+        width: 60px;
+        height: 100%;
+        float: right;
+        text-indent: 9000px;
+        position: relative;
+        //triangle expander
+        &:after{
+          text-indent: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin: 0;
+          @include translate(-50%, -50%);
+          content: '';
+          background-color: transparent;
+        }
+      }
+      &.sf-expanded > .sf-accordion-button:after{
+        content: '';
+      }
+    }//end accordion button
+
+    .menuparent{
+      @include clearfix;
+      a{
+        &:not(.sf-accordion-button){
+          padding-right: 0;
+        }
+      }
+    }//end menuparent
+
+
+    /* ====  LEVEL 1  ====*/
+
+
+    /* ====  LEVEL 2  ====*/
+    li.sf-depth-2{
+
+      &:first-of-type.sf-expanded{
+        border-top: 0;
+      }
+      &:last-of-type.sf-expanded{
+        border-bottom: 0;
+      }
+
+    }//end level 2
+
+
+    /* ====  LEVEL 3 & Below ====*/
+    li.sf-depth-3{
+      //font size for level 3 and those below
+      a{
+        font-size: 15px;
+        padding: 10px 30px;
+        &:not(.sf-accordion-button){
+          padding: 10px 30px 10px 50px;
+        }
+      }
+    }
+
+  }//end mobile styles

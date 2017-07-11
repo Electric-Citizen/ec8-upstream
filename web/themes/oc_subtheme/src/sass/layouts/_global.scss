@@ -1,0 +1,143 @@
+/*Base Layout Rules
+--------------------*/
+
+//HEADER
+.layout-container > header {
+	background: $oc-gold;
+	& > div{
+		padding: 10px 20px;
+		font-size: 0;
+		@include paddedContent;
+		@include auto;
+		position: relative;
+	}
+	.block--system-branding{
+		@include calc(width, "100% - 70px");
+		a{
+			img{
+				max-width: 160px;
+				margin-right: 5px;
+			}
+			.site-name {
+				font-size: 24px;
+				color: $white;
+				display: none;
+			}
+			&:hover{
+				text-decoration: none;
+				img{
+					opacity: .8;
+				}
+				.site-name{
+					color: $black;
+				}
+			}
+			@include breakpoint ($tab, true){
+				.site-name{
+					font-size: 32px;
+				}
+			}
+		}//end logo a
+
+		//tagline / slogan
+		.tagline{
+			display: none;
+		}
+
+		@include breakpoint ($deskmenu, true){
+			img{
+				max-width: 200px;
+			}
+		}
+	}//end block-system-branding
+
+	//search
+	#block-oc-subtheme-search{
+		
+	}//end search block
+
+	//search length when next to branding
+	.block--system-branding + #block-oc-subtheme-search{
+		@include breakpoint ($deskmenu, true){
+			@include calc(width, "100% - 220px");
+		}
+	}
+
+	//main nav
+	#block-mainnavigation{
+		width: 60px;
+		text-align: right;
+		#superfish-main-toggle{
+      		display: block;
+      		position: absolute;
+      		height: 30px;
+      		width: 30px;
+      		top: 15px;
+      		right: 45px;
+      		@include breakpoint ($tab, true){
+    			top: 2px;
+    		}
+      		span{
+        		display: none;
+      		}
+      		&:before{
+        		content: '';
+        		display: block;
+        		position: absolute;
+        		top: 0;
+        		right: 0;
+        		height: 24px;
+        		width: 24px;
+        		background: url(../images/svg/menu-toggle.svg);
+        		background-size: 24px 48px;
+        		background-position: 0 0;
+      		}
+      		&.sf-expanded{
+      			&:before{
+      				background-position: 0 24px;
+      			}
+      		}
+    	}//end hamburger
+		@include breakpoint ($deskmenu, true){
+			width: 100%;
+			margin-right: -15px;
+			margin-top: 10px;
+		}
+	}
+	//superfish length when next to branding
+	.block--system-branding + #block-mainnavigation{
+		@include breakpoint ($deskmenu, true){
+			@include calc(width, "100% - 240px");
+		}
+	}
+
+
+}//end header
+
+//main container (set min height to 100vh - header and footer)
+.layout-container > main{
+	@include calc(min-height, "100vh - 238px");
+	@include breakpoint ($tab, true){
+		@include calc(min-height, "100vh - 238px");
+	}
+	@include breakpoint ($deskmenu, true){
+		@include calc(min-height, "100vh - 308px");
+	}
+}
+
+//FOOTER
+footer {
+	background: $dark-grey;
+	color: $off-white;
+	min-height: 150px;
+	padding: 40px 20px 10px;
+	box-sizing: border-box;
+	& > div{
+		position: relative;
+		@include constrained-no-pad;
+	}
+	@include breakpoint ($tab, true){
+		padding: 40px 20px 50px;
+
+	}
+}

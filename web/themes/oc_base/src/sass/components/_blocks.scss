@@ -1,0 +1,18 @@
+/*DEFAULT BLOCKS
+*/
+
+/* SEARCH
+--------------- */
+#block-oc-subtheme-search{
+	#search-block-form {
+		@include breakpoint ($mobilemenu, true){
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+		}
+		& > div{
+			@include inline-block;
+		}
+	}//end search block
+}

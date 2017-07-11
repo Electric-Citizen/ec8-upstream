@@ -1,0 +1,27 @@
+oc_base.images.mobile:
+  label: Mobile
+  mediaQuery: '(min-width: 0px)'
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+oc_base.images.tablet:
+  label: Tablet
+  mediaQuery: 'all and (min-width: 400px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+oc_base.images.desk:
+  label: Desk
+  mediaQuery: '(min-width: 760px)'
+  weight: 2
+  multipliers:
+    - 1x
+oc_base.images.bigdesk:
+  label: Big Desk
+  mediaQuery: '(min-width: 1200px)'
+  weight: 3
+  multipliers:
+    - 1x
+

@@ -1,0 +1,157 @@
+/**
+ * Child Specialty Animation Styles
+ */
+
+
+
+/*  Keyframes setup
+------------ */
+
+//slide in from 150% below (150% of the element height)
+@include keyframes(slideInUp){
+	0%{
+		@include translate3d(0, 150%, 0);
+    	visibility: visible;
+	}
+	100%{
+		@include translate3d(0, 0, 0);
+    	transform: translate3d(0, 0, 0);
+	}
+}
+
+//slide down (height slide from 0)
+@include keyframes(slideDown){
+    0%{
+
+        height: 0;
+    }
+    100%{
+
+        height: auto;
+    }
+}
+
+//slide in from 150% right (150% of the element height)
+@include keyframes(slideInRight){
+    from{
+        @include translate3d(150%, 0, 0);
+        visibility: visible;
+    }
+    to{
+        @include translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+//scale 1.25 times then back to normal
+@include keyframes(breathe){
+    0%{
+        @include scale(1, 1);
+    }
+    50%{
+        @include scale(1.25, 1.25);
+    }
+    100%{
+        @include scale(1, 1);
+    }
+}
+
+//zoom in
+@include keyframes(zoomIn){
+    from{
+        @include opacity(0);
+        @include scale3d(.3, .3, .3);
+    }
+    50%{
+        @include opacity(1);
+    }
+    100%{
+        @include opacity(1);
+        @include scale3d(1, 1, 1);
+    }
+}
+
+//delayed fade in
+@include keyframes(fadeInDelay){
+    from{
+        @include opacity(0);
+    }
+    50%{
+        @include opacity(0);
+    }
+    100%{
+        @include opacity(1);
+    }
+}
+
+//flip in vertical axis
+@include keyframes(flipY){
+    from{
+        //perspective is needed anytime you play with the Y axis to set depth. The larger the number, the greater the foreshortening
+        @include perspective(400);
+        //rotate3d(X-axis, Y-axis, Z-axis, degree of turn)
+        @include rotate3d(0, 1, 0, 90deg);
+        
+    }
+    40%{
+        @include perspective(400);
+        @include rotate3d(0, 1, 0, 45deg);
+    }
+    60%{
+       @include perspective(400);
+       @include rotate3d(0, 1, 0, 0deg);
+
+    }
+    to{
+       @include perspective(400);
+       @include opacity(1);
+    }
+}
+
+
+
+
+//expandDown
+@include keyframes(expandDown){
+    from{
+        height: 0
+    }
+    20%{
+        @include translateY(100%);
+        @include opacity(0);
+    }
+    30%{
+        height: auto;
+    }
+    to {
+        @include translateY(0);
+        @include opacity(100%);
+    }
+}
+
+
+/*  Class based animations
+--------------- */
+.slideInUp {
+    @include animation('slideInUp 1.5s 1 ease-out');
+}
+.expandDown {
+    @include animation('expandDown 1.5s 1 ease-out');
+}
+.slideInRight {
+    @include animation('slideInRight 1.5s 1');
+}
+.zoomIn{
+    @include animation('zoomIn 1.5s 1');
+}
+.fi-delay{
+    @include animation('fadeInDelay 3s 1');
+}
+.flipY{
+    @include backface-visibility(visible);
+    @include animation('flipY 1.5s 1 ease-in forwards');
+}
+
+
+
+

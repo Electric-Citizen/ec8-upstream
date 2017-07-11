@@ -1,0 +1,12 @@
+/**
+ * Default Pane Styles
+ */
+
+.panels--content-wrapper{
+    margin: 1em auto 4em;
+}
+
+//remove weird 99% width from panels flexible
+.panels-flexible-region{
+    width: 100% !important;
+}

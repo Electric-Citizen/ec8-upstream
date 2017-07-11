@@ -1,0 +1,19 @@
+name: Open Citizen Base Theme
+type: theme
+description: Custom base theme by Electric Citizen using Core Theme "Stable" as parent
+package: EC
+core: 8.x
+# Defines libraries group in which we can add css/js.
+libraries:
+  - oc_base/global-styling
+  - oc_base/stacktable
+  - oc_base/fonts
+# base theme: classy
+hidden: false
+regions:
+ header: Header 
+ content: Content 
+ footer: Footer 
+ckeditor_stylesheets:
+  - https://fonts.googleapis.com/css?family=Open+Sans
+  - css/elements.css

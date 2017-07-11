@@ -1,0 +1,78 @@
+/*  STYLE MIXINS
+------------------- */
+@mixin overlay{
+  &:before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: $image-overlay;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+}
+
+
+
+/* Animation Mixins
+--------------------- */
+
+
+/* FORM ITEMS
+---------------- */
+@mixin exposedInput-text{
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid $light-grey;
+  border-radius: 0;
+  @include font-size(16px);
+  padding: 8px 6px 9px 6px;
+}
+@mixin exposedInput-select2{
+  width: 100%;
+  box-sizing: border-box;
+  @include font-size(16px);
+  border: 1px solid $light-grey;
+  border-radius: 0;
+  height: auto;
+  &.select2--container--focus{
+    box-shadow: 0 2px 2px rgba(35,35,35,0.3);
+  }
+}
+@mixin submitButton{
+  width: 110px;
+  line-height: 40px;
+  @include font-size(20px);
+  border: none;
+}
+
+/*  IE MIXINS
+---------------- */
+
+@mixin ie-social{
+  &.Facebook .field-content a{
+    background: url(../images/ie_fallbacks/facebook.png) no-repeat;
+  }
+  &.Twitter .field-content a{
+    background: url(../images/ie_fallbacks/twitter.png) no-repeat;
+  }
+  &.YouTube .field-content a{
+    background: url(../images/ie_fallbacks/youtube.png) no-repeat;
+  }
+  &.Instagram .field-content a{
+    background: url(../images/ie_fallbacks/instagram.png) no-repeat;
+  }
+  &.LinkedIn .field-content a{
+    background: url(../images/ie_fallbacks/linkedin.png) no-repeat;
+  }
+  &.Google .field-content a{
+    background: url(../images/ie_fallbacks/google-plus.png) no-repeat;
+  }
+  .field-content a:hover{
+    background-position: bottom right;
+  }
+}
+
+

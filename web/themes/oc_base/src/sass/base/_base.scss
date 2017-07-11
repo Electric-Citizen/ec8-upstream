@@ -1,0 +1,221 @@
+/**
+ * $BASE visual styles
+ */
+
+body {
+  overflow-x: hidden;
+}
+
+
+/**
+ * $LINKS
+ */
+
+
+
+/*
+ GLOBALs
+ ---------------- */
+ div{
+  box-sizing: border-box;
+  *{
+    box-sizing: inherit;
+  }
+ }
+ img{
+  max-width: 100%;
+  height: auto;
+ }
+
+ //google api map pins
+ .gm-style-iw{
+    strong{
+      font-weight: 700;
+    }
+    em{
+      font-style: italic;
+    }
+    h2{
+      font-size: 16px;
+    }
+    h3{
+      font-size: 14px;
+    }
+ }
+
+
+/* MEDIA SIZING */
+.oc-media{
+  &.view-modemediaverysmall,.view-mode-very-small{
+    max-width: 200px;
+  }
+  &.view-modemediasmall,.view-mode-small{
+    max-width: 300px;
+  }
+  &.view-modemediamedium,.view-mode-medium{
+    max-width: 420px;
+  }
+  &.view-modemediasmall,.view-mode-square{
+    max-width: 350px;
+  }
+  &.view-modemedialarge,.view-mode-large{
+    max-width: 800px;
+  }
+}
+
+/* MEDIA SIZING */
+.oc-media{
+  &.view-modemediasmall,.view-mode-small{
+    max-width: 300px;
+  }
+  &.view-modemediamedium,.view-mode-medium{
+    max-width: 600px;
+  }
+  &.view-modemediasmall,.view-mode-square{
+    max-width: 350px;
+  }
+  &.view-modemedialarge,.view-mode-large{
+    max-width: 800px;
+  }
+}
+
+
+/* wysiwyg image alignment */
+.oc-media{
+  margin-bottom: 2em;
+  &.right:not(.has-video){
+    @include breakpoint($tab, true) {
+      float: right;
+      margin-left: 1em;
+    }
+  }
+  &.left:not(.has-video){
+    @include breakpoint($tab, true) {
+      float: left;
+      margin-right: 2em;
+    }
+  }
+  &.center{
+    @include auto;
+  }
+  //set clearfix on the parent field
+  .field &{
+    @include clearfix;
+  }
+}
+
+
+/* WYSIWYG TEXT & BLOCK STYLES */
+
+span.highlight{
+  background: $highlighter;
+}
+
+.warning{
+  border: 2px solid $warning;
+  padding: .5em 1em;
+  margin-bottom: 1.5em;
+  color: $warning;
+}
+.field.body,.field-oc-long-text{
+  @include clearfix;
+}
+
+
+/* HINTS
+------------- */
+.hint{
+  //show as regular text on smaller screens
+  color: inherit;
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+  @include breakpoint ($deskmenu, true){
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+.hint-bubble{
+  position: absolute !important;
+  z-index: 998;
+  display: inline-block !important;
+  &:after{
+    position: absolute;
+    @include calc(right, "50% - 20px");
+    top: -10px;
+    content: '';
+    display: block;
+    border-left: 20px double transparent;
+    border-right: 20px double transparent;
+    transform: rotate(0.05deg);
+  }
+}
+
+
+
+/**
+ *MISC
+ */
+
+
+.center {
+  margin:1em auto;
+  text-align: center;
+}
+
+hr {
+  border: none;
+  border-bottom:1px solid $grey;
+}
+
+
+/* PANELS-IPE
+------------------- */
+//save buttons
+#panels-ipe-tray a{
+  padding: 5px 10px;
+  border: 1px solid;
+  &.panelizer-ipe-save-custom{
+    border-color: $green-good;
+    background: $green-good;
+    color: $white;
+    &:hover{
+      background: transparent;
+      color: darken($green-good, 10%);
+    }
+  }
+  &.panelizer-ipe-save-default{
+    border-color: $red-bad;
+    background: $red-bad;
+    color: $white;
+    &:hover{
+      background: transparent;
+      color: darken($red-bad, 10%);
+    }
+  }
+}
+.ipe-category-picker-bottom{
+  white-space: initial;
+}
+
+
+/* BACK TO TOP
+-------------------- */
+#backtotop{
+  height: 50px;
+  width: 50px;
+  background-size: 100%;
+  z-index: 500;
+}
+
+
+/* ADMIN TOOLBAR
+----------------- */
+#block-oc-subtheme-local-tasks{
+  @include paddedContent;
+  @include auto;
+  margin-top: 2em;
+}
+
+

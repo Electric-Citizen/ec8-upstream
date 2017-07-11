@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Bartik theme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+
+
+function oc_base_preprocess_field(&$variables, $hook) {
+  if ($variables['element']['#object']->bundle() == 'admin_view_placer') {
+        $view_name = $variables['element']['#object']->get('field_view_machine_name')->value;
+        $display_name = $variables['element']['#object']->get('field_display_machine_name')->value; 
+        $view = views_embed_view($view_name,$display_name);  
+        $view_output = \Drupal::service('renderer')->render($view);  
+        $variables["viewfield"] = $view_output;
+  }elseif ($variables['element']['#object']->bundle() == 'slideshow') { 
+        //ksm($variables);
+        $paragraph_id = $variables['element']['#object']->id(); 
+        $view = views_embed_view('oc_widgets', 'slideshow',$paragraph_id);  
+        $view_output = \Drupal::service('renderer')->render($view);  
+        $variables["viewfield"] = $view_output;
+  }
+}
+
+//set theme template for support book pages
+function oc_base_theme_suggestions_page_alter(array &$suggestions, array $variables, $hook) {
+  // Try to get the node, so we can check if we're on the node page.
+  $node = Drupal::request()->attributes->get('node');
+  if ($node && $node->getType() == 'support_book') {
+    $suggestions[] = 'page__support_book';
+  }
+}
+
+function oc_base_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == "views_exposed_form") {
+    $form['title']['#attributes']['placeholder'] = 'Keyword(s)';
+  }
+}
+
+//add node id to body as class
+function oc_base_preprocess_html(&$variables) {
+  $path = \Drupal::service('path.current')->getPath();
+  $path_args = explode('/', $path);
+  if (isset($path_args[1]) && isset($path_args[2]) && ($path_args[1] == 'node') && (is_numeric($path_args[2]))) {
+    $variables['attributes']['class'][] = 'page-node-' . $path_args[2];
+  }
+}

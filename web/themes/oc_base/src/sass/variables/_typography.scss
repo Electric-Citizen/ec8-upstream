@@ -1,0 +1,46 @@
+/* Modular Scale Sass
+----------------------
+Modular-scale is used as a function. Simply pass it through in place of any value to generate a value based on a modular scale.
+https://github.com/modularscale/modularscale-sass
+http://www.modularscale.com/
+
+font-size: ms(2); // two up the modular scale
+font-size: ms(2, 16px); // two up the modular scale with a base size of 16px, default is 1em
+font-size: ms(2, 1em, $octave); // Same as above but on an octave scale
+
+Output a list to your terminal to help you find out what values are on your scale.
+@debug ms-list($start, $end, $ms-base, $ms-ratio);
+*/
+
+//set global defaults for Modular Scale
+// $ms-base: 1.25em;//20px
+// $ms-ratio:1.2;//minor third
+
+/* Responsive Scale for Modular Sass
+----------------------
+https://zellwk.com/blog/changing-modular-scale/
+font size:  include ms-respond(font-size, 3);
+
+*/
+
+// $ms-fluid: false;
+//set to false to have precise font values instead of fluid
+
+//$ms-range:
+//set breakpoints for scale change
+  // 1.1   20em,//400px
+  // 1.2   30em,//600px
+  // 1.25 60em;//1200px
+
+
+/* Font Stack Variables
+---------------------- */
+
+$sans: "Open Sans", Helvetica, Arial, sans-serif;
+$serif: Georgia, "Times New Roman", Times, serif;
+$verdana: Verdana, Geneva, sans-serif;
+
+
+
+
+

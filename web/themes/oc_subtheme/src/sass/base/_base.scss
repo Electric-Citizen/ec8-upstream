@@ -1,0 +1,42 @@
+/**
+ * $Custom base visual styles
+ */
+
+body {
+  background: $off-white;
+}
+
+/**
+ * $LINKS
+ */
+a {
+  color: $link;
+  &:link, &:visited {
+    text-decoration: none;
+    outline: none;
+  }
+  &:hover, &:focus {
+    text-decoration: underline;
+    color: $hover-link;
+  }
+  &.active, &:active {
+    color:$active-link;
+  }
+}
+
+/* HINTS
+------------- */
+.hint-bubble{
+  padding: 0 2em !important;
+  @include opacity(0);
+  &.hinted{
+   @include breakpoint ($deskmenu, true){
+      @include opacity(1);
+      @include transTwoAll;
+    }
+  }
+}
+
+
+
+

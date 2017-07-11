@@ -1,0 +1,128 @@
+/**
+ * $Forms Component Styles
+ */
+
+/* FORMS
+------------ */
+.webform-submission-form,.user-login-form,.search-page-form{
+	.form-item{
+		margin-bottom: 1.5em;
+		label:not(.option),.fieldset-legend{
+			@include font-size(15px);
+			font-weight: 700;
+			text-transform: uppercase;
+			font-family: $sans;
+			&:after{
+				content: '';
+			}
+			&.form-required{
+				position: relative;
+				&:after{
+					content: '*';
+					color: $red-bad;
+					position: absolute;
+					top: -1px;
+					right: -.75em;
+					font-size: 80%;
+				}
+			}
+		}//end label
+		label.option{
+			@include font-size(15px);
+		}
+		.description{
+			@include font-size(15px);
+			color: $mid-grey;
+		}
+		input.form-file{
+			padding-left: 0 !important;
+
+		}
+		input:not([type="submit"]),textarea{
+			display: block;
+			width: 100%;
+			max-width: 800px;
+			border: none;
+			padding: 9px 16px;
+			@include font-size(18px);
+			font-family: $sans;
+		}
+	}//end form-item
+
+	//radios
+	.js-webform-radios{
+		&.webform-options-display-one-column{
+			display: inline;
+			.form-item{
+				margin-bottom: 0;
+			}
+			input{
+				width: auto;
+				display: inline;
+			}
+		}
+	}
+
+	//checkboxes (and checkbox for uploaded file)
+	.webform-options-display-one-column.form-checkboxes{
+		.js-form-type-checkbox{
+			margin-bottom: 0;
+			input{
+				width: auto;
+				display: inline;
+			}
+		}
+	}
+
+
+	//managed files (after adding a file)
+	.form-managed-file{
+		.js-form-type-checkbox{
+			margin-top: .5em;
+			margin-bottom: 0;
+			input{
+				width: auto;
+				display: inline;
+			}
+		}
+		.js-form-submit{
+			margin-bottom: .5em;
+		}
+	}
+
+	.form-actions{
+		.js-form-submit{
+			@include appearance('none');
+			background: $link;
+			font-weight: 600;
+			font-size: 18px;
+			text-transform: uppercase;
+			border: none;
+			width: 240px;
+			padding: .5em 0;
+			border-radius: 0;
+			&:hover{
+				background: $hover-link;
+			}
+		}
+	}
+} //end webforms
+
+
+/*   USER LOGIN FORM ADDITIONAL CUSTOMIZATION
+----------------------- */
+.user-login-form{
+	.form-item input:not([type="submit"]){
+		border: 1px solid $light-grey;
+		max-width: 400px;
+	}
+	.form-actions .js-form-submit{
+		width: 130px;
+		padding: .25em;
+	}
+}
+
+
+
+
+

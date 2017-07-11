@@ -1,0 +1,51 @@
+/*Base Layout Rules
+--------------------*/
+
+//HEADER
+header {
+	& > div{
+		padding: 10px 20px;
+	}
+	.block--system-branding{
+		@include inline-setup-center;
+		a{
+			> *{
+				vertical-align: middle;
+			}
+		}//end logo a
+
+		@include breakpoint ($deskmenu, true){
+			width: 100%;
+		}
+	}
+
+	//search
+	#block-oc-subtheme-search{
+		position: static;
+		@include inline-block;
+		text-align: right;
+	}//end search block
+
+	//main nav
+	#block-mainnavigation{
+		@include inline-setup;
+		position: static; //needed for contextual links
+		@include breakpoint ($deskmenu, true){
+			vertical-align: middle;
+		}
+	}
+
+}//end header
+
+//MAIN
+.content-wrapper {
+	@include constrained;
+	clear:both;
+
+
+}
+
+//FOOTER
+footer{
+
+}

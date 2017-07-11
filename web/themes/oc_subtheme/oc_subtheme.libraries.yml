@@ -1,0 +1,19 @@
+global-styling:
+  version: 1.0
+  css:
+    theme:
+       css/oc-subtheme.styles.css: {}
+  js:
+    js/oc-subtheme.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/underscore
+    - core/drupalSettings
+    - core/jquery.once
+
+fonts:
+  css:
+    theme:
+      https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700: { type: external }

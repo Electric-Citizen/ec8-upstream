@@ -1,0 +1,68 @@
+/**
+ * $NODE
+ */
+
+
+/* GLOBAL
+------------------------- */
+.node--teaser {
+  margin-bottom:1em;
+}
+
+.node__links {
+  margin-bottom: 1em;
+}
+
+
+
+//Shorten space between p and following ul
+.field-type-long-text,.field-type-text-with-summary{
+    p + ul{
+        margin-top: -1.25em;
+    }
+}
+
+//BANNER IMAGE BACKGROUNDS
+.block-region-top.background{
+	position: relative;
+	h1{
+		@include breakpoint ($tab, true){
+			text-align: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include translate(-50%, -50%);
+			z-index: 20;
+		}
+	}
+	.field-banner{
+		position: relative;
+	}
+}
+
+/* BASIC PAGES
+------------------- */
+.node--type-page{
+	//title in top
+	.block-region-top{
+		h1{
+			@include paddedContent;
+			@include auto;
+			width: 100%;
+		}
+	}
+	//title in main content of beaker
+	.content-wrapper{
+		h1{
+			max-width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	.field-banner{
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,614 @@
+/**
+ * Custom Widget Styles
+ */
+
+
+/*  FLEXSLIDER GLOBAL SETTINGS
+-------------------------------- */
+.flexslider{
+  	
+  	/*override default, make direction visible always*/
+  	.flex-direction-nav{
+     
+      a{
+        &:before{
+          font-family: arial;
+          font-size: 50px;
+          color: $white;
+          @include text-shadow( 2px 2px 10px rgba(0,0,0,.5) );
+          @include transition(color .3s ease);
+          @include breakpoint ($tab, true){
+            font-size: 80px;
+          }
+        }
+        &:hover,&:focus{
+          &:before{
+            color: $link;
+          }
+        }
+      }
+      .flex-prev {
+        left: 5px !important;
+      }
+      .flex-next {
+        right: 5px !important;
+      }
+
+    }//end flex direciton nav
+}
+
+
+/* SWIPEBOX GLOBAL SETTINGS
+----------------------------- */
+#swipebox-overlay{
+
+	figcaption{
+		color: $off-white;
+		margin-top: 1em;
+
+	}
+}
+
+
+/* WIDGETS COLOR
+--------------------------*/
+
+
+%light-back {
+	h2.pane-title{
+		color: $black;
+	}
+	h2,h3,h4,h5,h6,p,div {
+		color: $black;
+		&.pane-title{
+			border-color: $black;
+		}
+	}
+	:before,:after{
+		color: $black;
+	}
+	a{
+		color: $transparent-black;
+	}
+	figcaption {
+		color: $dark-grey;
+	}
+	.paragraph--type--call-to-action &{
+		h2 > a{
+			color: $black;
+			&:hover{
+				color: $transparent-black;
+			}
+		}
+		.field-oc-link a{
+			color: $black;
+			&:hover{
+				background-color: $transparent-black;
+				color: $white;
+				border-color: $black;
+			}
+		}
+	}
+}
+
+%dark-back {
+	h2.pane-title{
+		color: $white;
+	}
+	h2,h3,h4,h5,h6,p,div {
+		color: $white;
+		&.pane-title{
+			border-color: $white;
+		}
+	}
+	:before,:after{
+		color: $white;
+	}
+	a{
+		color: $transparent-white;
+	}
+	figcaption {
+		color: $white;
+	}
+	.paragraph--type--call-to-action &{
+		h2 > a{
+			color: $white;
+			&:hover{
+				color: $transparent-white;
+			}
+		}
+		.field-oc-link a{
+			color: $white;
+			&:hover{
+				background-color: $transparent-white;
+				color: $black;
+				border-color: $white;
+			}
+		}
+	}
+}
+
+
+/* 	Widget Color picker
+-------------------------- */
+.widget-color{
+	//dk grey style
+	&.grey{
+		background-color: $oc-darkgrey;
+		@extend %dark-back;
+	}
+	//dk grey style
+	&.blue{
+		background-color: $oc-blue;
+		@extend %dark-back;
+	}
+	//dk grey style
+	&.orange{
+		background-color: $oc-gold;
+		@extend %light-back;
+	}
+}
+
+.image{
+	@extend %dark-back;
+	.paragraph--type--call-to-action &{
+		h2 > a{
+			color: $white;
+			&:hover{
+				color: $transparent-white;
+			}
+		}
+		.field-oc-link a{
+			color: $white;
+			&:hover{
+				background-color: $transparent-white;
+				color: $black;
+				border-color: $white;
+			}
+		}
+	}
+}
+
+
+
+/* LAYOUT
+------------------ */
+.field--name-field-oc-widgets,.field-block-widgets{
+	
+	.flex-wrap{
+		&.backless .paragraph:not(.paragraph--type--accordion-item):not(.paragraph--type--social-platform){
+			padding-top: 1em;
+			padding-bottom: 1em;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		//set max for widget content when on a background color in kermit
+		.wrapper{
+			.kermit .block-region-main &{
+				max-width: $max-width-text;
+				@include auto;
+			}
+		}
+
+		//percentages at tab
+		@include breakpoint($tab, true){
+			&:not(.backless).single{
+				.kermit &{
+					.widget-color,.image{
+						@include calc(margin-right, "-50vw + 400px");
+						@include calc(margin-left, "-50vw + 400px");
+						h2.widget-title,.wrapper{
+							@include calc(width, "100vw - 40px");
+							@include auto;
+						}
+					}
+				}
+			}
+			&:not(.single):not(.backless){
+				.paragraph{
+					height: 100%;
+					.widget-color,.image{
+						height: 100%;
+					}
+				}
+			}
+			&.quarter,&.third{
+				flex: 0 0 50%;
+			}
+		}
+		//percentages at banner
+		@include breakpoint ($max-width, true){
+			&.quarter{
+				flex: 0 0 25%;
+			}
+			&.third{
+				flex: 0 0 33.333%;
+			}
+			&.half{
+				flex: 0 0 50%;
+			}
+			&.two-thirds{
+				flex: 0 0 66.666%;
+			}
+			&.three-quarter{
+				flex: 0 0 75%;
+			}
+		}
+
+	}//end flex wrap
+
+	//shim for backed/backless spacers
+	.single.backless + .single:not(.backless),.single:not(.backless) + .single.backless{
+		margin-top: 1em;
+	}
+	.single:not(.backless):last-child{
+		margin-bottom: 2em;
+	}
+
+	//ie fallbacks
+	.is-ie &{
+		.flex-wrap{
+			@include breakpoint ($tab, true){
+				&.quarter,&.third{
+					width: 50%;
+				}
+			}
+			@include breakpoint($max-width, true){
+				&.quarter{
+					width: 25%;
+				}
+				&.third{
+					width: 33.333%
+				}
+				&.half{
+					width: 50%;
+				}
+				&.two-thirds{
+					width: 66.666%;
+				}
+				&.three-quarter{
+					width: 75%;
+				}
+			}
+		}
+	}
+
+}//end widgets field
+
+.paragraph{
+	.widget-color{
+		padding: 3em 20px;
+	}
+	.image{
+		padding: 3em 20px;
+		@include overlay;
+		& *{
+			color: $white;	
+		}
+	}
+}
+
+
+/*  ACCORDIONS
+------------------------*/
+.paragraph--type--accordion-group{
+	.accordion-header{
+		border: 1px solid;
+		border-color: $mid-grey;
+		color: $mid-grey;
+		@include transTwoAll;
+		margin-bottom: 0;
+		&:after{
+			content: "+";
+		}
+		&:hover{
+			background: $mid-grey;
+			color: $white;
+		}
+
+	}
+
+	//accordion content
+	.field-oc-long-text{
+		background: $off-white;
+		padding: 0 2em;
+		@include transTwoAll;	
+	}
+
+	//active accordion
+	.accord-active{
+		.accordion-header{
+			background: $mid-grey;
+			color: $white;
+			&:after{
+				content: "–";
+			}
+		}
+		.field-oc-long-text{
+			padding: 2em;
+		}
+	}//end active
+
+	//no-js fallback
+	.no-js &{
+		&:hover{
+			.field-oc-long-text{
+				padding: 2em;
+			}
+		}
+	}
+
+}//end accordions
+
+
+
+/* BUTTONS
+--------------------*/
+.paragraph--type--buttons{
+	li{
+		max-width: 250px;
+		margin: 0 20px 20px;
+		a{
+			padding: .5em 1em;
+			@include adjust-font-size-to(20px);
+			border: 2px solid;
+			@include transTwoAll;
+		}
+		&.default{
+			a{
+				color: $white;
+				background: $link;
+				border-color: $link;
+			} 
+			&:hover{
+				a{
+					text-decoration: none;
+					background: transparent;
+					color: $link;
+				}
+			}
+		}
+		&.orange{
+			a{
+				color: $white;
+				background: $oc-gold;
+				border-color: $oc-gold;
+			} 
+			&:hover{
+				a{
+					text-decoration: none;
+					background: transparent;
+					color: $oc-brown;
+				}
+			}
+		}
+		&.blue{
+			a{
+				color: $white;
+				background: $oc-blue;
+				border-color: $oc-blue;
+			} 
+			&:hover{
+				a{
+					text-decoration: none;
+					background: transparent;
+					color: $oc-slate;
+				}
+			}
+		}
+		&.dark-grey{
+			a{
+				color: $white;
+				background: $oc-darkgrey;
+				border-color: $oc-darkgrey;
+			} 
+			&:hover{
+				a{
+					text-decoration: none;
+					background: transparent;
+					color: $oc-darkgrey;
+				}
+			}
+		}
+	}//end li
+
+}//end buttons
+
+
+/* CALL TO ACTION
+--------------------- */
+.paragraph--type--call-to-action{
+	.field-oc-link{
+		text-align: center;
+		margin-top: 2em;
+		margin-bottom: 1em;
+		a{
+			border: 1px solid;
+			border-color: inherit;
+			font-size: 22px;
+			padding: 10px 30px;
+			color: $link;
+			&:hover{
+				background-color: $link;
+				color: $white;
+			}
+		}
+	}
+
+
+}//end cta
+
+
+/* FORM
+----------- */
+.paragraph--type--form{
+	.field-oc-form{
+		background: $image-overlay;
+		padding: 2em 1em;
+	}
+}
+
+
+/* HORIZONTAL RULE
+------------------------*/
+.paragraphs--type--horizontal-rule{
+	height: 1px;
+	background: $light-grey;
+}
+
+
+/* IMAGE
+------------------*/
+.paragraph--type--image{
+	.kermit & .wrapper{
+		max-width: $max-width !important;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	.field-oc-long-text{
+		max-width: $max-width-text;
+		@include auto;
+	}
+}//end type--image
+
+
+/* LIGHT BOX GALLERY
+----------------------- */
+.paragraph--type--lightbox-gallery{
+	.kermit & .wrapper{
+		max-width: $max-width !important;
+	}
+	a.swipebox{
+		margin: 0 10px 20px;
+		max-width: 250px;
+	}
+}
+
+
+/* LINKS & FILES
+------------------ */
+.paragraph--type--links-files{
+	.wrapper{
+		margin-top: .5em;
+	}
+	.field-oc-long-text{
+		margin-top: .5em;
+	}
+	.field:not(.field-oc-long-text){
+		margin-top: .5em;
+	}
+}
+
+
+/*  MAP 
+-----------------*/
+.paragraph--type--map{
+	.kermit & .wrapper{
+		max-width: $max-width !important;
+	}
+	.field-oc-long-text{
+		max-width: $max-width-text;
+		@include auto;
+	}
+}
+
+/* PULLQUOTE
+--------------- */
+.paragraph--type--pullquote{
+	.field-oc-long-text{
+		position: relative;
+		max-width: 740px;
+		font-family: $serif;
+		font-style: italic;
+		@include font-size(28px);
+    	padding-bottom:10px;
+    	@include breakpoint ($tab, true){
+    		@include font-size(42px);
+    		padding-bottom:0;
+    	}
+		&:before{
+			color: $transparent-black;
+	   		content: "“";
+	    	font-size: 3em;
+	    	line-height: 0.1em;
+	    	margin-right: 0.25em;
+	    	vertical-align: -0.4em;
+		}
+		&:after{
+			color: $transparent-black;
+	   		content: "”";
+	    	font-size: 3em;
+	    	line-height: 0.1em;
+	    	margin-right: 0.25em;
+	    	vertical-align: -0.44em;
+		}
+		p{
+			display: inline;
+		}
+	}//end long text
+
+	.field-oc-short-text{
+		text-align: right;
+		position: relative;
+		font-weight: bold;
+    	text-transform: uppercase;
+		&:before{
+			content: '–';
+			left: -1.25em;
+		}
+		@include breakpoint ($tab, true){
+			@include font-size(18px);
+		}
+	}
+}//end quote
+
+
+/*  SLIDESHOW
+-----------------  */
+.paragraph--type--slideshow{
+	.kermit & .wrapper{
+		max-width: $max-width !important;
+	}
+}
+
+/* SOCIAL MEDIA
+------------------ */
+.paragraph--type--social-media{
+	margin-bottom: 2em;
+	text-align: center;
+	.kermit & .wrapper{
+		@include paddedText;
+		@include auto;
+	}
+	.field-social-media{
+		& > div{
+			@include inline-block;
+			padding: 0 10px;
+		}
+		a{
+			color: $black;
+			&:hover{
+				color: $hover-link;
+			}
+		}
+	}
+}//end social media
+
+/*  TEXT WIDGET
+------------------- */
+.paragraph--type--text{
+	//styled in oc_base
+}
+
+
+/* VIDEO
+-----------------*/
+.paragraph--type--video{
+	.kermit & .wrapper{
+		max-width: $max-width !important;
+	}
+	.field-oc-long-text{
+		max-width: $max-width-text;
+		@include auto;
+	}
+}

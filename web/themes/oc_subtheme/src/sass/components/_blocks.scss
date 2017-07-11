@@ -1,0 +1,113 @@
+/*Custom Block Styles
+*/
+
+/* SEARCH
+--------------- */
+#block-oc-subtheme-search{
+	//search icon
+	.t-search{
+		overflow: hidden;
+		font-size: 16px;
+		text-indent: 9000px;
+		position: absolute;
+		top: 16px;
+		right: 12px;
+		width: 22px;
+		height: 22px;
+		background: url(../images/svg/search-toggle.svg);
+		background-size: 22px 44px;
+		background-position: 0 0;
+		&.searching{
+			background-position: 0 22px;
+		}
+		@include breakpoint($deskmenu, true){
+			top: 8px;
+			right: 26px;
+		}
+	}
+
+	#search-block-form {
+		overflow: hidden;
+		text-align: center;
+		z-index: 1;
+		position: absolute !important;
+		top: 100%;
+		left: 50%;
+		@include translateX(-50%);
+		width: 80%;
+		max-width: 500px;
+		&.slideDown{
+			height: auto;
+		}
+		@include breakpoint ($deskmenu, true){
+			top: -5px;
+			left: auto;
+			@include translateX(0);
+			right: 55px;
+			max-width: 320px;
+		}
+		//search box
+		.js-form-type-search{
+			padding: 10px 0;
+			width: 100%;
+			@include breakpoint ($deskmenu, true){
+				width: 320px;
+			}
+			input{
+				width: 100%;
+				padding: 9px 10px;
+				font-size: 13px;
+				border: none;
+				@include input-placeholder{
+      				color: $grey;
+     	 			@include opacity(1);
+    			}
+    			&:focus{
+      				@include input-placeholder{
+        				@include opacity(.2);
+      				}
+    			}
+				@include breakpoint ($deskmenu, true){
+					padding: 6px 10px;
+				}
+			}
+		}
+
+		//search button
+		.form-submit{
+			position: absolute;
+			right: 8px;
+			top: 15px;
+			color: $white;
+			text-indent: 9000px;
+			border: none;
+			height: 24px;
+			width: 24px;
+			background: url(../images/svg/search-input.svg);
+			background-size: 26px 24px;
+			background-position: 0 0;
+			@include breakpoint ($tab, true){
+				height: 20px;
+				width: 20px;
+				background-size: 30px 20px;
+			}
+		}
+	}//end search block
+}//end block-oc-subtheme-search
+
+
+/* FOOTER COPYRIGHT
+--------------- */
+#block-footercopyright{
+	width: 100%;
+	border-top: 1px solid $off-white;
+	padding-top: 1em;
+	clear: both;
+	text-align: right;
+	p{
+		margin:0;
+		@include font-size (15px);
+	}
+}
+
+
