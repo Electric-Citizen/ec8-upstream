@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies: {  }
+id: global
+label: Global
+tags:
+  canonical_url: '[current-page:url:absolute]'
+  generator: 'Drupal 8 (http://drupal.org)'
+  geo_region: US-MN
+  referrer: unsafe-url
+  shortlink: '[current-page:url:unaliased]'
+  title: '[current-page:title] | [site:name]'
+  og_determiner: '[site:name]'
+  og_locale: en_US
+  og_site_name: '[site:name]'
+  og_title: '[current-page:title]'
+  og_type: 'Article (inc blog)'
+  og_url: '[current-page:url:absolute]'
+  twitter_cards_image: '[node:field_banner:entity:field_media_image]'
+  twitter_cards_page_url: '[current-page:url:absolute]'
+  twitter_cards_title: '[current-page:title]'
+  twitter_cards_type: summary_large_image

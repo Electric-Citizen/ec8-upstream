@@ -1,0 +1,32 @@
+name: 'OC Blog'
+description: 'Blog content type, views, settings'
+type: module
+core: 8.x
+dependencies:
+  - ctools
+  - entity_browser_entity_form
+  - entity_reference_revisions
+  - field
+  - image
+  - inline_entity_form
+  - media_entity
+  - menu_ui
+  - metatag
+  - node
+  - oc_field_storage
+  - oc_media
+  - oc_metatags
+  - oc_profiles
+  - oc_taxonomy
+  - oc_widgets
+  - panelizer
+  - paragraphs
+  - path
+  - pathauto
+  - rdf
+  - taxonomy
+  - text
+  - user
+  - views
+version: 8.x-1.0
+package: 'Open Citizen'

@@ -1,0 +1,15 @@
+name: 'OC WYSIWYG'
+description: 'Text Formats and Editor settings.'
+type: module
+core: 8.x
+dependencies:
+  - ckeditor
+  - editor
+  - entity_embed
+  - file
+  - filter
+  - image
+  - linkit
+  - node
+version: 8.x-1.0
+package: 'Open Citizen'
