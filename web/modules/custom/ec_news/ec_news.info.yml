@@ -1,0 +1,27 @@
+name: News
+description: 'Provides News content type and related configuration. Add news nodes.'
+type: module
+core: 8.x
+dependencies:
+  - ec_core
+  - ec_site
+  - ec_widgets
+  - entity_browser_entity_form
+  - entity_reference_revisions
+  - field
+  - inline_entity_form
+  - media_entity
+  - menu_ui
+  - metatag
+  - node
+  - panelizer
+  - paragraphs
+  - path
+  - pathauto
+  - responsive_image
+  - taxonomy
+  - text
+  - user
+  - views
+package: 'Electric Citizen'
+version: 8.x-1.0

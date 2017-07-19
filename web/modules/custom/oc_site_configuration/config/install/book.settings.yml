@@ -1,6 +1,0 @@
-allowed_types:
-  - support_book
-block:
-  navigation:
-    mode: 'all pages'
-child_type: support_book

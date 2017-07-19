@@ -1,5 +1,0 @@
-bundle: oc
-excluded:
-  - core.entity_form_display.taxonomy_term.categories.default
-  - taxonomy.vocabulary.categories
-required: true

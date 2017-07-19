@@ -1,8 +1,0 @@
-bundle: oc
-excluded:
-  - core.entity_form_display.node.page.default
-  - core.entity_view_display.node.page.default
-  - core.entity_view_display.node.page.teaser
-  - field.field.node.page.field_banner
-  - field.field.node.page.panelizer
-required: true

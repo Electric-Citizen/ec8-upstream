@@ -1,0 +1,24 @@
+name: Blog
+description: 'Provides Blog content type and related configuration. Add a blog post.'
+type: module
+core: 8.x
+dependencies:
+  - ec_core
+  - ec_profiles
+  - ec_site
+  - ec_widgets
+  - entity_reference_revisions
+  - field
+  - image
+  - media_entity
+  - menu_ui
+  - metatag
+  - node
+  - panelizer
+  - pathauto
+  - taxonomy
+  - text
+  - user
+  - views
+package: 'Electric Citizen'
+version: 8.x-1.0
