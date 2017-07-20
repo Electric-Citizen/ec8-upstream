@@ -1,0 +1,32 @@
+bundle: oc
+excluded:
+  - media_entity.bundle.document
+  - media_entity.bundle.video
+  - search_api.server.local
+  - field.field.node.blog.field_author
+  - field.field.node.blog.field_tags
+  - field.field.node.event.field_event_location
+  - field.field.node.event.field_event_pin_info
+  - field.field.node.event.field_oc_date
+  - field.field.node.page.field_use_as_background
+  - core.entity_form_display.block_content.basic.default
+  - core.entity_form_display.node.blog.default
+  - core.entity_form_display.node.event.default
+  - core.entity_form_display.node.news.default
+  - core.entity_form_display.node.page.default
+  - core.entity_form_display.node.profiles.default
+  - core.entity_form_display.node.support_book.default
+  - core.entity_view_display.node.blog.default
+  - core.entity_view_display.node.blog.teaser
+  - core.entity_view_display.node.event.default
+  - core.entity_view_display.node.event.teaser
+  - core.entity_view_display.node.news.default
+  - core.entity_view_display.node.news.teaser
+  - core.entity_view_display.node.page.default
+  - core.entity_view_display.node.page.teaser
+  - core.entity_view_display.node.profiles.blog_author
+  - core.entity_view_display.node.profiles.default
+  - core.entity_view_display.node.profiles.teaser
+  - core.entity_view_display.node.support_book.default
+  - core.entity_view_display.node.support_book.teaser
+required: true

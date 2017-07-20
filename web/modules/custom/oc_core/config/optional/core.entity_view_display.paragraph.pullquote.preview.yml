@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.pullquote.field_admin_description
+    - field.field.paragraph.pullquote.field_background_image
+    - field.field.paragraph.pullquote.field_background_style
+    - field.field.paragraph.pullquote.field_layout
+    - field.field.paragraph.pullquote.field_oc_long_text
+    - field.field.paragraph.pullquote.field_oc_short_text
+    - paragraphs.paragraphs_type.pullquote
+  module:
+    - options
+id: paragraph.pullquote.preview
+targetEntityType: paragraph
+bundle: pullquote
+mode: preview
+content:
+  field_admin_description:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_layout:
+    weight: 1
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  field_background_image: true
+  field_background_style: true
+  field_oc_long_text: true
+  field_oc_short_text: true

@@ -1,0 +1,4 @@
+bundle: oc
+excluded:
+  - filter.format.restricted_html
+required: true

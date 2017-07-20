@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.social_platform.field_oc_link
+    - field.field.paragraph.social_platform.field_social_platform
+    - paragraphs.paragraphs_type.social_platform
+  module:
+    - link
+id: paragraph.social_platform.default
+targetEntityType: paragraph
+bundle: social_platform
+mode: default
+content:
+  field_oc_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_social_platform:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
