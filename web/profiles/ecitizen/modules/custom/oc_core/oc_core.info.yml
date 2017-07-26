@@ -1,0 +1,46 @@
+name: Core
+description: 'Provides core components required by other features.'
+type: module
+core: 8.x
+dependencies:
+  - block
+  - block_content
+  - contact
+  - crop
+  - entity_browser
+  - entity_browser_entity_form
+  - entity_reference_revisions
+  - field
+  - file
+  - flexslider_views
+  - focal_point
+  - geolocation
+  - image
+  - link
+  - media_entity
+  - media_entity_document
+  - menu_link_content
+  - metatag
+  - node
+  - oc_blog
+  - oc_news
+  - oc_page
+  - oc_profiles
+  - oc_site
+  - options
+  - panelizer
+  - paragraphs
+  - responsive_image
+  - search_api
+  - search_api_db
+  - shortcut
+  - taxonomy
+  - telephone
+  - text
+  - tour
+  - user
+  - video_embed_field
+  - video_embed_media
+  - views
+  - webform
+package: 'Open Citizen'

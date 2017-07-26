@@ -1,0 +1,4 @@
+bundle: oc
+excluded:
+  - pathauto.pattern.tags_term_
+required: true
