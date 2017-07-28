@@ -1,0 +1,9 @@
+uuid: c46f74f7-789f-442b-aa88-9a913b23b5c5
+langcode: en
+status: true
+dependencies: {  }
+name: Categories
+vid: categories
+description: 'General content categories'
+hierarchy: 0
+weight: 0

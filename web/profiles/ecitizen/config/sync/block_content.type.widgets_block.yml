@@ -1,0 +1,8 @@
+uuid: 647472cd-179f-4e98-9ee4-c03469a95237
+langcode: en
+status: true
+dependencies: {  }
+id: widgets_block
+label: 'Widgets Block'
+revision: 0
+description: 'Add a block of widgets.'

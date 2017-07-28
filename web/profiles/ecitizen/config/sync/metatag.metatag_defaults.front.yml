@@ -1,0 +1,24 @@
+uuid: ddf6105c-5275-4dcf-9cb1-29557e83c015
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  abstract: '[site:slogan]'
+  canonical_url: '[site:url]'
+  description: '[site:slogan]'
+  geo_region: US-MN
+  shortlink: '[site:url]'
+  title: '[site:name]'
+  og_description: '[site:slogan]'
+  og_site_name: '[site:name]'
+  og_title: '[site:name]'
+  og_type: Website
+  og_url: '[site:url]'
+  twitter_cards_description: '[site:slogan]'
+  twitter_cards_page_url: '[site:url]'
+  twitter_cards_title: '[site:name]'
+  twitter_cards_type: summary_large_image

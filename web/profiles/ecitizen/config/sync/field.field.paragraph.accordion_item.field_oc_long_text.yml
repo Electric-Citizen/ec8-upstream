@@ -1,0 +1,23 @@
+uuid: ed3c7dfc-002c-4463-a253-2c2259a1ae10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oc_long_text
+    - paragraphs.paragraphs_type.accordion_item
+  module:
+    - text
+_core:
+  default_config_hash: TORLP83Up3Am5ex9i6SoeRpb5Y0GdZptkzvq_Fgq9Hg
+id: paragraph.accordion_item.field_oc_long_text
+field_name: field_oc_long_text
+entity_type: paragraph
+bundle: accordion_item
+label: 'Accordion Content'
+description: 'Add content to this accordion item.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

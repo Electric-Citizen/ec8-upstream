@@ -1,0 +1,9 @@
+uuid: ad66cbd1-4ff1-4711-a0a4-07142f9d1fdf
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: zf3GsXCKLTS8GhBlCv6BH43gxx1ZXjR9Hvd9VNyL81o
+id: call_to_action
+label: 'Call to Action'
+behavior_plugins: {  }

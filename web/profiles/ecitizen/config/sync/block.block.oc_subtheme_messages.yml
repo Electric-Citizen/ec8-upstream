@@ -1,0 +1,22 @@
+uuid: 7560eb8a-d3c0-47e2-8457-ac6014d62aee
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - oc_subtheme
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: oc_subtheme_messages
+theme: oc_subtheme
+region: content
+weight: -4
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

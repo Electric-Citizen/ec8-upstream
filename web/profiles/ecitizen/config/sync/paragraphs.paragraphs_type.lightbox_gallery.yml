@@ -1,0 +1,9 @@
+uuid: 3fd6dd01-1f60-48cc-8c8e-85acae85f05a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 47hihzuEY5ceNAMirMxTik3XB3rfG0nIhGIz3QYfmjk
+id: lightbox_gallery
+label: 'Lightbox Gallery'
+behavior_plugins: {  }

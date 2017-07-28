@@ -1,0 +1,99 @@
+uuid: bbeace08-7ab2-4abb-9c22-fee4ed673b39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_oc_widgets
+    - node.type.news
+    - paragraphs.paragraphs_type.content_item
+    - paragraphs.paragraphs_type.horizontal_rule
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.lightbox_gallery
+    - paragraphs.paragraphs_type.links_files
+    - paragraphs.paragraphs_type.map
+    - paragraphs.paragraphs_type.pullquote
+    - paragraphs.paragraphs_type.slideshow
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.video
+  module:
+    - entity_reference_revisions
+id: node.news.field_oc_widgets
+field_name: field_oc_widgets
+entity_type: node
+bundle: news
+label: Widgets
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      content_item: content_item
+      horizontal_rule: horizontal_rule
+      image: image
+      lightbox_gallery: lightbox_gallery
+      links_files: links_files
+      map: map
+      pullquote: pullquote
+      slideshow: slideshow
+      text: text
+      video: video
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: 19
+        enabled: false
+      accordion_item:
+        weight: 20
+        enabled: false
+      admin_view_placer:
+        weight: 21
+        enabled: false
+      buttons:
+        weight: 22
+        enabled: false
+      call_to_action:
+        weight: 23
+        enabled: false
+      content_item:
+        enabled: true
+        weight: 24
+      form:
+        weight: 25
+        enabled: false
+      horizontal_rule:
+        enabled: true
+        weight: 26
+      image:
+        enabled: true
+        weight: 27
+      lightbox_gallery:
+        enabled: true
+        weight: 28
+      links_files:
+        enabled: true
+        weight: 29
+      map:
+        enabled: true
+        weight: 30
+      pullquote:
+        enabled: true
+        weight: 31
+      slideshow:
+        enabled: true
+        weight: 32
+      social_media:
+        weight: 33
+        enabled: false
+      social_platform:
+        weight: 34
+        enabled: false
+      text:
+        enabled: true
+        weight: 35
+      video:
+        enabled: true
+        weight: 36
+field_type: entity_reference_revisions

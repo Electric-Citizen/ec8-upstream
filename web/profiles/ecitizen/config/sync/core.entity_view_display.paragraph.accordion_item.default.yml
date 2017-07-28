@@ -1,0 +1,35 @@
+uuid: 99afbb0f-012e-4808-8a1f-c6d92cadf0a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.accordion_item.field_accordion_header
+    - field.field.paragraph.accordion_item.field_admin_description
+    - field.field.paragraph.accordion_item.field_oc_long_text
+    - paragraphs.paragraphs_type.accordion_item
+  module:
+    - text
+_core:
+  default_config_hash: ilcGRX8v1svGwJFAXqef-USWyuFC-WSy47qLIblUFjQ
+id: paragraph.accordion_item.default
+targetEntityType: paragraph
+bundle: accordion_item
+mode: default
+content:
+  field_accordion_header:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_oc_long_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_admin_description: true

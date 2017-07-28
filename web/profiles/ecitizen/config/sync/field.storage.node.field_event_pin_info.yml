@@ -1,0 +1,21 @@
+uuid: 25b7f966-9eea-45b1-abd3-d4b6f64d9a5d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: l1SSUVEDewphlqbBAyOrq_E0dGy23-S30TbC8yXHeVQ
+id: node.field_event_pin_info
+field_name: field_event_pin_info
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

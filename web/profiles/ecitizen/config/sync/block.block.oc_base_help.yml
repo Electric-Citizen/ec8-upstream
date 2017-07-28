@@ -1,0 +1,22 @@
+uuid: 78765046-597d-409f-b268-66e0bced1394
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - oc_base
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: oc_base_help
+theme: oc_base
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

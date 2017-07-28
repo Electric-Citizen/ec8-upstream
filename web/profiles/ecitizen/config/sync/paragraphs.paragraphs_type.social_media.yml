@@ -1,0 +1,7 @@
+uuid: b356c488-9267-42dc-b737-5fc3616c9bc0
+langcode: en
+status: true
+dependencies: {  }
+id: social_media
+label: 'Social Media'
+behavior_plugins: {  }
