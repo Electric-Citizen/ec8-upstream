@@ -1,9 +1,0 @@
-uuid: 3b6b3d2d-f3c9-4e83-9187-21c3611103cd
-langcode: en
-status: true
-dependencies: {  }
-_core:
-  default_config_hash: 2PpqkmOLR5jSI-DBXGgFm4tol_PynjRZ9BffejUwiHc
-id: buttons
-label: Buttons
-behavior_plugins: {  }

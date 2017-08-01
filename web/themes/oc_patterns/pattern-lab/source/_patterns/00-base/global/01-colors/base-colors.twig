@@ -1,0 +1,13 @@
+<p>Base colors are automatically pulled from base_color_vars.scss on npm start.</p>
+<ul class="sg-colors pl-spacer">
+  {% for item in items %}
+    <li>
+      <div class="sg-swatch" style="background: {{item.value}};"></div>
+      <div class="sg-info">
+        <span>{{item.value}}</span> <br/>
+        <code>{{item.name}}</code>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
+

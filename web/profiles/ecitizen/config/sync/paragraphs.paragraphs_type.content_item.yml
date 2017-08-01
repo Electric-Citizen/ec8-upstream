@@ -1,7 +1,0 @@
-uuid: ad59786d-dc80-4a25-bac5-a6211d65b6e0
-langcode: en
-status: true
-dependencies: {  }
-id: content_item
-label: 'Content Item'
-behavior_plugins: {  }
