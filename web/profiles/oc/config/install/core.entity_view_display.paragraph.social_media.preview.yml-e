@@ -1,0 +1,36 @@
+uuid: b36af047-fbd8-4519-b8cc-8ddb7cab4934
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.social_media.field_admin_description
+    - field.field.paragraph.social_media.field_layout
+    - field.field.paragraph.social_media.field_social_media
+    - field.field.paragraph.social_media.field_widget_title
+    - paragraphs.paragraphs_type.social_media
+  module:
+    - options
+id: paragraph.social_media.preview
+targetEntityType: paragraph
+bundle: social_media
+mode: preview
+content:
+  field_admin_description:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_layout:
+    type: list_key
+    weight: 1
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_social_media: true
+  field_widget_title: true

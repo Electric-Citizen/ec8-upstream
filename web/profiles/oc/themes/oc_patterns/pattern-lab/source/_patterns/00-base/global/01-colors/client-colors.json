@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "name": "$site-background",
+      "value": "#f6f6f6"
+    },
+    {
+      "name": "$link",
+      "value": "#d52d00"
+    },
+    {
+      "name": "$active-link",
+      "value": "#6a2600"
+    },
+    {
+      "name": "$hover-link",
+      "value": "#6a2600"
+    },
+    {
+      "name": "$button-back",
+      "value": "#efb61b"
+    },
+    {
+      "name": "$button-back-hover",
+      "value": "#c84700"
+    }
+  ],
+  "meta": {
+    "description": "To add to these items, use Sass variables that start with <code>$</code> in <code>.//components/_patterns/00-base/global/01-colors/_client-color-vars.scss</code>"
+  }
+}

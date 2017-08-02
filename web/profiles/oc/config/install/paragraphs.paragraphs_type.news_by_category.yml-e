@@ -1,0 +1,7 @@
+uuid: b3758f8b-4ec6-4878-8317-1cadfeff1fe8
+langcode: en
+status: true
+dependencies: {  }
+id: news_by_category
+label: 'News by Category'
+behavior_plugins: {  }

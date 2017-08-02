@@ -1,0 +1,7 @@
+uuid: 6f0ce487-5f4f-4730-9051-422eab6b5b6e
+langcode: en
+status: true
+dependencies: {  }
+id: event_by_category
+label: 'Events by Category'
+behavior_plugins: {  }

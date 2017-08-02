@@ -1,0 +1,25 @@
+uuid: dd9a8aaf-3a5d-4f74-b49e-54830e99d382
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b27e966e-01f7-412e-b8d9-bf6f0067ce83'
+  module:
+    - block_content
+  theme:
+    - oc_patterns
+id: oc_patterns_footeraddress
+theme: oc_patterns
+region: footer
+weight: -5
+provider: null
+plugin: 'block_content:b27e966e-01f7-412e-b8d9-bf6f0067ce83'
+settings:
+  id: 'block_content:b27e966e-01f7-412e-b8d9-bf6f0067ce83'
+  label: 'Footer Address'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

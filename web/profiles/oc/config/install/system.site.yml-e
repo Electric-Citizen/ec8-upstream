@@ -1,0 +1,14 @@
+uuid: 24529e03-71c6-4b25-8486-46f41ac45b8d
+name: 'Open Citizen Install'
+mail: info@electriccitizen.com
+slogan: ''
+page:
+  403: ''
+  404: /search404
+  front: /node/94
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo

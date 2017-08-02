@@ -1,0 +1,19 @@
+uuid: 2713bf0a-81bf-4973-844f-e05507dc0e59
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: b-qxCu1VLGWjqvXKv4Nt7y2BUo5VSGpEIj8gb6C_PUY
+id: global
+label: Global
+tags:
+  generator: 'Drupal 8 (http://drupal.org)'
+  shortlink: '[current-page:url:unaliased]'
+  title: '[current-page:title] | [site:name]'
+  og_determiner: '[site:name]'
+  og_title: '[current-page:title]'
+  og_type: 'Article (inc blog)'
+  og_url: '[current-page:url:absolute]'
+  twitter_cards_page_url: '[current-page:url:absolute]'
+  twitter_cards_title: '[current-page:title]'
+  twitter_cards_type: summary

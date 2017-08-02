@@ -1,0 +1,17 @@
+uuid: b0f71bd8-5b96-4c7d-8860-00041f0726bf
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: RfHILAa8Z1-etdd3E3zNJAtHwuqCdM_7LU4JBniONdY
+name: medium_500
+label: 'Medium (500)'
+effects:
+  101f35fe-660d-4f58-9b75-23fde73ce66c:
+    uuid: 101f35fe-660d-4f58-9b75-23fde73ce66c
+    id: image_scale
+    weight: 1
+    data:
+      width: 500
+      height: null
+      upscale: true

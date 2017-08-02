@@ -1,0 +1,19 @@
+uuid: f9b13ab1-d30d-4d9b-9544-06fa2a0a376e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: Zvb_vI8lhr0KGOBfs2rwD7gpprFcNuRblNOe7OIuIAk
+name: News
+type: news
+description: 'Add news nodes.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b94cdde2-031d-4e40-b3ad-1ac0722525f4'
+  module:
+    - block_content
+  theme:
+    - oc_patterns
+id: oc_patterns_footercopyright
+theme: oc_patterns
+region: footer
+weight: -3
+provider: null
+plugin: 'block_content:b94cdde2-031d-4e40-b3ad-1ac0722525f4'
+settings:
+  id: 'block_content:b94cdde2-031d-4e40-b3ad-1ac0722525f4'
+  label: 'Footer Copyright'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,34 @@
+uuid: 1563d632-b02b-4ffe-9a5e-3da5fc872399
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.large_rectangle
+    - field.field.media.image.field_caption
+    - field.field.media.image.field_media_image
+    - media_entity.bundle.image
+    - responsive_image.styles.large_rectangle
+  module:
+    - responsive_image
+_core:
+  default_config_hash: WdRggU8wXehHSyxgGU5xB_S5K9rwKp417ohg7McB-44
+id: media.image.large_rectangle
+targetEntityType: media
+bundle: image
+mode: large_rectangle
+content:
+  field_media_image:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: large_rectangle
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+hidden:
+  created: true
+  field_caption: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,10 @@
+uuid: ff2700a1-c227-46da-ae53-8a53706fa56e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.blog_author
+label: 'Blog Author'
+targetEntityType: node
+cache: true

@@ -1,0 +1,9 @@
+uuid: 731da0fc-6c96-4bbb-b5f2-0ccaa8ed2a45
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: xFmIZZmwU5TVs2ecXZnsKd1nTZ3Ms54cMHP6tYRnw90
+id: admin_view_placer
+label: 'Admin View Placer'
+behavior_plugins: {  }

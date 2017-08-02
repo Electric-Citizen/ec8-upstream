@@ -1,0 +1,7 @@
+uuid: 0f57891a-02bb-4eb6-a3d4-ef11ccec3e56
+langcode: en
+status: true
+dependencies: {  }
+id: pullquote
+label: Pullquote
+behavior_plugins: {  }

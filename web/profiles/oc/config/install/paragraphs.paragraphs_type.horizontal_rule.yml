@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: DFjNPp66gs8S2agQGgjreyMBMpTEKqOCCKgMm-dvdfs
+id: horizontal_rule
+label: 'Horizontal Rule'
+behavior_plugins: {  }

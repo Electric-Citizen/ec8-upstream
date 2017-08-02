@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 2PpqkmOLR5jSI-DBXGgFm4tol_PynjRZ9BffejUwiHc
+id: buttons
+label: Buttons
+behavior_plugins: {  }

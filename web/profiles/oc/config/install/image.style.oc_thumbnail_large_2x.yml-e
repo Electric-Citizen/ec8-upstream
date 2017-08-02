@@ -1,0 +1,16 @@
+uuid: 568e9ddc-ac74-4f99-b21e-9482af6dd284
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: oc_thumbnail_large_2x
+label: 'OC Thumbnail Large 2x'
+effects:
+  eee0ee2f-d79b-450d-ba74-8eb9907a8421:
+    uuid: eee0ee2f-d79b-450d-ba74-8eb9907a8421
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 500
+      height: 400

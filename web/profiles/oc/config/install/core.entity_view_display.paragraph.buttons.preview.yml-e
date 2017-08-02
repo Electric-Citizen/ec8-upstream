@@ -1,0 +1,40 @@
+uuid: fa077083-531d-4514-a272-36952cb737fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.buttons.field_admin_description
+    - field.field.paragraph.buttons.field_button_color
+    - field.field.paragraph.buttons.field_layout
+    - field.field.paragraph.buttons.field_oc_link_multi
+    - field.field.paragraph.buttons.field_widget_title
+    - paragraphs.paragraphs_type.buttons
+  module:
+    - options
+_core:
+  default_config_hash: '-KMYZ0NB8FywRl-htA7TgTZFv8Qb4_0ZsNTOH-q8kXc'
+id: paragraph.buttons.preview
+targetEntityType: paragraph
+bundle: buttons
+mode: preview
+content:
+  field_admin_description:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_layout:
+    weight: 1
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  field_button_color: true
+  field_oc_link_multi: true
+  field_widget_title: true
