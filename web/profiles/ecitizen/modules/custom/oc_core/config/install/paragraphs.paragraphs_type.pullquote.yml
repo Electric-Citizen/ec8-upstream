@@ -1,6 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: pullquote
-label: Pullquote
-behavior_plugins: {  }

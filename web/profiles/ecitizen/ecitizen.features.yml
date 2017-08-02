@@ -1,6 +1,0 @@
-bundle: oc
-excluded:
-  - system.menu.footer
-  - system.menu.main
-  - views.view.glossary
-required: true
