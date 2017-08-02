@@ -4,86 +4,112 @@ description: 'Pre-configured install for Electric Citizen site builds.'
 version: 1.0
 core: 8.x
 dependencies:
-  - node
-  - history
+  - addanother
+  - addtoany
+  - admin_toolbar
+  - auto_entitylabel
+  - automated_cron
   - block
+  - block_content
+  - book
   - breakpoint
   - ckeditor
   - color
-  - config
   - comment
-  - contextual
+  - components
+  - config
+  - config_update
+  - config_update_ui
   - contact
-  - menu_link_content
+  - contact_storage
+  - contextual
+  - crop
+  - ctools
+  - ctools_block
   - datetime
-  - block_content
-  - quickedit
-  - editor
-  - help
-  - image
-  - menu_ui
-  - options
-  - path
-  - page_cache
-  - dynamic_page_cache
-  - taxonomy
   - dblog
-  - search
-  - shortcut
-  - toolbar
+  - devel
+  - disqus
+  - dynamic_page_cache
+  - easy_breadcrumb
+  - editor
+  - embed
+  - entity
+  - entity_browser
+  - entity_browser_entity_form
+  - entity_embed
+  - entity_reference_revisions
+  - field
+  - field_group
   - field_ui
   - file
-  - rdf
-  - views
-  - views_ui
-  - tour
-  - automated_cron
-  - entity_embed
-  - entity_browser
-  - inline_entity_form
-  - video_embed_media
-  - video_embed_field
-  - media_entity
-  - media_entity_image
-  - media_entity_document
-  - views_infinite_scroll
-  - ctools
-  - addanother
-  - focal_point
-  - paragraphs
-  - token
-  - contact_storage
-  - geolocation
-  - twig_tweak
-  - panelizer
-  - pathauto
-  - superfish
-  - link_attributes
-  - auto_entitylabel
-  - webform
-  - honeypot
+  - filter
   - flexslider
-  - linkit
-  - metatag
+  - flexslider_views
   - flippy
-  - menu_block
-  - page_manager
-  - pathologic
-  - redirect
-  - admin_toolbar
-  - field_group
+  - focal_point
+  - geolocation
+  - help
+  - history
+  - honeypot
+  - image
   - image_style_quality
-  - easy_breadcrumb
+  - inline_entity_form
+  - kint
+  - layout_discovery
+  - libraries
+  - link
+  - link_attributes
+  - linkit
+  - media_entity
+  - media_entity_document
+  - media_entity_image
+  - menu_block
+  - menu_ui
+  - metatag
+  - node
+  - options
+  - page_cache
+  - page_manager
+  - page_manager_ui
+  - panelizer
+  - panels
+  - panels_ipe
+  - paragraphs_type_permissions
+  - path
+  - pathologic
+  - quickedit
+  - rdf
+  - redirect
+  - responsive_image
+  - search
   - search404
   - search_api
-  - components
-  - addtoany
-  - coffee
+  - search_api_db
+  - shortcut
+  - superfish
+  - system
+  - taxonomy
+  - telephone
+  - text
+  - token
+  - toolbar
+  - tour
+  - twig_tweak
+  - user
+  - video_embed_field
+  - video_embed_media
+  - views_infinite_scroll
+  - views_ui
+  - webform
+  - webform_ui
+  - xmlsitemap_custom
+  - xmlsitemap_engines
+  - menu_link_content
+  - pathauto
   - xmlsitemap
-  - seo_checklist
-  - hreflang
-  - amp
-
+  - views
+  - paragraphs
 themes:
   - oc_patterns
   - seven
