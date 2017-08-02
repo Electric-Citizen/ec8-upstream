@@ -1,6 +1,0 @@
-<?php
-
-/**
- * @file
- * The search404 module file, does all the searching when a 404 occurs.
- */

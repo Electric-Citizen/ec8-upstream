@@ -1,0 +1,19 @@
+name: News
+description: 'Provides News content type and related configuration. Add news nodes.'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - menu_ui
+  - metatag
+  - node
+  - options
+  - panelizer
+  - paragraphs
+  - pathauto
+  - taxonomy
+  - text
+  - user
+  - views
+version: 8.x-1.0
+package: 'Open Citizen'
