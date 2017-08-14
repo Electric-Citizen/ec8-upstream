@@ -7,8 +7,6 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-_core:
-  default_config_hash: 4r-C2vAJgWNclvPibVJVezB4W7sGDTse1KlQgOjt33c
 name: Event
 type: event
 description: 'Create event nodes.'

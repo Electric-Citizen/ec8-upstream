@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: NzoU8g2Q_HdPlk1Mm7KilV1FwnWeMmNt6dRjcCBJXj4
 name: flexslider_full
 label: 'Flexslider Full'
 effects:

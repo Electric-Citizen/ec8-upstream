@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: 8waJxDtLXHY641GGh-VY3UQm2dyJtQxUYblUgJ84wXI
 id: events
 label: Events
 type: 'canonical_entities:node'

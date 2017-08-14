@@ -7,8 +7,6 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-_core:
-  default_config_hash: xKsY75fseUtqFo7T5cg1v3XxksirLH2IaVvJw_ev84M
 name: Blog
 type: blog
 description: 'Add a blog post.'

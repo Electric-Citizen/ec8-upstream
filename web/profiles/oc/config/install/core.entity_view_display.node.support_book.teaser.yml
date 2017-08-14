@@ -10,8 +10,6 @@ dependencies:
   module:
     - text
     - user
-_core:
-  default_config_hash: XPhQkf6tLV0UtOs-HIoKDgmIXL5tax27fQg0RDPHQEA
 id: node.support_book.teaser
 targetEntityType: node
 bundle: support_book

@@ -5,8 +5,6 @@ dependencies:
     - field.storage.node.field_banner
     - media_entity.bundle.image
     - node.type.event
-_core:
-  default_config_hash: WNu3eNycwdkGq0iZpfngsiSuULSwG_-_IVwmpWeHDZk
 id: node.event.field_banner
 field_name: field_banner
 entity_type: node

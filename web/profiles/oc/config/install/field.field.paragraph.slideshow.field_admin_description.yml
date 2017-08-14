@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_admin_description
     - paragraphs.paragraphs_type.slideshow
-_core:
-  default_config_hash: N3Fi-_ZYN1lDk5YA8fivvC2-E8dCLRi4mzjQJj4ayoQ
 id: paragraph.slideshow.field_admin_description
 field_name: field_admin_description
 entity_type: paragraph

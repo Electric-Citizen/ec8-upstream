@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - focal_point
-_core:
-  default_config_hash: dXJYbPsIaSFILOKvqDasCncVhR-6bMRuS679oVq1xds
 name: oc_thumbnail
 label: 'OC Thumbnail'
 effects:

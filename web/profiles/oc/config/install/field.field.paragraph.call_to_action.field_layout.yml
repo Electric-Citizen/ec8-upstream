@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.call_to_action
   module:
     - options
-_core:
-  default_config_hash: DnETFGOrVDtt7nUDtUR_MhnwKPQVboBP6fN6wMTiWI4
 id: paragraph.call_to_action.field_layout
 field_name: field_layout
 entity_type: paragraph

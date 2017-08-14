@@ -14,8 +14,6 @@ dependencies:
     - link
     - options
     - text
-_core:
-  default_config_hash: silkl3m-ubTDcFfUgNhmi6etoqGOsDTHon8o5gxzyyI
 id: paragraph.call_to_action.default
 targetEntityType: paragraph
 bundle: call_to_action

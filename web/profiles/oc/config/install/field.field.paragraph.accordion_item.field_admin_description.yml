@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_admin_description
     - paragraphs.paragraphs_type.accordion_item
-_core:
-  default_config_hash: xD8XbdfyduNst8ABm-POVAk_A6s4Rd6Il94w09G07jY
 id: paragraph.accordion_item.field_admin_description
 field_name: field_admin_description
 entity_type: paragraph

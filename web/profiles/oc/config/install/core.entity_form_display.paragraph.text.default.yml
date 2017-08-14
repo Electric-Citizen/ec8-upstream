@@ -15,8 +15,6 @@ dependencies:
     - entity_browser_entity_form
     - inline_entity_form
     - text
-_core:
-  default_config_hash: VXbQrtljldulX-cdSVGf2-BMSKj5C8OScLS08wy23P8
 id: paragraph.text.default
 targetEntityType: paragraph
 bundle: text

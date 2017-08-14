@@ -4,8 +4,6 @@ dependencies:
   module:
     - entity_reference_revisions
     - paragraphs
-_core:
-  default_config_hash: MT3kXdZbrpoErSwJ0Szd3PhwUlezEfQLDFbBJ0YkZNE
 id: paragraph.field_accordion_item
 field_name: field_accordion_item
 entity_type: paragraph

@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - search_api
-_core:
-  default_config_hash: q-BlDKHfpkMa8n0wdVGgqU2xNk4DFVdbqP0-VrWYcOo
 id: search-api-index
 label: 'Information about an index'
 module: search_api

@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - focal_point
-_core:
-  default_config_hash: FrBnLcGsRstAjMuzj6Q9wCasKKd3aPAy4PhcjWf-xlc
 name: 350x350
 label: 350x350
 effects:

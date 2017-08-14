@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.call_to_action
   module:
     - link
-_core:
-  default_config_hash: D1KHxn4RqfHdSJErnXG7n7KQAC8XNNAlXcBRhwqTTi0
 id: paragraph.call_to_action.field_oc_link
 field_name: field_oc_link
 entity_type: paragraph

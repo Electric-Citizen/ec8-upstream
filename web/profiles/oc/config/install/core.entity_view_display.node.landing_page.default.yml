@@ -150,8 +150,6 @@ third_party_settings:
         builder: ipe
         pattern: panelizer
         static_context: {  }
-_core:
-  default_config_hash: 1h2sEQ222bYyFk67-1xEhAMXEdbzEI367eTDmO2XiM8
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page

@@ -6,8 +6,6 @@ dependencies:
     - media_entity.bundle.video
   module:
     - video_embed_field
-_core:
-  default_config_hash: j7_nTmBif5u_37HX_AJ_U8xmF7ie2Fw02JgKFCrGS2w
 id: media.video.default
 targetEntityType: media
 bundle: video

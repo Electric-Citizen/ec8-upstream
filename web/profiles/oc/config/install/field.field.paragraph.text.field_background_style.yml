@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.text
   module:
     - options
-_core:
-  default_config_hash: qckMws_sw8JmSkVeIf5mOVsd5QMyML6_6GerVVBApos
 id: paragraph.text.field_background_style
 field_name: field_background_style
 entity_type: paragraph

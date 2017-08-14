@@ -10,8 +10,6 @@ dependencies:
     - paragraphs
     - path
     - text
-_core:
-  default_config_hash: zMriXaHU0C-Ha0dCwYsn3WJlse80UEu3GKrXfM2-0W0
 id: node.support_book.default
 targetEntityType: node
 bundle: support_book

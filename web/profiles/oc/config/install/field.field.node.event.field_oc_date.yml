@@ -6,8 +6,6 @@ dependencies:
     - node.type.event
   module:
     - datetime
-_core:
-  default_config_hash: iWIJEDM0rmANZe6ynYLmRY2OdDueHfBAhAT7a2nNiVs
 id: node.event.field_oc_date
 field_name: field_oc_date
 entity_type: node

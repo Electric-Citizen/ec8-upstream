@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - focal_point
-_core:
-  default_config_hash: A2zvO8QnZlRpu5qPUURh25uIrXtmtYMx8eONXAgIgNo
 name: banner_big_desk
 label: 'Banner Big Desk'
 effects:

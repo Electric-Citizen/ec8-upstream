@@ -14,8 +14,6 @@ dependencies:
     - paragraphs.paragraphs_type.links_files
   module:
     - options
-_core:
-  default_config_hash: y1cVuIVlHxvmT6nGhqXFNRtafpycpe21QjC4A1M5wYc
 id: paragraph.links_files.preview
 targetEntityType: paragraph
 bundle: links_files

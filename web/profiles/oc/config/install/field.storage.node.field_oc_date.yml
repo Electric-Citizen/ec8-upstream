@@ -4,8 +4,6 @@ dependencies:
   module:
     - datetime
     - node
-_core:
-  default_config_hash: kv0sBLDwK0l_lSDbNxwNbV0pBBRxDmPD2bYgY0rWv_Q
 id: node.field_oc_date
 field_name: field_oc_date
 entity_type: node

@@ -4,8 +4,6 @@ dependencies:
   enforced:
     module:
       - webform
-_core:
-  default_config_hash: 5VMrRfGXjK2HbORvpA_8j4-uBsAK_VSK6TS-NrGOBEg
 id: months
 label: Months
 category: 'Date and time'

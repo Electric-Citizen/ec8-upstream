@@ -7,8 +7,6 @@ dependencies:
 third_party_settings:
   crop:
     image_field: field_media_file
-_core:
-  default_config_hash: 0EyMcZZRUQbX_MNjMFXt0zRIqf52DJKGc6Gipjn714Y
 id: document
 label: Document
 description: ''

@@ -102,8 +102,6 @@ third_party_settings:
         builder: ipe
         pattern: panelizer
         static_context: {  }
-_core:
-  default_config_hash: zs7lQwC-x3RO8F51uxAs-b0WMoO79Uls3sPCfC8Ggks
 id: node.support_book.default
 targetEntityType: node
 bundle: support_book

@@ -16,8 +16,6 @@ dependencies:
     - paragraphs
     - path
     - text
-_core:
-  default_config_hash: klOg3BbD8-CQOD9JM7a2gjmw2kpPJRBF02Yw5AwJTIY
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page

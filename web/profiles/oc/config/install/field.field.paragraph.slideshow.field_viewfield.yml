@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.slideshow
   module:
     - options
-_core:
-  default_config_hash: AE-DIT8dmMDtdivdGPy24Ru2iXMu3qh081d1VQ5ypHg
 id: paragraph.slideshow.field_viewfield
 field_name: field_viewfield
 entity_type: paragraph

@@ -96,5 +96,3 @@ libraries:
   cdn: false
 langcode: en
 third_party_settings: {  }
-_core:
-  default_config_hash: S0K-_1rpy65IpdsOvuO0JAUKgYxzqOJLYnKn8jkiQFs

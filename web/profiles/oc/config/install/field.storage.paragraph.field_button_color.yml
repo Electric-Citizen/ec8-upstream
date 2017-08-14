@@ -4,8 +4,6 @@ dependencies:
   module:
     - options
     - paragraphs
-_core:
-  default_config_hash: wFO37IvoFsdqLCrLlsh3Iu0kzil-29qmRVZaaiZ5A9Y
 id: paragraph.field_button_color
 field_name: field_button_color
 entity_type: paragraph

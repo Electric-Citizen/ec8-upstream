@@ -14,8 +14,6 @@ dependencies:
   module:
     - text
     - user
-_core:
-  default_config_hash: UHFO8WAXUKWvu8pOeXy9qRnKj4DEKheZgc1yUkL2zdA
 id: node.event.teaser
 targetEntityType: node
 bundle: event

@@ -58,6 +58,17 @@ lightbox:
     - core/drupal
     - core/drupalSettings
     - core/jquery.once
+masonry:
+  version: 3.0
+  js:
+    components/_patterns/03-organisms/02-widgets/mosaic-gallery/masonry.pkgd.js: {}
+    components/_patterns/03-organisms/02-widgets/mosaic-gallery/mosaic-gallery.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
 media-js:
   version: 1.0
   js:

@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: HF6ctDHGX3XijCev6VIVZ66czT10rxSCkfxiUtaLdGU
 name: large_800
 label: 'Large (800)'
 effects:

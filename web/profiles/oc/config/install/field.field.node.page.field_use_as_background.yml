@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.node.field_use_as_background
     - node.type.page
-_core:
-  default_config_hash: 34IJZEBC6_PZEOWNDow3ZCNAodShRsBFB4y912KVEDY
 id: node.page.field_use_as_background
 field_name: field_use_as_background
 entity_type: node

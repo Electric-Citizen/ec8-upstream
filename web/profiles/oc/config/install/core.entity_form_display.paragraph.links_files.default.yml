@@ -17,8 +17,6 @@ dependencies:
     - inline_entity_form
     - link
     - text
-_core:
-  default_config_hash: tVdOameIjLNL9HPJqCLh5kFnA0Chw0ZQKQgHHk5SR4w
 id: paragraph.links_files.default
 targetEntityType: paragraph
 bundle: links_files

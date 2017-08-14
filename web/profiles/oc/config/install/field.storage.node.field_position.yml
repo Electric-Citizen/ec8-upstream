@@ -4,8 +4,6 @@ dependencies:
   module:
     - node
     - taxonomy
-_core:
-  default_config_hash: 3PjkXcqybKqCp7MiB0gcgb6EdDIukcoQ8vmxaSKC99g
 id: node.field_position
 field_name: field_position
 entity_type: node

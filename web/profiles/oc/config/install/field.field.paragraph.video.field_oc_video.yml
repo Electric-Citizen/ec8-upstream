@@ -5,8 +5,6 @@ dependencies:
     - field.storage.paragraph.field_oc_video
     - media_entity.bundle.video
     - paragraphs.paragraphs_type.video
-_core:
-  default_config_hash: G3SEn6Xilf0CKce9aNHXeeKQVi8ej9O8g3gmtXbkEyA
 id: paragraph.video.field_oc_video
 field_name: field_oc_video
 entity_type: paragraph

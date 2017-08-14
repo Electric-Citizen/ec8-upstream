@@ -5,8 +5,6 @@ dependencies:
     - page_manager.page.homepage
   module:
     - panels
-_core:
-  default_config_hash: EXFJezSoEi1iNR4CiapnL_hsHGHeJAPG-C265eCv5cc
 id: homepage-panels_variant-0
 label: Panels
 variant: panels_variant

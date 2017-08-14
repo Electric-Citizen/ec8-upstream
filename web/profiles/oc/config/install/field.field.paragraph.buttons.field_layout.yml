@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.buttons
   module:
     - options
-_core:
-  default_config_hash: rPQOWTDjcOd0fJk5serVcb36SFPiM1J4geVQFHOSSVA
 id: paragraph.buttons.field_layout
 field_name: field_layout
 entity_type: paragraph

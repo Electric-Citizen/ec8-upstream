@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.node.field_email
     - node.type.profiles
-_core:
-  default_config_hash: 3Q08j0Fz1XpKn_GYaMQmhokrdg-4LL714p9g-gYr3Fo
 id: node.profiles.field_email
 field_name: field_email
 entity_type: node

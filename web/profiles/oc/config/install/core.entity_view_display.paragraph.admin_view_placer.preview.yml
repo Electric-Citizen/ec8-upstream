@@ -12,8 +12,6 @@ dependencies:
     - paragraphs.paragraphs_type.admin_view_placer
   module:
     - options
-_core:
-  default_config_hash: 2uHxN5k9NrwM4Rbha_M48lm6A8RsljvLBrqw3O0wdB8
 id: paragraph.admin_view_placer.preview
 targetEntityType: paragraph
 bundle: admin_view_placer

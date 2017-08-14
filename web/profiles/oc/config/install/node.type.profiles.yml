@@ -7,8 +7,6 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-_core:
-  default_config_hash: mWwihqswUrSDfOjloyrpvFefIFKeR7Ubak6YFwmev4E
 name: Profiles
 type: profiles
 description: 'Add profile nodes.'

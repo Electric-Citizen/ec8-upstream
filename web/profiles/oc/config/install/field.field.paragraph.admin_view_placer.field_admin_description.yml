@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_admin_description
     - paragraphs.paragraphs_type.admin_view_placer
-_core:
-  default_config_hash: bEnReJUe1NVex-gX_EIM_ujx-ePGkpd2Kv57W8Q1RR4
 id: paragraph.admin_view_placer.field_admin_description
 field_name: field_admin_description
 entity_type: paragraph

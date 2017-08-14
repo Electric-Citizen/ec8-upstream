@@ -2,12 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - views.view.media
+    - views.view.oc_media
   module:
     - entity_browser_entity_form
     - views
-_core:
-  default_config_hash: nJpFWq7xocfa6DGBFd0ytEkm9YjxVpmsbqU6p085rQg
 name: file_browser
 label: 'File Browser'
 display: modal
@@ -23,7 +21,7 @@ widget_selector_configuration: {  }
 widgets:
   b08e2398-e926-4fba-b6c0-f1059c7b49b4:
     settings:
-      view: media
+      view: oc_media
       view_display: file_browser
       submit_text: Place
       auto_select: false

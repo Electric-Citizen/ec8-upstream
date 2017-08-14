@@ -5,8 +5,6 @@ dependencies:
     - field.storage.node.field_position
     - node.type.profiles
     - taxonomy.vocabulary.position
-_core:
-  default_config_hash: rAL3QeAr-tUI5Ebc4mW_zLJgUzsflbN-JOu7-aqGH0A
 id: node.profiles.field_position
 field_name: field_position
 entity_type: node

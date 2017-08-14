@@ -18,8 +18,6 @@ dependencies:
     - path
     - telephone
     - text
-_core:
-  default_config_hash: mjXdzXPVx5RHhYI0zq56iAJ43C22u7n11Rz9WdSBq_U
 id: node.profiles.default
 targetEntityType: node
 bundle: profiles

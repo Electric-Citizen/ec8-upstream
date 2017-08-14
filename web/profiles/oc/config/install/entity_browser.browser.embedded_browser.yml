@@ -2,12 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - views.view.media
+    - views.view.oc_media
   module:
     - entity_browser_entity_form
     - views
-_core:
-  default_config_hash: EPH3KQIeTBzMYJ7UyCaiQmM9Sj4ghVz5hLgNm668SsU
 name: embedded_browser
 label: 'Embedded Browser'
 display: iframe
@@ -23,7 +21,7 @@ widget_selector_configuration: {  }
 widgets:
   c8d6a021-b87e-4250-91f1-b64982adedf5:
     settings:
-      view: media
+      view: oc_media
       view_display: embed_browser
       submit_text: Place
       auto_select: false

@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.text
   module:
     - text
-_core:
-  default_config_hash: HnZCTiue4s_z7l0WiN-QHq43Dk4iRcQxX227Y4g-gt4
 id: paragraph.text.field_oc_long_text
 field_name: field_oc_long_text
 entity_type: paragraph

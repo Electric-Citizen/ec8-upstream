@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - honeypot
-_core:
-  default_config_hash: eon34YiqAcOESuvejRT1GpvMkFRsfShjo91U3pvEsGA
 id: honeypot
 label: Honeypot
 module: honeypot

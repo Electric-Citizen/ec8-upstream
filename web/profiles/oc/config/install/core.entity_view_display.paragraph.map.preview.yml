@@ -12,8 +12,6 @@ dependencies:
     - paragraphs.paragraphs_type.map
   module:
     - options
-_core:
-  default_config_hash: iAEMb_ESt0tq9jK_gYS45_UVvnMZ_VM_5TvJxY5zuGc
 id: paragraph.map.preview
 targetEntityType: paragraph
 bundle: map

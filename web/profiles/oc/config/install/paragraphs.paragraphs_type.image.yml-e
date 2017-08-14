@@ -1,9 +1,0 @@
-uuid: a7045e9b-294b-4af4-8b3b-17a10584fd76
-langcode: en
-status: true
-dependencies: {  }
-_core:
-  default_config_hash: MQuBGUXWIA7YFtgbStyyzu7e_EvJv3xkCEIWHvKBKSQ
-id: image
-label: Image
-behavior_plugins: {  }

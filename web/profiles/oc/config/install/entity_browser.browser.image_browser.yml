@@ -2,12 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - views.view.media
+    - views.view.oc_media
   module:
     - entity_browser_entity_form
     - views
-_core:
-  default_config_hash: ZrcitCAQcmFhRQxS7FnOzofiNdqunaZpds5AgxuVhII
 name: image_browser
 label: 'Image Browser'
 display: modal
@@ -17,13 +15,15 @@ display_configuration:
   link_text: 'Select Image'
   auto_open: true
 selection_display: no_display
-selection_display_configuration: {  }
+selection_display_configuration:
+  view: null
+  view_display: null
 widget_selector: tabs
 widget_selector_configuration: {  }
 widgets:
   afdf7119-d896-4771-beae-64a5d472c2ed:
     settings:
-      view: media
+      view: oc_media
       view_display: image_browser
       submit_text: Place
       auto_select: false

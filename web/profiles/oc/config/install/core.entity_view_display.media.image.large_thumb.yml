@@ -9,8 +9,6 @@ dependencies:
     - responsive_image.styles.oc_large_thumb
   module:
     - responsive_image
-_core:
-  default_config_hash: 7IzAXZmzwyiWjlTH3AUu2IMmfXaogUX_IsCtQcLS1Kg
 id: media.image.large_thumb
 targetEntityType: media
 bundle: image

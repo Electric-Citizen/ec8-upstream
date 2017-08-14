@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - media_entity
-_core:
-  default_config_hash: AF5AZyRxyWv2BLAiQAQYNQHERfZ5bH9SQI4sPw5Fo6g
 id: media.large
 label: Large
 targetEntityType: media

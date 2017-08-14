@@ -16,8 +16,6 @@ dependencies:
     - inline_entity_form
     - link
     - text
-_core:
-  default_config_hash: ATRlPgb3nzopkrG8kJBrJNmiEX1AA3zu8_mYaCf8bLY
 id: paragraph.call_to_action.default
 targetEntityType: paragraph
 bundle: call_to_action

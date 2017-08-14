@@ -9,8 +9,6 @@ dependencies:
     - responsive_image.styles.medium_500
   module:
     - responsive_image
-_core:
-  default_config_hash: DqxyRMsyx-wwv126df3pXQjLm2lku0N3uEdAeMfJxUk
 id: media.image.medium
 targetEntityType: media
 bundle: image

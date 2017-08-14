@@ -13,8 +13,6 @@ dependencies:
     - entity_browser_entity_form
     - inline_entity_form
     - text
-_core:
-  default_config_hash: xN9i_FuXBk3qgzPecKvIIof4IRZlY6-hk4ISlYnM-XI
 id: paragraph.video.default
 targetEntityType: paragraph
 bundle: video

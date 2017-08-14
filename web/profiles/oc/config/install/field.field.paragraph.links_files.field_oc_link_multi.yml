@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.links_files
   module:
     - link
-_core:
-  default_config_hash: o5UFgPI1Tr0Q76QYsDzP5kydDJ3pMkPgBXynVAc2wS8
 id: paragraph.links_files.field_oc_link_multi
 field_name: field_oc_link_multi
 entity_type: paragraph

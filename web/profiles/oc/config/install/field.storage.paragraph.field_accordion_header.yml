@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - paragraphs
-_core:
-  default_config_hash: b30uTb0c6guoK5btksTNJu4qUvCIlcbcdC6u3TewLM4
 id: paragraph.field_accordion_header
 field_name: field_accordion_header
 entity_type: paragraph

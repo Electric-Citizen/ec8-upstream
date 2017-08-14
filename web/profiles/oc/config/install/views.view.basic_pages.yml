@@ -6,8 +6,6 @@ dependencies:
   module:
     - node
     - user
-_core:
-  default_config_hash: 8_utaYIqyCfpWufxMSLpZS6Wb3IPvfK_l0TLluoQvjU
 id: basic_pages
 label: 'Basic Pages'
 module: views

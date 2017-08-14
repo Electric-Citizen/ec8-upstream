@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: GZ243j2BufTOd0UkG13bZnurCALJDo-7hSsJA6qZvSw
 id: node_search
 label: Content
 path: node

@@ -6,8 +6,11 @@ dependencies:
   module:
     - entity_embed
     - media_entity
-_core:
-  default_config_hash: 8M1SAQMAOk1a2HvOZvEN9cTwLe7X2NaImQOLkNHymvo
+  config:
+    - core.entity_view_mode.media.full
+    - core.entity_view_mode.media.large
+    - core.entity_view_mode.media.medium
+    - core.entity_view_mode.media.small
 label: Media
 id: media
 type_id: entity
@@ -22,4 +25,4 @@ type_settings:
   entity_browser: embedded_browser
   entity_browser_settings:
     display_review: false
-icon_uuid: 5f1a7629-2f9c-4257-a0b1-6027d71e574c
+icon_uuid: null

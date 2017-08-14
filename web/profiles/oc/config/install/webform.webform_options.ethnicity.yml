@@ -4,8 +4,6 @@ dependencies:
   enforced:
     module:
       - webform
-_core:
-  default_config_hash: jspD2HmmMbJ5IFbtHN_y03rObZ_AVF28LweObdwvCQE
 id: ethnicity
 label: Ethnicity
 category: Demographic

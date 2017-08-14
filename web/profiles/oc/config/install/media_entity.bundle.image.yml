@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - media_entity_image
-_core:
-  default_config_hash: L_AjN7AIbs4CLrtnPlkUyx_1gDbfkgqy4TeqETVknPA
 id: image
 label: Image
 description: ''

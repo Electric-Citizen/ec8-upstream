@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.image
   module:
     - link
-_core:
-  default_config_hash: YFnS_dVT1NGyFphf49A91QoeXm9NLlEerRrqdypTGvQ
 id: paragraph.image.field_oc_link
 field_name: field_oc_link
 entity_type: paragraph

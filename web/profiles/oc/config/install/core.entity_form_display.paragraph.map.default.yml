@@ -12,8 +12,6 @@ dependencies:
   module:
     - geolocation
     - text
-_core:
-  default_config_hash: 86r47PwxCi-x6I40qlX_nWIVj14tZHjH8sBADDi2p2Y
 id: paragraph.map.default
 targetEntityType: paragraph
 bundle: map

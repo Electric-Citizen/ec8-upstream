@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.lightbox_gallery
   module:
     - options
-_core:
-  default_config_hash: sSC5FJ9NqCZ4szWwMuRYjM1Jpm0sP6dnNN2-6C1Ce7M
 id: paragraph.lightbox_gallery.field_layout
 field_name: field_layout
 entity_type: paragraph

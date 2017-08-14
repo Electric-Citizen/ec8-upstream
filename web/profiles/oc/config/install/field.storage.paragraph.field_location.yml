@@ -4,8 +4,6 @@ dependencies:
   module:
     - geolocation
     - paragraphs
-_core:
-  default_config_hash: DqjEc6qooYbjg5TXgFfV9RniXhUsVz6yl89D18rDLPA
 id: paragraph.field_location
 field_name: field_location
 entity_type: paragraph

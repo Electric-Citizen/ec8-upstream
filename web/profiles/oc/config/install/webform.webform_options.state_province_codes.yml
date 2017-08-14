@@ -4,8 +4,6 @@ dependencies:
   enforced:
     module:
       - webform
-_core:
-  default_config_hash: lKr0gbo0fi0V4c9PDTiGIFj0RYGHO8DbJPasEXdrpeg
 id: state_province_codes
 label: 'State/Province codes'
 category: Geographic

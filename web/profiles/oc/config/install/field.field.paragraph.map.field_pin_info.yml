@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.map
   module:
     - text
-_core:
-  default_config_hash: plznetqF61appmiZNnwff6KjnXLtVs7sOGVO0bg044Q
 id: paragraph.map.field_pin_info
 field_name: field_pin_info
 entity_type: paragraph

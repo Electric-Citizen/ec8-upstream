@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.video
   module:
     - options
-_core:
-  default_config_hash: QngWMTkfDPhdMKk7U9SEE5QZDsgHtXHgIkoxwQp9zGk
 id: paragraph.video.field_layout
 field_name: field_layout
 entity_type: paragraph

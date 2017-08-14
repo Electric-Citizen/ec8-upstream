@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.image
   module:
     - options
-_core:
-  default_config_hash: 8DPVbh_uMvdCAiJ-24Iwe1B8Br6X8fbbSG70X2LLBL8
 id: paragraph.image.field_image_style
 field_name: field_image_style
 entity_type: paragraph

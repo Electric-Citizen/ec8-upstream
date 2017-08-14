@@ -5,8 +5,6 @@ dependencies:
     - field.storage.paragraph.field_oc_image_multi
     - media_entity.bundle.image
     - paragraphs.paragraphs_type.lightbox_gallery
-_core:
-  default_config_hash: 7N8zzoIY7_ySdXkDit-7rA9FZHLy1_BAUYV_zhWilbM
 id: paragraph.lightbox_gallery.field_oc_image_multi
 field_name: field_oc_image_multi
 entity_type: paragraph

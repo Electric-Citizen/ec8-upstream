@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.buttons
   module:
     - link
-_core:
-  default_config_hash: N6SiXMuDAuPxB0iNWMCeXGEG5eqymvKUOGVnOCgaZdQ
 id: paragraph.buttons.field_oc_link_multi
 field_name: field_oc_link_multi
 entity_type: paragraph

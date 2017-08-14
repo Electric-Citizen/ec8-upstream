@@ -1,9 +1,0 @@
-uuid: fb9a3f1c-bdf1-487d-aad7-312134d735db
-langcode: en
-status: true
-dependencies: {  }
-_core:
-  default_config_hash: QwfMOirJ441xsk8khq6haDomEqeAZSxtRMSvYiWMjvs
-id: links_files
-label: 'Links & Files'
-behavior_plugins: {  }

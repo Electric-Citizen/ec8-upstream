@@ -1,9 +1,0 @@
-uuid: 3726f5d2-f160-4da1-a473-c35da4e60fb8
-langcode: en
-status: true
-dependencies: {  }
-_core:
-  default_config_hash: DFjNPp66gs8S2agQGgjreyMBMpTEKqOCCKgMm-dvdfs
-id: horizontal_rule
-label: 'Horizontal Rule'
-behavior_plugins: {  }

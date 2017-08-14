@@ -9,8 +9,6 @@ dependencies:
     - responsive_image.styles.banner
   module:
     - responsive_image
-_core:
-  default_config_hash: 4rXjhEiChnz2Ab_nBy-Snhbf6kvhSo5tE9i8JiPj-Xg
 id: media.image.banner
 targetEntityType: media
 bundle: image

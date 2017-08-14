@@ -9,8 +9,6 @@ dependencies:
     - media_entity.bundle.image
   module:
     - image
-_core:
-  default_config_hash: la_RFeX_oklCpq_mKx5bmIR7Hoc9ikbgmD7kkOZTOjQ
 id: media.image.full
 targetEntityType: media
 bundle: image

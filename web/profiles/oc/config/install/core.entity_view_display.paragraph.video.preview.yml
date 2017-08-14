@@ -11,8 +11,6 @@ dependencies:
     - paragraphs.paragraphs_type.video
   module:
     - options
-_core:
-  default_config_hash: gv5nl0z910Ka4gMTXmBVmf72Qr6mIlUHvJRnEJQdwrg
 id: paragraph.video.preview
 targetEntityType: paragraph
 bundle: video

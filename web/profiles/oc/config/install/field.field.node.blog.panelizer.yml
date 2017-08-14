@@ -6,8 +6,6 @@ dependencies:
     - node.type.blog
   module:
     - panelizer
-_core:
-  default_config_hash: YDzBKtr3S2QOOpYUVzsaF4Go_r51SPQ7JPJeVDwfEo0
 id: node.blog.panelizer
 field_name: panelizer
 entity_type: node

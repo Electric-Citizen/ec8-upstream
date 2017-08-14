@@ -11,8 +11,6 @@ dependencies:
     - paragraphs.paragraphs_type.slideshow
   module:
     - options
-_core:
-  default_config_hash: 4zRilRscxosLMPSZTDF_l6frNcBSxHyaCJ28bDheSA0
 id: paragraph.slideshow.preview
 targetEntityType: paragraph
 bundle: slideshow

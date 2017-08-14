@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - focal_point
-_core:
-  default_config_hash: KNNoyfiiJo06M2n_1FBWjXqdJEvWpmsvruZvh9m_Wtk
 name: banner_mobile_2x
 label: 'Banner Mobile 2x'
 effects:

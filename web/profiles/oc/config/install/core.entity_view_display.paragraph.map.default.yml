@@ -13,8 +13,6 @@ dependencies:
     - geolocation
     - options
     - text
-_core:
-  default_config_hash: ctfvzU-07yNcKCAfhnO43O85pUi93ppTju-fevJGgIQ
 id: paragraph.map.default
 targetEntityType: paragraph
 bundle: map

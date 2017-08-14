@@ -11,8 +11,6 @@ dependencies:
     - paragraphs.paragraphs_type.buttons
   module:
     - options
-_core:
-  default_config_hash: '-KMYZ0NB8FywRl-htA7TgTZFv8Qb4_0ZsNTOH-q8kXc'
 id: paragraph.buttons.preview
 targetEntityType: paragraph
 bundle: buttons

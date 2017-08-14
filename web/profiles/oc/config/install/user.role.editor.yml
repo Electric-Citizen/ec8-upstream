@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: 4RrCQsiN0HL_ksClDeg58iCDpmosCy9tjhsmFUJKOAA
 id: editor
 label: Editor
 weight: 4

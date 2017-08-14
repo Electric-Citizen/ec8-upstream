@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_view_machine_name
     - paragraphs.paragraphs_type.admin_view_placer
-_core:
-  default_config_hash: DrobR_ZpwiGu7Gu4sNvmPGt9_lpIJJ-WgvDmSw53PR8
 id: paragraph.admin_view_placer.field_view_machine_name
 field_name: field_view_machine_name
 entity_type: paragraph

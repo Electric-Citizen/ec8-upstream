@@ -4,8 +4,6 @@ dependencies:
   module:
     - file
     - media_entity
-_core:
-  default_config_hash: _D8FDsw5lMKZ5EJ2wVRuJLb34QUlx1gZCqg0XSZ2zVw
 id: media.field_media_file
 field_name: field_media_file
 entity_type: media

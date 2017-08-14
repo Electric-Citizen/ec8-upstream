@@ -7,8 +7,6 @@ dependencies:
     - paragraphs.paragraphs_type.horizontal_rule
   module:
     - options
-_core:
-  default_config_hash: aOvbYt5Sk--To5552OKH13GVbMx7_MtYlkEDWvLFdMI
 id: paragraph.horizontal_rule.preview
 targetEntityType: paragraph
 bundle: horizontal_rule

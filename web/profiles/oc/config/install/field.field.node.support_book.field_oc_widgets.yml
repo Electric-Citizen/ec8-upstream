@@ -16,8 +16,6 @@ dependencies:
     - paragraphs.paragraphs_type.video
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: 2EHTuCxNbixeRs-qtXu-xO9iuvNBtA3TwiNGHRFCbwk
 id: node.support_book.field_oc_widgets
 field_name: field_oc_widgets
 entity_type: node

@@ -146,8 +146,6 @@ third_party_settings:
         builder: ipe
         pattern: panelizer
         static_context: {  }
-_core:
-  default_config_hash: VUfivFwttDdPCXO9lgA5QQ-R8t7ckWZlZOh21q6jMjk
 id: node.profiles.default
 targetEntityType: node
 bundle: profiles

@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_admin_description
     - paragraphs.paragraphs_type.video
-_core:
-  default_config_hash: i0hhwO7SRs2Km-MEoYtR32NWi38Git8hgZXNRrR_fHo
 id: paragraph.video.field_admin_description
 field_name: field_admin_description
 entity_type: paragraph

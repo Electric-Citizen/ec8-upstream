@@ -6,8 +6,6 @@ dependencies:
     - node.type.support_book
   module:
     - text
-_core:
-  default_config_hash: yMbjwXbA3349GOP0QcE-ZCFU5SW2Jcme4n4KCQf1uC0
 id: node.support_book.body
 field_name: body
 entity_type: node

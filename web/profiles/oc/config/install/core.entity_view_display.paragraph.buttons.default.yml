@@ -11,8 +11,6 @@ dependencies:
   module:
     - link
     - options
-_core:
-  default_config_hash: fmgE9kmg44bkxC7CWMmH3TpzuHCYPRt8cPlYx6ZxKxs
 id: paragraph.buttons.default
 targetEntityType: paragraph
 bundle: buttons

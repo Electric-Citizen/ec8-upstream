@@ -153,7 +153,7 @@ news:
       "Quae cum praeponunt, ut sit aliqua rerum selectio, naturam videntur sequi; Quis Aristidem non mortuum diligit? Nummus in Croesi divitiis obscuratur, pars est tamen divitiarum. Nec vero sum nescius esse utilitatem in historia, non modo voluptatem."
 
 
-news_tag_instructions:
-  "STYLEGUIDE ONLY: This template is not carried into Drupal, but the News By tag OC Widgets view is
+news_category_instructions:
+  "STYLEGUIDE ONLY: This template is not carried into Drupal, but the News by Category OC Widgets view is
   customized to work with the widget display settings fields."
 

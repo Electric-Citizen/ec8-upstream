@@ -340,8 +340,6 @@ third_party_settings:
         storage_id: ''
         builder: ipe
         pattern: panelizer
-_core:
-  default_config_hash: otCGZKc1sWO3o73WT8wAavunGcm939syv4dgJrsSLaA
 id: node.blog.default
 targetEntityType: node
 bundle: blog

@@ -9,8 +9,6 @@ dependencies:
     - responsive_image.styles.350x350
   module:
     - responsive_image
-_core:
-  default_config_hash: Df0OnKsB-0OKKjHaaCU0VnBGOq8GLtMWRm3MYraNHC0
 id: media.image.square
 targetEntityType: media
 bundle: image

@@ -15,8 +15,6 @@ dependencies:
     - link
     - options
     - text
-_core:
-  default_config_hash: UizqFVxu_lQkDs3XoQxnzRzx07Py45Ap6xlJ5RzD29g
 id: paragraph.links_files.default
 targetEntityType: paragraph
 bundle: links_files

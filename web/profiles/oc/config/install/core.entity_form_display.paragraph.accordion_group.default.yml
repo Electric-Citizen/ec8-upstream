@@ -9,8 +9,6 @@ dependencies:
     - paragraphs.paragraphs_type.accordion_group
   module:
     - paragraphs
-_core:
-  default_config_hash: AaPy6L0_XHj9taTngc3Aye4no5MhQp9OZZs_Vf_ADyU
 id: paragraph.accordion_group.default
 targetEntityType: paragraph
 bundle: accordion_group

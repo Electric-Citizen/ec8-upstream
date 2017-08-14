@@ -5,8 +5,6 @@ dependencies:
     - contact
     - contact_storage
     - user
-_core:
-  default_config_hash: FWNZiDPzXA2-_eL-zQOztdT2HVFW5Pp41UQa2_870aM
 id: contact_messages
 label: 'Contact messages'
 module: views

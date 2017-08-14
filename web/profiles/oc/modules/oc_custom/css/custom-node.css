@@ -179,6 +179,11 @@
   background: url(../icons//svg/map.svg) no-repeat;
 }
 
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Mosaic Gallery"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Mosaic Gallery"]:hover{
+  background: url(../icons//svg/mosaic.svg) no-repeat;
+}
+
+
 .field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add News by Category"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add News by Category"]:hover{
   background: url(../icons//svg/news.svg) no-repeat;
 }
@@ -209,6 +214,10 @@
 
 .field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Text"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Text"]:hover{
   background: url(../icons/svg/text.svg) no-repeat;
+}
+
+.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Tile Image"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Tile Image"]:hover{
+  background: url(../icons//svg/mosaic.svg) no-repeat;
 }
 
 .field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Video"],.field--widget-entity-reference-paragraphs .paragraphs-dropbutton-wrapper input[value="Add Video"]:hover{

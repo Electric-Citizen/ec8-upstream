@@ -5,8 +5,6 @@ dependencies:
     - system
   theme:
     - oc_patterns
-_core:
-  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: oc_patterns_messages
 theme: oc_patterns
 region: content

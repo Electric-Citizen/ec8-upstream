@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.links_files
   module:
     - options
-_core:
-  default_config_hash: j2mX84j6QCGxM97M4XPG8iXcAXoG7sr4_25dUQ0l3D0
 id: paragraph.links_files.field_layout
 field_name: field_layout
 entity_type: paragraph

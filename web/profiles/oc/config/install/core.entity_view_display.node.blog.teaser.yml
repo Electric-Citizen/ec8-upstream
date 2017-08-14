@@ -21,8 +21,6 @@ third_party_settings:
     custom: false
     allow: false
     default: default
-_core:
-  default_config_hash: 8XFS95eRhoaRFqzi5mk3YTWf0H8F-QKXHOlS4BDrdlc
 id: node.blog.teaser
 targetEntityType: node
 bundle: blog

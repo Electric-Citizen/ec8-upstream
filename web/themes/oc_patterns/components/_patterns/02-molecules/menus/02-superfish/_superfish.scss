@@ -68,6 +68,11 @@
   /* ====  sf main links ==== */
   &.sf-menu > li{
     @include inline-block-top;
+    &:not(.sfHover){
+      & > ul{
+        display: none !important;
+      }
+    }
     & > a{
       color: $black;
       padding: 20px 15px !important;

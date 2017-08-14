@@ -12,8 +12,6 @@ dependencies:
     - paragraphs.paragraphs_type.text
   module:
     - options
-_core:
-  default_config_hash: MQgKzhGcsRmKLVvKhdPRXLDpLy7Itrg5PgTMdaLU7KM
 id: paragraph.text.preview
 targetEntityType: paragraph
 bundle: text

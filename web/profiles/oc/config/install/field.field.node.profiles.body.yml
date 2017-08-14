@@ -6,8 +6,6 @@ dependencies:
     - node.type.profiles
   module:
     - text
-_core:
-  default_config_hash: FbvxJVzLZEh1Vg7BFgOIpC8E5kutC5nP_Y0sJamSgMU
 id: node.profiles.body
 field_name: body
 entity_type: node

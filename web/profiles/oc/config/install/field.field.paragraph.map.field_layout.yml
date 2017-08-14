@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.map
   module:
     - options
-_core:
-  default_config_hash: Ba7AjEEfrZkkEBbFDVDMYEOoJEI4FNAuzRfd8aAGiBw
 id: paragraph.map.field_layout
 field_name: field_layout
 entity_type: paragraph

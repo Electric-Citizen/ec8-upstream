@@ -7,8 +7,6 @@ dependencies:
     - file
     - image
     - node
-_core:
-  default_config_hash: eNdETbEE9a6tCxRYbYijrvDjOZVKgJG-F1d-soz_40g
 id: wysiwyg
 label: WYSIWYG
 description: ''

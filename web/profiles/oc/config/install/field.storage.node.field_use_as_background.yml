@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: JyMttwTNKGIkEgKRNbl_ubduDd6o6-EdMKO-x5jjmVA
 id: node.field_use_as_background
 field_name: field_use_as_background
 entity_type: node

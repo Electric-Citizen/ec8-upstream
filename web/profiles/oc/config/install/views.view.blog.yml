@@ -12,8 +12,6 @@ dependencies:
     - taxonomy
     - text
     - user
-_core:
-  default_config_hash: HprKnRJQuCC0aG3LgFUx5UJf7AnaRZKRWLICI79DEMQ
 id: blog
 label: Blog
 module: views

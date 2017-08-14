@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_admin_description
     - paragraphs.paragraphs_type.lightbox_gallery
-_core:
-  default_config_hash: JJr1KhPVV9tvmrnV0n47am2xSzC4yYh9eRpnaPiAq0I
 id: paragraph.lightbox_gallery.field_admin_description
 field_name: field_admin_description
 entity_type: paragraph

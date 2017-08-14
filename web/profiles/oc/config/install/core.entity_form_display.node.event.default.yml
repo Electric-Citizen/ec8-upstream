@@ -20,8 +20,6 @@ dependencies:
     - metatag
     - path
     - text
-_core:
-  default_config_hash: 8cFe4GYG2kxjKko4oaUJogbtGuBun8L87YBp-OvDwb4
 id: node.event.default
 targetEntityType: node
 bundle: event

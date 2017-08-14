@@ -7,8 +7,6 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-_core:
-  default_config_hash: Zvb_vI8lhr0KGOBfs2rwD7gpprFcNuRblNOe7OIuIAk
 name: News
 type: news
 description: 'Add news nodes.'

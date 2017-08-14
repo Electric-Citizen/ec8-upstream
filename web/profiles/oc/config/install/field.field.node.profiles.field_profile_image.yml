@@ -5,8 +5,6 @@ dependencies:
     - field.storage.node.field_profile_image
     - media_entity.bundle.image
     - node.type.profiles
-_core:
-  default_config_hash: A7EZ-VjOrqCKJ-VEnd_7XbsMWrK0bkje_aVYyEUpktg
 id: node.profiles.field_profile_image
 field_name: field_profile_image
 entity_type: node

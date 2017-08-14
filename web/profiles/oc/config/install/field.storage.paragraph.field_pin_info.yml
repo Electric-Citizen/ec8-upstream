@@ -4,8 +4,6 @@ dependencies:
   module:
     - paragraphs
     - text
-_core:
-  default_config_hash: 75RlKNsVP2-1VHtaMrwDMg1Sqh4uq4RlmxtgnEcvn_g
 id: paragraph.field_pin_info
 field_name: field_pin_info
 entity_type: paragraph

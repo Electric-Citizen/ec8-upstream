@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: pXhD9xbly3kzrXyKTPWNnKxvhhURdacaA6l_ujJc95g
 id: senior_editor
 label: 'Senior Editor'
 weight: 3

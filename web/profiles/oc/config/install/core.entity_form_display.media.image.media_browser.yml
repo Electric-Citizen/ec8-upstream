@@ -9,8 +9,6 @@ dependencies:
     - media_entity.bundle.image
   module:
     - image
-_core:
-  default_config_hash: sTA496QnTLP-wuFTAekE2SPvLoqB9hy7rqpQtZPZZzw
 id: media.image.media_browser
 targetEntityType: media
 bundle: image

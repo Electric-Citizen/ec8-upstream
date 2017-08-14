@@ -9,8 +9,6 @@ dependencies:
     - field.field.paragraph.admin_view_placer.field_viewfield
     - field.field.paragraph.admin_view_placer.field_widget_title
     - paragraphs.paragraphs_type.admin_view_placer
-_core:
-  default_config_hash: ZoJfwyJJOfmUaVNUOy5zclODMhW6BKhsF-_apvUGhFI
 id: paragraph.admin_view_placer.default
 targetEntityType: paragraph
 bundle: admin_view_placer

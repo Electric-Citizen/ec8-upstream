@@ -3,8 +3,6 @@ status: true
 dependencies:
   config:
     - node.type.support_book
-_core:
-  default_config_hash: DNsKexC3JCPZzmPL9P5Gl7MtsvvZYwnTwfgWddKZE1A
 id: node.support_book.promote
 field_name: promote
 entity_type: node

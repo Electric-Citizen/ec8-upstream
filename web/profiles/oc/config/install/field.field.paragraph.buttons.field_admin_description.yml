@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_admin_description
     - paragraphs.paragraphs_type.buttons
-_core:
-  default_config_hash: JmstKtsUXFjE_Gpr7GOFbdlyPOr6bK1df86eLv1bQEo
 id: paragraph.buttons.field_admin_description
 field_name: field_admin_description
 entity_type: paragraph

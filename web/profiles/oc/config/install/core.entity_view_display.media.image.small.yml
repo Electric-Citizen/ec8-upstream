@@ -9,8 +9,6 @@ dependencies:
     - responsive_image.styles.small_300
   module:
     - responsive_image
-_core:
-  default_config_hash: NrvFgj0WAfZU7QpKfPunKFAvv48tXNezVysfTlNGlUw
 id: media.image.small
 targetEntityType: media
 bundle: image

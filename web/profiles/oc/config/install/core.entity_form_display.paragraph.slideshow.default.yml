@@ -12,8 +12,6 @@ dependencies:
   module:
     - entity_browser_entity_form
     - inline_entity_form
-_core:
-  default_config_hash: rEAgLzjxEmVSp9Qv01Xq7f13KkY84M7tL8amxuADKzU
 id: paragraph.slideshow.default
 targetEntityType: paragraph
 bundle: slideshow

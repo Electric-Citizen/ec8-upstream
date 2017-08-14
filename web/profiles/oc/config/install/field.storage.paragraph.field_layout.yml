@@ -4,8 +4,6 @@ dependencies:
   module:
     - options
     - paragraphs
-_core:
-  default_config_hash: BH2QTXDdnXH5W33ThZOlfbXlsErNYifJhe2cKiCxZWA
 id: paragraph.field_layout
 field_name: field_layout
 entity_type: paragraph

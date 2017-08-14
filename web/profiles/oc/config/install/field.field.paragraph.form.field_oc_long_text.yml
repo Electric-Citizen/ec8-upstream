@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.form
   module:
     - text
-_core:
-  default_config_hash: Hk4JgJSuaIix3Tsds9r5heEi-5WF2gMwlPBDIueveJw
 id: paragraph.form.field_oc_long_text
 field_name: field_oc_long_text
 entity_type: paragraph

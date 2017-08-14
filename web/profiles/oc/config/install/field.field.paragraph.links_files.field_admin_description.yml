@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_admin_description
     - paragraphs.paragraphs_type.links_files
-_core:
-  default_config_hash: dkdstrT3h-D3zW2YpvnloB8GIRSHekUKkzk5-4CVUYs
 id: paragraph.links_files.field_admin_description
 field_name: field_admin_description
 entity_type: paragraph

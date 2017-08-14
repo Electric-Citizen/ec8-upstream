@@ -6,8 +6,6 @@ dependencies:
     - node.type.profiles
   module:
     - telephone
-_core:
-  default_config_hash: nPVNORbUhcJoJrJlqLy_Amu2hNMiw8TvmKqyKTpjNwQ
 id: node.profiles.field_phone
 field_name: field_phone
 entity_type: node

@@ -13,8 +13,6 @@ dependencies:
   module:
     - text
     - user
-_core:
-  default_config_hash: H5NYP2wiQsA3PZwlgbAXrF5Wc2q9rO9dCqXx-6bJ06g
 id: node.landing_page.teaser
 targetEntityType: node
 bundle: landing_page

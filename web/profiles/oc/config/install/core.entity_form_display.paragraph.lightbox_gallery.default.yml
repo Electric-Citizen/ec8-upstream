@@ -11,8 +11,6 @@ dependencies:
   module:
     - entity_browser_entity_form
     - inline_entity_form
-_core:
-  default_config_hash: DayIHuBCgsmfzpGQdSVVMDiXeGuon066MksDceOcqyk
 id: paragraph.lightbox_gallery.default
 targetEntityType: paragraph
 bundle: lightbox_gallery

@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.admin_view_placer
   module:
     - options
-_core:
-  default_config_hash: cZ0A94bCISyqY-bbkM8u_YqJryW5IiRs047fFEoX71I
 id: paragraph.admin_view_placer.field_layout
 field_name: field_layout
 entity_type: paragraph

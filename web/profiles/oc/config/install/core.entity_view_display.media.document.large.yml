@@ -7,8 +7,6 @@ dependencies:
     - media_entity.bundle.document
   module:
     - file
-_core:
-  default_config_hash: _ut8bx_kePyGRYGym5saQZ3c0jJnID67x6yk6bWJ8qY
 id: media.document.large
 targetEntityType: media
 bundle: document

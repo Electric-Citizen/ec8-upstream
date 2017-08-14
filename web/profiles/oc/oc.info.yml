@@ -65,6 +65,7 @@ dependencies:
   - menu_ui
   - metatag
   - node
+  - oc_custom
   - options
   - page_cache
   - page_manager
@@ -107,6 +108,12 @@ dependencies:
   - xmlsitemap
   - views
   - paragraphs
+  - media_entity
+  - media_entity_document
+  - media_entity_image
+
+
 themes:
   - oc_patterns
+  - bartik
   - seven

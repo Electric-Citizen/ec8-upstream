@@ -9,8 +9,6 @@ dependencies:
     - paragraphs.paragraphs_type.lightbox_gallery
   module:
     - options
-_core:
-  default_config_hash: rawzkfUK4Pj1Ku0B0YpX5cddZtZ_nzLmbhIAWLlbFHM
 id: paragraph.lightbox_gallery.default
 targetEntityType: paragraph
 bundle: lightbox_gallery

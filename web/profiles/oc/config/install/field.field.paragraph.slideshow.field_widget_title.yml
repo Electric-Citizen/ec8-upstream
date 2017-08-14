@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_widget_title
     - paragraphs.paragraphs_type.slideshow
-_core:
-  default_config_hash: kP-HfoRn97yroQuYWh06_D7J_GPU3KM9hOgxfWD7mSg
 id: paragraph.slideshow.field_widget_title
 field_name: field_widget_title
 entity_type: paragraph

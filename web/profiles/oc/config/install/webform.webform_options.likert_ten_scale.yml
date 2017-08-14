@@ -4,8 +4,6 @@ dependencies:
   enforced:
     module:
       - webform
-_core:
-  default_config_hash: 0jqiwerGBMbI6SSW2BpFXAaIihZ9MF_iEGrCAgM-d7E
 id: likert_ten_scale
 label: 'Likert: Ten Scale'
 category: Likert

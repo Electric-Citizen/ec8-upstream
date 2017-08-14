@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.video
   module:
     - text
-_core:
-  default_config_hash: 5HP2YP77q1M0i4MCIiLF-8Xpxe_GGaqPR9yqjdOKXU4
 id: paragraph.video.field_oc_long_text
 field_name: field_oc_long_text
 entity_type: paragraph

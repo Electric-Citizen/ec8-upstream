@@ -10,8 +10,6 @@ dependencies:
     - paragraphs.paragraphs_type.buttons
   module:
     - link
-_core:
-  default_config_hash: YpYzokz3oIUVv4Ypq3MBXr7_46SVQi6IQJEiOSUukYI
 id: paragraph.buttons.default
 targetEntityType: paragraph
 bundle: buttons

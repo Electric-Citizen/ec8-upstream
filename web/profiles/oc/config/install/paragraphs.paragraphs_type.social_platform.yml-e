@@ -1,7 +1,0 @@
-uuid: 4f35f834-10f3-47e4-a910-3d00f724b7ea
-langcode: en
-status: true
-dependencies: {  }
-id: social_platform
-label: 'Social Platform'
-behavior_plugins: {  }

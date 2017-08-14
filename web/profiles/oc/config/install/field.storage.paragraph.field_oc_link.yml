@@ -4,8 +4,6 @@ dependencies:
   module:
     - link
     - paragraphs
-_core:
-  default_config_hash: Ylzk3nwxik05VrCbkLNGpjwfRTfxp3zJI39a21IRtNc
 id: paragraph.field_oc_link
 field_name: field_oc_link
 entity_type: paragraph

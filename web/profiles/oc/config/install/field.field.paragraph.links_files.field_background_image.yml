@@ -5,8 +5,6 @@ dependencies:
     - field.storage.paragraph.field_background_image
     - media_entity.bundle.image
     - paragraphs.paragraphs_type.links_files
-_core:
-  default_config_hash: SkV6U-8Rf65YFRMEq-ZhZpIrZ9DeaVl-tn5FQN8ZoBI
 id: paragraph.links_files.field_background_image
 field_name: field_background_image
 entity_type: paragraph

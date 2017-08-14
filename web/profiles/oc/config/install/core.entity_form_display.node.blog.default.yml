@@ -18,8 +18,6 @@ dependencies:
     - paragraphs
     - path
     - text
-_core:
-  default_config_hash: CZ2oljCjhC5xuiFmKj7MCpQi3Rw-3gEel1BG94RWDJU
 id: node.blog.default
 targetEntityType: node
 bundle: blog

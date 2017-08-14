@@ -5,8 +5,6 @@ dependencies:
     - field.storage.paragraph.field_oc_image
     - media_entity.bundle.image
     - paragraphs.paragraphs_type.image
-_core:
-  default_config_hash: IYcPivO54ZpwhICu-VnrlZda3z6168QG9pOcu5_Tw-k
 id: paragraph.image.field_oc_image
 field_name: field_oc_image
 entity_type: paragraph

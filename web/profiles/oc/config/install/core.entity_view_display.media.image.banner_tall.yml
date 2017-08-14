@@ -9,8 +9,6 @@ dependencies:
     - responsive_image.styles.banner_tall
   module:
     - responsive_image
-_core:
-  default_config_hash: WdRggU8wXehHSyxgGU5xB_S5K9rwKp417ohg7McB-44
 id: media.image.banner_tall
 targetEntityType: media
 bundle: image

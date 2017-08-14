@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.media.field_caption
     - media_entity.bundle.image
-_core:
-  default_config_hash: y9Acm7BAWrDF3mANBrdn7yZhfdJa_nzspSyPwMyZsWA
 id: media.image.field_caption
 field_name: field_caption
 entity_type: media

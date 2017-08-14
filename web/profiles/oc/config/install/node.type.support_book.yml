@@ -7,8 +7,6 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-_core:
-  default_config_hash: ji4pL4xruOxfrgS7781kaPIt0nOX9e6KBPJH8XTWxwU
 name: 'Support Book'
 type: support_book
 description: 'Add support pages.'

@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: b3H3O2fkp3n26-XK17qxr4eoflT-ZTZ-zDwMAo0sG2U
 id: blog
 label: Blog
 type: 'canonical_entities:node'

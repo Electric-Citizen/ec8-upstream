@@ -16,8 +16,6 @@ dependencies:
     - inline_entity_form
     - link
     - text
-_core:
-  default_config_hash: _who5PSi9_vkn8e7aZgrXNOIimXdpvSNUmB3f4wx9LA
 id: paragraph.image.default
 targetEntityType: paragraph
 bundle: image

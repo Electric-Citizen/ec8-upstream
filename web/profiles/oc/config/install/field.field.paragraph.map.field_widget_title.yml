@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_widget_title
     - paragraphs.paragraphs_type.map
-_core:
-  default_config_hash: wFeBM8Rm2SjbA53ej9wyZvBWA8A3RDzcLGb5VD4Ebvs
 id: paragraph.map.field_widget_title
 field_name: field_widget_title
 entity_type: paragraph

@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.map
   module:
     - geolocation
-_core:
-  default_config_hash: 7ag0omnxXL8ZZ8RC4cUex9KQD97wgFxl69Ak05CCW2U
 id: paragraph.map.field_location
 field_name: field_location
 entity_type: paragraph

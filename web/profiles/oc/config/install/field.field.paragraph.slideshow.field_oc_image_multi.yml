@@ -5,8 +5,6 @@ dependencies:
     - field.storage.paragraph.field_oc_image_multi
     - media_entity.bundle.image
     - paragraphs.paragraphs_type.slideshow
-_core:
-  default_config_hash: p2LPhL-29bTfYNxhLixNx6LAf8bq_BoMLxbPCNWjcMU
 id: paragraph.slideshow.field_oc_image_multi
 field_name: field_oc_image_multi
 entity_type: paragraph

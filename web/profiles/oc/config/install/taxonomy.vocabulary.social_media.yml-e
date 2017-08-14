@@ -1,9 +1,0 @@
-uuid: e06fad22-9b65-40c2-b9b6-d374f703e238
-langcode: en
-status: true
-dependencies: {  }
-name: 'Social Media'
-vid: social_media
-description: ''
-hierarchy: 0
-weight: 0

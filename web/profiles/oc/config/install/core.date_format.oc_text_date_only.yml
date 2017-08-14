@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: pBQWpPWkd-rWLS68dmpSnK-HqWXLh4AZY3R-0ARR3pM
 id: oc_text_date_only
 label: 'OC Text Date Only'
 locked: false

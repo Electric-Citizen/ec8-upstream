@@ -13,8 +13,6 @@ dependencies:
     - paragraphs.paragraphs_type.call_to_action
   module:
     - options
-_core:
-  default_config_hash: BV3I6AE0rM6nKVY4bCEtaFkI_YnJAHz1pjoeCrk0n-s
 id: paragraph.call_to_action.preview
 targetEntityType: paragraph
 bundle: call_to_action

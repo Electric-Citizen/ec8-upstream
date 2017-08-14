@@ -11,8 +11,6 @@ dependencies:
     - paragraphs.paragraphs_type.form
   module:
     - options
-_core:
-  default_config_hash: hSOKNj4D8ONUn_Dk3tGw6BF0-l09N10FbCbVcOtH4w8
 id: paragraph.form.preview
 targetEntityType: paragraph
 bundle: form
