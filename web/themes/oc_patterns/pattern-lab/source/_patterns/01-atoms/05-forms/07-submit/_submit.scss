@@ -1,9 +1,0 @@
-/* ===============
-   SUBMIT
-=============== */
-
-input[type="submit"]{
-  //from forms.scss
-  @include form-submit;
-  font-size: 15px;
-}
