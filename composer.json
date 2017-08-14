@@ -62,7 +62,7 @@
     "drupal/seo_checklist": "^4.0",
     "drupal/simple_block": "^1.0@beta",
     "drupal/stage_file_proxy": "^1.0@alpha",
-    "drupal/superfish": "^1.0@RC",
+    "drupal/superfish": "^1.1",
     "drupal/token": "^1.0@RC",
     "drupal/twig_tweak": "^1.6",
     "drupal/video_embed_field": "^1.4",
