@@ -1,10 +1,10 @@
 name: 'OC Patterns'
-mail: adam@electriccitizen.com
+mail: info@electriccitizen.com
 slogan: ''
 page:
   403: ''
   404: /search404
-  front: /node/94
+  front: /node
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en

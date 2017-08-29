@@ -8,6 +8,7 @@
 use Drupal\user\Entity\User;
 use Drupal\user\RoleInterface;
 use Drupal\shortcut\Entity\Shortcut;
+use \Drupal\menu_link_content\Entity\MenuLinkContent;
 
 /**
  * Implements hook_install().
@@ -46,11 +47,17 @@ function oc_standard_install() {
 
   // Enable the Contact link in the footer menu.
   /** @var \Drupal\Core\Menu\MenuLinkManagerInterface $menu_link_manager */
-  //$menu_link_manager = \Drupal::service('plugin.manager.menu.link');
-  //$menu_link_manager->updateDefinition('contact.site_page', ['enabled' => TRUE]);
+  $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
+  $menu_link_manager->updateDefinition('contact.site_page', ['enabled' => TRUE]);
 
-  //user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, ['access site-wide contact form']);
-  //user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['access site-wide contact form']);
+  // Create a home link in main menu.
+  /** @var \Drupal\Core\Menu\MenuLinkManagerInterface $menu_link_manager */
+  $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
+  $menu_link_manager->updateDefinition('contact.site_page', ['enabled' => TRUE]);
+
+
+  user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, ['access site-wide contact form']);
+  user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['access site-wide contact form']);
 
   // Allow authenticated users to use shortcuts.
   user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['access shortcuts']);
@@ -78,5 +85,19 @@ function oc_standard_install() {
 
   // Enable the admin theme.
   \Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
+
+  // Create link to Home page.
+  MenuLinkContent::create([
+    'title'      => 'Home',
+    'link'       => ['uri' => 'internal:/home'],
+    'menu_name'  => 'main',
+    'weight'     => '-4',
+  ])->save();
+
+  // The system.site config entity must be configured during install.
+  \Drupal::configFactory()->getEditable('system.site')
+    ->set('mail', 'info@electriccitizen.com')
+    ->set('name', 'Electric Citizen')
+    ->save();
 }
 
