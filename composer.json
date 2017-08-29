@@ -147,7 +147,6 @@
     },
     "build-env": {
       "install-cms": [
-        "drush pm-enable config_direct_save simple_block --yes",
         "drush pm-uninstall block_content --yes"
       ],
       "export-configuration": "drush config-export --yes"
