@@ -146,9 +146,6 @@
       "drush/contrib/{$name}": ["type:drupal-drush"]
     },
     "build-env": {
-      "install-cms": [
-        "drush pm-uninstall block_content --yes"
-      ],
       "export-configuration": "drush config-export --yes"
     },
     "drupal-scaffold": {
