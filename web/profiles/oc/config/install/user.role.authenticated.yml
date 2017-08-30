@@ -10,6 +10,7 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'access toolbar'
   - 'search content'
   - 'use text format basic_html'
   - 'view disqus comments'
