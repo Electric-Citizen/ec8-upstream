@@ -30,7 +30,6 @@ web/sites/example.settings.local.php
 web/sites/example.sites.php
 web/update.php
 web/web.config
-web/themes/*/node_modules/
 
 # Add directories containing build assets below.
 # Keep all additions above the "cut" line.
@@ -56,6 +55,9 @@ web/themes/*/node_modules/
 
 # Ignore Drupal's file directory
 web/sites/default/files
+
+# Ignore node_modules
+web/themes/*/node_modules/
 
 # Pantheon commits a settings.php for environment-specific settings.
 # Place local settings in settings.local.php
