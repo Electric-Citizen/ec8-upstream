@@ -18,6 +18,8 @@
     pattern_lab: themeDir + '/pattern-lab/public'
   };
 
+  
+
   module.exports = {
     host: 'http://127.0.0.1:8888/',
     themeDir: themeDir,
@@ -42,7 +44,7 @@
       outputStyle: 'expanded',
       autoPrefixerBrowsers: [
         'last 2 versions',
-        '- IE >= 9'
+        'IE >= 9'
       ],
       includePaths: (['./node_modules']),
       sassdoc: {
