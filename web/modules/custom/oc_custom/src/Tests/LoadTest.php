@@ -10,7 +10,7 @@ use Drupal\simpletest\WebTestBase;
  *
  * @group oc_custom
  */
-class LoadTest extends WebTestBase{
+class LoadTest extends WebTestBase {
 
   /**
    * Modules to enable.

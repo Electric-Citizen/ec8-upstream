@@ -86,26 +86,14 @@
       enabled: true,
       configFile: themeDir + 'pattern-lab/config/config.yml',
       watchedExtensions: (['twig', 'json', 'yaml', 'yml', 'md', 'jpg', 'jpeg', 'png']),
-      scssToJson: [
+      scssToYAML: [
         {
-          src: themeDir + '/components/_patterns/00-base/global/01-colors/_base-color-vars.scss',
-          dest: themeDir + '/components/_patterns/00-base/global/01-colors/base-colors.json',
+          src: `${themeDir}/components/_patterns/00-base/global/01-colors/_color-vars.scss`,
+          dest: `${themeDir}/components/_patterns/00-base/global/01-colors/colors.yml`,
           lineStartsWith: '$',
-          allowVarValues: false
+          allowVarValues: false,
         },
-        {
-          src: themeDir + '/components/_patterns/00-base/global/01-colors/_client-color-vars.scss',
-          dest: themeDir + '/components/_patterns/00-base/global/01-colors/client-colors.json',
-          lineStartsWith: '$',
-          allowVarValues: false
-        },
-        {
-          src: themeDir + '/components/_patterns/00-base/global/02-fonts/_font-vars.scss',
-          dest: themeDir + '/components/_patterns/00-base/global/02-fonts/fonts.json',
-          lineStartsWith: '$',
-          allowVarValues: false
-        }
-      ]
+      ],
     },
     browserSync: {
       ui: false,
@@ -116,6 +104,7 @@
       // domain: 'emulsify.dev',
       openBrowserAtStart: true,
       browser: "google chrome",
+      online: true,
       reloadDelay: 50,
       reloadDebounce: 750
     },

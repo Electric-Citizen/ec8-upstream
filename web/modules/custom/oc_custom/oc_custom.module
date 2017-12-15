@@ -5,6 +5,7 @@
  * Contains oc_custom.module.
  */
 
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
@@ -22,11 +23,6 @@ function oc_custom_help($route_name, RouteMatchInterface $route_match) {
     default:
   }
 }
-
-
-
-
-
 
 /**
  * Implements hook_theme().
@@ -54,54 +50,52 @@ function oc_custom_preprocess_views_view_grid__media(array &$variables) {
   }
 }
 
-//attach eb library everywhere
+// Attach eb library everywhere
 // function oc_custom_page_attachments(array &$attachments){
 //   $attachments['#attached']['library'][] = 'oc_custom/eb_browser';
-// }
-
-
-/*
- * attach css and custom.js to node form only
+// }.
+/**
+ * Attach css and custom.js to node form only.
  */
-function oc_custom_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-    $form['#attached']['library'][] = 'oc_custom/custom';
+function oc_custom_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['#attached']['library'][] = 'oc_custom/custom';
 }
 
-/*
- * attach SELECT2 globally
+/**
+ * Attach SELECT2 globally.
  */
-function oc_custom_page_attachments(array &$attachments){
-    $attachments['#attached']['library'][] = 'oc_custom/custom-global';
+function oc_custom_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'oc_custom/custom-global';
 }
 
 /* SEARCH FORM
 ----------------- */
-/*
- * attach css and custom.js to node form only
+
+/**
+ * Attach css and custom.js to node form only.
  */
-function oc_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+function oc_custom_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if ($form_id == 'search_block_form') {
     $form['keys']['#attributes']['placeholder'] = t('enter keywords');
   }
 }
-
 
 /*
  *  VIEWS EXPOSED FILTERS ALTER
  */
 /*
 function oc_custom_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-  //set date fields to be date pickers manually for now
-  if ($form['#id'] == 'views-exposed-form-events-upcoming-events'){
-    $form['field_oc_date_value_1']['#type'] = 'date';
-    $form['field_oc_date_value_2']['#type'] = 'date';
-  } 
-  if ($form['#id'] == 'views-exposed-form-news-all-news'){
-    $form['created']['#type'] = 'date';
-    $form['created_1']['#type'] = 'date';
-  } 
-
-  //set placeholders
-  //$form['combine']['#attributes']['placeholder'] = 'Keyword(s)';
+// set date fields to be date pickers manually for now
+if ($form['#id'] == 'views-exposed-form-events-upcoming-events'){
+$form['field_oc_date_value_1']['#type'] = 'date';
+$form['field_oc_date_value_2']['#type'] = 'date';
 }
-*/
+if ($form['#id'] == 'views-exposed-form-news-all-news'){
+$form['created']['#type'] = 'date';
+$form['created_1']['#type'] = 'date';
+}
+
+// set placeholders
+// $form['combine']['#attributes']['placeholder'] = 'Keyword(s)';
+}
+ */
