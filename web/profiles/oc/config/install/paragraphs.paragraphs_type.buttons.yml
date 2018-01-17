@@ -1,6 +1,10 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:2f0e7f38-79c6-400a-8b4b-85e9385f4022'
 id: buttons
 label: Buttons
+icon_uuid: 2f0e7f38-79c6-400a-8b4b-85e9385f4022
+description: ''
 behavior_plugins: {  }

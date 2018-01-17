@@ -1,6 +1,10 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:71f689e1-cc2a-423e-a979-428c849eceae'
 id: event_by_category
 label: 'Events by Category'
+icon_uuid: 71f689e1-cc2a-423e-a979-428c849eceae
+description: ''
 behavior_plugins: {  }

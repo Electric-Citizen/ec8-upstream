@@ -1,6 +1,10 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:c61cd64f-3849-4ec5-9603-a85e9e8566e6'
 id: admin_view_placer
-label: 'Admin View Placer'
+label: 'View Placer'
+icon_uuid: c61cd64f-3849-4ec5-9603-a85e9e8566e6
+description: ''
 behavior_plugins: {  }

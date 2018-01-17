@@ -1,6 +1,10 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:b321b73b-f167-4128-89ec-b805586085c2'
 id: image
 label: Image
+icon_uuid: b321b73b-f167-4128-89ec-b805586085c2
+description: ''
 behavior_plugins: {  }

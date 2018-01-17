@@ -1,6 +1,10 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:cb77aac9-796c-466e-9b29-828a8bf79ee7'
 id: links_files
 label: 'Links & Files'
+icon_uuid: cb77aac9-796c-466e-9b29-828a8bf79ee7
+description: ''
 behavior_plugins: {  }

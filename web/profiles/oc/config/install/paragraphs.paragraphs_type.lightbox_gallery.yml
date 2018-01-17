@@ -1,6 +1,10 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:161fea28-9d32-4849-895c-63276bcb69a0'
 id: lightbox_gallery
 label: 'Lightbox Gallery'
+icon_uuid: 161fea28-9d32-4849-895c-63276bcb69a0
+description: ''
 behavior_plugins: {  }

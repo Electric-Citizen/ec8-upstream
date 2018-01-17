@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.profiles.field_first_name
     - field.field.node.profiles.field_last_name
     - field.field.node.profiles.field_phone
-    - field.field.node.profiles.field_position
     - field.field.node.profiles.field_profile_image
     - field.field.node.profiles.panelizer
     - node.type.profiles
@@ -159,10 +158,10 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  addtoany: true
   field_email: true
   field_first_name: true
   field_last_name: true
   field_phone: true
-  field_position: true
   links: true
   panelizer: true

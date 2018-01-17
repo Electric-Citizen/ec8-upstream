@@ -1,6 +1,10 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:3e91c741-de7a-4720-8028-09dd9fc2b6f1'
 id: slideshow
 label: Slideshow
+icon_uuid: 3e91c741-de7a-4720-8028-09dd9fc2b6f1
+description: ''
 behavior_plugins: {  }

@@ -1,6 +1,10 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:a4c7075f-9fa2-494e-b616-9a3e55642a47'
 id: text
 label: Text
+icon_uuid: a4c7075f-9fa2-494e-b616-9a3e55642a47
+description: ''
 behavior_plugins: {  }

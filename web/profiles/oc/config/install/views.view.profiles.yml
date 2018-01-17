@@ -5,10 +5,8 @@ dependencies:
     - field.storage.node.field_position
     - field.storage.node.field_profile_image
     - node.type.profiles
-    - taxonomy.vocabulary.position
   module:
     - node
-    - taxonomy
     - user
 id: profiles
 label: Profiles
@@ -374,14 +372,14 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: true
+          hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
+          click_sort_column: value
+          type: string
           settings:
-            link: false
-          group_column: target_id
+            link_to_entity: false
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -456,53 +454,6 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: string
-        field_position_target_id:
-          id: field_position_target_id
-          table: node__field_position
-          field: field_position_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_position_target_id_op
-            label: Position
-            description: ''
-            use_operator: false
-            operator: field_position_target_id_op
-            identifier: field_position_target_id
-            required: false
-            remember: false
-            multiple: true
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              senior_editor: '0'
-              editor: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: true
-          type: select
-          limit: true
-          vid: position
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
       sorts:
         field_last_name_value:
           id: field_last_name_value
@@ -544,7 +495,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -565,7 +515,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:

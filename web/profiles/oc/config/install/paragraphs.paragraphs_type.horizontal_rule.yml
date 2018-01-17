@@ -1,6 +1,10 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:e17677f9-e84e-46a2-a0d2-743304926ec1'
 id: horizontal_rule
 label: 'Horizontal Rule'
+icon_uuid: e17677f9-e84e-46a2-a0d2-743304926ec1
+description: ''
 behavior_plugins: {  }
