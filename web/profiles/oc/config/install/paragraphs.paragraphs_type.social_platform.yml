@@ -1,6 +1,10 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:bcb6de22-caec-4673-8985-52b56d4b27c9'
 id: social_platform
 label: 'Social Platform'
+icon_uuid: bcb6de22-caec-4673-8985-52b56d4b27c9
+description: ''
 behavior_plugins: {  }

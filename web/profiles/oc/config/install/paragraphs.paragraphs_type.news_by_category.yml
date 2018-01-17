@@ -1,6 +1,10 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:a1c43756-6b62-473b-bcb2-2eff9f5500ac'
 id: news_by_category
 label: 'News by Category'
+icon_uuid: a1c43756-6b62-473b-bcb2-2eff9f5500ac
+description: ''
 behavior_plugins: {  }

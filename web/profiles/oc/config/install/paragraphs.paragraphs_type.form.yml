@@ -1,6 +1,10 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:777528c5-2885-4d0c-a13a-66c124b2d8a8'
 id: form
 label: Form
+icon_uuid: 777528c5-2885-4d0c-a13a-66c124b2d8a8
+description: ''
 behavior_plugins: {  }

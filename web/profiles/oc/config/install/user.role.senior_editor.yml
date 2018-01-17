@@ -191,7 +191,6 @@ permissions:
   - 'view all revisions'
   - 'view any webform submission'
   - 'view blog revisions'
-  - 'view disqus comments'
   - 'view event revisions'
   - 'view landing_page revisions'
   - 'view news revisions'

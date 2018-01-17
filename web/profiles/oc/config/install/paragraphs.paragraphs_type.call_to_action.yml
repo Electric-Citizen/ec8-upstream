@@ -1,6 +1,10 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:9f306de7-479d-4c8d-8832-edcd1ba9877c'
 id: call_to_action
 label: 'Call to Action'
+icon_uuid: 9f306de7-479d-4c8d-8832-edcd1ba9877c
+description: ''
 behavior_plugins: {  }

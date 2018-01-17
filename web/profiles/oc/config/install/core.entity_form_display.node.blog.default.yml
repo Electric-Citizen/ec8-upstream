@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.media.media_browser
+    - core.entity_form_mode.media.background_image
     - field.field.node.blog.body
     - field.field.node.blog.field_author
     - field.field.node.blog.field_banner
@@ -41,7 +41,7 @@ content:
   field_banner:
     weight: 2
     settings:
-      form_mode: media_browser
+      form_mode: background_image
       label_singular: ''
       label_plural: ''
       allow_new: true
@@ -64,12 +64,14 @@ content:
     settings:
       title: Paragraph
       title_plural: Paragraphs
-      edit_mode: preview
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
       add_mode: button
       form_display_mode: default
       default_paragraph_type: _none
     third_party_settings: {  }
-    type: entity_reference_paragraphs
+    type: paragraphs
     region: content
   field_tags:
     weight: 5
@@ -83,6 +85,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
   title:
     type: string_textfield
     weight: 0

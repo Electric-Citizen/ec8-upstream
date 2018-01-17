@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies: {  }
 id: NXhscRe0440PFpI5dSznEVgmauL25KojD7u4e9aZwOM
-label: xmlsitemap
+label: 'http://dev-newupstream.pantheonsite.io/'
 chunks: 1
-links: 91
-max_filesize: 15453
+links: 30
+max_filesize: 6492
 context: {  }
-updated: 1501626701
+updated: 1515686826
