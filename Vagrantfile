@@ -1,6 +1,6 @@
 
 ENV['ENV'] = "dev"
-ENV['SITE'] = "8be50dbc-4463-43b5-bd18-d8304662382"
+ENV['SITE'] = "<SITEID>"
 
 # The absolute path to the root directory of the project. Both Drupal VM and
 # the config file need to be contained within this path.

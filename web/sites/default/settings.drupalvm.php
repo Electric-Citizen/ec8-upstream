@@ -10,4 +10,4 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 
-$settings['hash_salt'] = 'pleasure-thankful-weevil-ablate';
+$settings['hash_salt'] = '<HASHSALT>';
