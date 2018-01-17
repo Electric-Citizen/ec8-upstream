@@ -18,7 +18,7 @@ dependencies:
   - components
   - config
   - config_update
-  - config_update
+  - config_split
   - config_update_ui
   - contact
   - contact_storage
@@ -39,6 +39,7 @@ dependencies:
   - entity_browser_entity_form
   - entity_embed
   - entity_reference_revisions
+  - environment_indicator
   - field
   - field_group
   - field_ui
