@@ -1,15 +1,15 @@
-alias_local: '@newupstream.local'
-alias_remote: '@newupstream.dev'
+alias_local: '@ec8-upstream.local'
+alias_remote: '@ec8-upstream.dev'
 
 branch: master
-site: 8be50dbc-4463-43b5-bd18-d8304662382
+site: <PANTHEON-SITEID>
 env: dev
 
-vagrant_hostname: newupstream.local
-vagrant_machine_name: newupstream
-vagrant_ip: 192.168.88.101
+vagrant_hostname: ec8-upstream.local
+vagrant_machine_name: ec8-upstream
+vagrant_ip: 192.168.88.102
 
-drupal_site_name: "EC New Upstream"
+drupal_site_name: "EC 8 Upstream"
 drupal_enable_modules: []
 drupal_account_name: admin
 drupal_account_pass: admin
