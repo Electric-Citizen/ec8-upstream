@@ -1,8 +1,8 @@
-# EC8 Upstream
+# <SITENAME> <SITENAME-MD>
 
-[![CircleCI](https://circleci.com/gh/electriccitizen/newupstream.svg?style=shield)](https://circleci.com/gh/electriccitizen/newupstream)
-[![Dashboard newupstream](https://img.shields.io/badge/dashboard-newupstream-yellow.svg)](https://dashboard.pantheon.io/sites/cbc91b53-e053-4c27-8ad4-7502151a02ed#dev/code)
-[![Dev Site newupstream](https://img.shields.io/badge/site-newupstream-blue.svg)](http://dev-newupstream.pantheonsite.io/)
+[![CircleCI](https://circleci.com/gh/electriccitizen/<SITENAME>.svg?style=shield)](https://circleci.com/gh/electriccitizen/<SITENAME>)
+[![Dashboard <SITENAME>](https://img.shields.io/badge/dashboard-<SITENAME>-yellow.svg)](https://dashboard.pantheon.io/sites/cbc91b53-e053-4c27-8ad4-7502151a02ed#dev/code)
+[![Dev Site <SITENAME>](https://img.shields.io/badge/site-<SITENAME>-blue.svg)](http://dev-<SITENAME>.pantheonsite.io/)
 
 Center for Inclusive Childcare is a Composer-based Drupal 8 application hosted on [Pantheon](http://dashboard.getpantheon.com). The application integrates with [Circle CI](https://circleci.com/dashboard) for continuous integration testing. All development and theming is done on a local virtual machine running [Drupal VM](http://drupalvm.com). Please review this README and be sure to understand the core concepts and workflow described below prior to beginning.
 
@@ -32,15 +32,15 @@ Center for Inclusive Childcare is a Composer-based Drupal 8 application hosted o
 
 This repository contains the project build files (composer.json, exported config, etc.), a custom theme, and any custom modules that have been added to the project. It does not contain Drupal core, vendor files, or contributed modules. This repository and its build files are used as the starting point for each build and deployment.
 
-See the icon links at the top of this README for direct links to:
+See the small icon links at the top of this README for direct links to:
 
-* ![Circle](https://circleci.com/gh/electriccitizen/newupstream.svg?style=shield) [Circle CI](https://circleci.com/gh/electriccitizen/newupstream) to diagnose builds (the build log usually indicates clearly why a build is failing.)
-* ![Dashboard](https://img.shields.io/badge/dashboard-newupstream-yellow.svg) [Pantheon Dashboard](https://dashboard.pantheon.io/sites/4bf71429-83ad-4601-9cbc-b5e5b1b1c7a7#dev/code) to view or share the link to your ```multidev``` site.
-* ![Dev](https://img.shields.io/badge/site-newupstream-blue.svg) [Development site](http://dev-newupstream.pantheonsite.io/): A quick link to the Pantheon development site.
+* Circle CI tests
+* Pantheon Dashboard
+* Pantheon Development site
 
-Also see the [Drupal VM Dashboard](http://dashboard.newupstream.local) for error logs, MySQL/Adminer, and Mailhog.
+Also see the [Drupal VM Dashboard](http://dashboard.<SITENAME>.local) for error logs, MySQL/Adminer, and Mailhog.
 
-[Back to top](#center-for-inclusive-childcare)
+[Back to top](#<SITENAME-MD>)
 
 ## Requirements
 
@@ -75,7 +75,7 @@ See the Drupal VM [Quickstart Guide](https://github.com/geerlingguy/drupal-vm#qu
 
 > If you already have Pantheon and Github accounts with public keys in place (and they have been added to the appropriate teams for this project) you can skip this step.
 
-[Back to top](#center-for-inclusive-childcare)
+[Back to top](#<SITENAME-MD>)
 
 ## Onboarding
 
@@ -87,10 +87,10 @@ You can download and install the Pantheon alias files by clicking the ```Drush a
 
 ```terminus aliases```
 
-You can run ```drush @newupstream.dev status``` to verify you have the correct alias.
+You can run ```drush @<SITENAME>.dev status``` to verify you have the correct alias.
 
 
-**Create a local alias:** The local ```@newupstream.local``` alias is generated automatically by the VM however we recommend creating your own copy so that you can run both aliases from anywhere within your ```<project-root>```. To use your own local alias, create a new alias file in your ```~/.drush``` folder called ```newupstream.local.aliases.drushrc.php``` and paste in the following code:
+**Create a local alias:** The local ```@<SITENAME>.local``` alias is generated automatically by the VM however we recommend creating your own copy so that you can run both aliases from anywhere within your ```<project-root>```. To use your own local alias, create a new alias file in your ```~/.drush``` folder called ```<SITENAME>.local.aliases.drushrc.php``` and paste in the following code:
 
 ```
 <?php
@@ -101,14 +101,14 @@ You can run ```drush @newupstream.dev status``` to verify you have the correct a
 * @see example.aliases.drushrc.php.
 */
 
-$aliases['newupstream.local'] = array(
-'uri' => 'newupstream.local',
-'root' => '/var/www/newupstream/docroot',
-'remote-host' => 'newupstream.local',
+$aliases['<SITENAME>.local'] = array(
+'uri' => '<SITENAME>.local',
+'root' => '/var/www/<SITENAME>/docroot',
+'remote-host' => '<SITENAME>.local',
 'remote-user' => 'vagrant',
 'ssh-options' => '-o "SendEnv PHP_IDE_CONFIG PHP_OPTIONS XDEBUG_CONFIG" -o PasswordAuthentication=no -i "' . (getenv('VAGRANT_HOME') ?: drush_server_home() . '/.vagrant.d') . '/insecure_private_key"',
 'path-aliases' => array(
-  '%drush-script' => '/var/www/newupstream/vendor/drush/drush/drush',
+  '%drush-script' => '/var/www/<SITENAME>/vendor/drush/drush/drush',
 ),
 );
 ```
@@ -119,13 +119,13 @@ The setup outlined above will allow you to run both aliases anywhere within your
 **On your local machine, clone the working repository:**
 
 ```
-git clone git@github.com:electriccitizen/newupstream.git
+git clone git@github.com:electriccitizen/<SITENAME>.git
 ```
 
 **Install project dependencies:**
 
 ```
-cd newupstream
+cd <SITENAME>
 
 composer install
 ```
@@ -145,23 +145,23 @@ and it will often fix the build.
 **Install the Drupal site:**
 
 ```
-drush @newupstream.local site:install
+drush @<SITENAME>.local site:install
 ```
 
 You should now have a local environment in a 1:1 state with the development site including code, files, and database. The ```drush site:install``` command only needs to be run the first time you set up your local environment. When you need to refresh your local environment, you will run ```drush site:refresh``` instead (see below).
 
-[Back to top](#center-for-inclusive-childcare)
+[Back to top](#<SITENAME-MD>)
 
 ## Workflow basics
 
 * Primary development branch: ```master```
-* Local drush alias: ```@newupstream.local```
+* Local drush alias: ```@<SITENAME>.local```
 * Local environment: DrupalVM
-* Local URL: http://newupstream.local
+* Local URL: http://<SITENAME>.local
 * Local login: admin/admin
 * Remote deploy branch: ```multidev``` (pull request into develop)
-* Remote drush alias: ```@newupstream.dev```
-* Remote URL: http://dev-newupstream.pantheonsite.io
+* Remote drush alias: ```@<SITENAME>.dev```
+* Remote URL: http://dev-<SITENAME>.pantheonsite.io
 
 Create a new ```working branch``` from ```master``` for each new task or issue. When you push your ```working branch``` to Github, the application builds itself on Circle CI and is automatically deployed to a Pantheon ```multidev``` environment. You will continue pushing to your ```working branch``` for additional QA, adjustments and fixes, or to diagnose any failing Circle CI tests.
 
@@ -169,14 +169,14 @@ Once everything is ready to deploy, submit a pull request on Github to merge you
 
 This triggers another build and the application is automatically deployed to the Pantheon development server if it passes all of the defined tests on Circle CI.
 
-[Back to top](#center-for-inclusive-childcare)
+[Back to top](#<SITENAME-MD>)
 
 ## Local development and common tasks
 
 Before beginning a new task, always make sure you are starting from a 1:1 state with the development server:
 
 ```
-drush @newupstream.local site:refresh
+drush @<SITENAME>.local site:refresh
 ```
 
 You can run the ```site:refresh``` command at any time to reset your local environment. This command will automatically checkout the ```master``` branch but will not delete or alter any ```working branch``` you may have in place.
@@ -184,9 +184,9 @@ You can run the ```site:refresh``` command at any time to reset your local envir
 By default, ```site:refresh``` will sync both the database and files from ```development``` server. If you want to skip the database or file sync, you can pass arguments to ```site:refresh``` like so:
 
 ```
-drush @newupstream.local site:refresh --nodb=1 --nofiles=1
+drush @<SITENAME>.local site:refresh --nodb=1 --nofiles=1
 ```
-[Back to top](#center-for-inclusive-childcare)
+[Back to top](#<SITENAME-MD>)
 
 ### Making a simple change
 
@@ -209,7 +209,7 @@ Change the site name, change the limit on a view, alter or create a content type
 When you are ready to push up your work for further QA or review, export the active configuration from your ```working branch``` and run a series of sanity checks to make sure your changes will still work against ```master```:
 
 ```
-drush @newupstream.local site:export
+drush @<SITENAME>.local site:export
 ```
 
 The ```site:export``` command will export your active configuration to code (```drush cex sync```), merge the ```master``` branch into your ```working branch```, run a ```composer install```, and finally run a test import (```drush cim sync```) to verify that your changes will work against the latest ```master``` branch before checking out your ```working branch``` again to prepare for a git push.  
@@ -245,9 +245,9 @@ A project maintainer will review your request and merge to trigger another Circl
 Each time your work is successfully merged into ```master``` you should delete your local ```working branch``` and start fresh to get your local environment back into a 1:1 state with develop.
 
 ```
-drush @newupstream.local site:refresh
+drush @<SITENAME>.local site:refresh
 ```
-[Back to top](#center-for-inclusive-childcare)
+[Back to top](#<SITENAME-MD>)
 
 ### Adding a new module
 
@@ -270,7 +270,7 @@ composer require drupal/<contrib_module>
 **Enable and configure your module**
 
 ```
-drush @newupstream.local en <contrib_module>
+drush @<SITENAME>.local en <contrib_module>
 ```
 Configure your new module as needed via the Drupal UI.
 
@@ -279,7 +279,7 @@ Configure your new module as needed via the Drupal UI.
 When you are ready to push up your work for further QA or review, export your active config:
 
 ```
-drush @newupstream.local site:export
+drush @<SITENAME>.local site:export
 ```
 
 **Commit and push your working branch**
@@ -304,9 +304,9 @@ When your changes have been reviewed and have passed any additional QA steps, su
 Each time your work is successfully merged into ```master``` you should delete your local ```working branch``` and start fresh to get your local environment back into a 1:1 state with develop.
 
 ```
-drush @newupstream.local site:refresh
+drush @<SITENAME>.local site:refresh
 ```
-[Back to top](#center-for-inclusive-childcare)
+[Back to top](#<SITENAME-MD>)
 
 ## Theming basics
 
@@ -368,14 +368,14 @@ We use an atomic approach to Pattern Lab file structure with Global elements for
 **Hiding files from Pattern Lab**
 By default, any file in components/\_patterns is going to be shown in Pattern Lab. You can prevent files from being shown in Pattern Lab by preceding the file name with an underscore. The file will sitll be active, but it will not by displayed in the local Pattern Lab instance. This is handy for things like files that are extended straight into Drupal like \_html.twig.
 
-[Back to top](#center-for-inclusive-childcare)
+[Back to top](#<SITENAME-MD>)
 
 ## Cheatsheet
 
 Here are the basic commands to start and finish a new task:
 
 ```
-drush @newupstream.local site:refresh
+drush @<SITENAME>.local site:refresh
 
 git branch <your_working_branch>
 
@@ -383,7 +383,7 @@ git checkout <your_working_branch>
 
 [make some changes]
 
-drush @newupstream.local site:export
+drush @<SITENAME>.local site:export
 
 git commit -am "description of your commit"
 
@@ -391,7 +391,7 @@ git push origin <your_working_branch>
 ```
 As outlined above you can submit a pull request into ```master``` once your changes are approved and ready.
 
-[Back to top](#center-for-inclusive-childcare)
+[Back to top](#<SITENAME-MD>)
 
 ## Available commands
 
@@ -401,13 +401,13 @@ The various build commands available for the project are simple wrappers that au
 drush site:install
 ```
 
-The ```site:install``` command is typically only issued during onboarding. It makes sure you are on the current ```master``` branch, runs ```composer install```, and syncs your database and files from ```newupstream.dev``` to ```newupstream.local```.
+The ```site:install``` command is typically only issued during onboarding. It makes sure you are on the current ```master``` branch, runs ```composer install```, and syncs your database and files from ```<SITENAME>.dev``` to ```<SITENAME>.local```.
 
 ```
 drush site:refresh
 ```
 
-The ```site:refresh``` command is used whenever you want to start a new ```working branch``` based on the current development server. It makes sure you are on the current ```master branch```, runs ```composer install```, and syncs your database and files from ```newupstream.dev``` to ```newupstream.local```. You can optionally choose to skip the file or database sync with ```--nofiles=1``` and ```--nodb=1```.
+The ```site:refresh``` command is used whenever you want to start a new ```working branch``` based on the current development server. It makes sure you are on the current ```master branch```, runs ```composer install```, and syncs your database and files from ```<SITENAME>.dev``` to ```<SITENAME>.local```. You can optionally choose to skip the file or database sync with ```--nofiles=1``` and ```--nodb=1```.
 
 ```
 drush site:export
@@ -420,19 +420,19 @@ The ```site:export``` command is a fairly complex command used to export your ac
 Note that you can run any standard drush command against your local environment for debugging and troubleshooting:
 
 ```
-drush @newupstream.local cr all
+drush @<SITENAME>.local cr all
 
-drush sql-sync @newupstream.dev @newupstream.local
+drush sql-sync @<SITENAME>.dev @<SITENAME>.local
 
-drush @newupstream.local cex sync
+drush @<SITENAME>.local cex sync
 
-drush @newupstream.local cim sync
+drush @<SITENAME>.local cim sync
 
 composer install
 
 etc.
 ```
-[Back to top](#center-for-inclusive-childcare)
+[Back to top](#<SITENAME-MD>)
 
 ## Suggested additions
 
@@ -461,7 +461,7 @@ To interact with the theme you will need NPM:
 brew install npm nvm
 ```
 
-[Back to top](#center-for-inclusive-childcare)
+[Back to top](#<SITENAME-MD>)
 
 ## General tips
 
@@ -479,13 +479,13 @@ composer self-update
 ```
 composer clear-cache
 ```
-[Back to top](#center-for-inclusive-childcare)
+[Back to top](#<SITENAME-MD>)
 
 ## Troubleshooting
 
 **Drush alias problems**
 
-You should have a ```@newupstream.local``` and a ```@newupstream.dev``` alias available immediately after running ```vagrant up```. If your aliases are not working, first:
+You should have a ```@<SITENAME>.local``` and a ```@<SITENAME>.dev``` alias available immediately after running ```vagrant up```. If your aliases are not working, first:
 
 * Make sure you are in the ```web``` folder of your project root
 
@@ -493,9 +493,9 @@ You should have a ```@newupstream.local``` and a ```@newupstream.dev``` alias av
 
   * Download and install a new alias file from your Pantheon dashboard into your ```~/.drush``` folder
 
-  * Try the following aliases instead of ```@newupstream.dev```:
+  * Try the following aliases instead of ```@<SITENAME>.dev```:
 
-  ```@pantheon.newupstream.dev```
+  ```@pantheon.<SITENAME>.dev```
 
 **PHP Memory Limit**
 
@@ -530,7 +530,7 @@ drush <your-command>
 This is often due to a missing vagrant-hostupdater plugin (see above for install) or a problem with your generated /etc/hosts file. Sometimes Drupal VM does not insert a proper line break between host entries, so you may see something similar to this in your system's /etc/hosts file:
 
 ```
-127.0.0.1       anothersite.dd192.168.189.178newupstream.local # VAGRANT: 461be619b044d8d6d99ca1ea37fc68be
+127.0.0.1       anothersite.dd192.168.189.178<SITENAME>.local # VAGRANT: 461be619b044d8d6d99ca1ea37fc68be
 ```
 
 To fix this problem manually edit your system's /etc/hosts file and add a line break where your Drupal VM entries begin:
@@ -540,7 +540,7 @@ sudo nano /etc/hosts
 
 127.0.0.1       anothersite.dd //fix the linebreak here!
 
-192.168.189.178  newupstream.local  # VAGRANT: 461be619b044d8d6d99ca1ea37fc68be...
+192.168.189.178  <SITENAME>.local  # VAGRANT: 461be619b044d8d6d99ca1ea37fc68be...
 
 etc.
 ```
@@ -553,13 +553,13 @@ If you continue to have issues you can also destroy and rebuild the virtual mach
 vagrant destroy
 ```
 
-After running this command, also verify that any related /etc/hosts entries were deleted during the destory process. Manually remove any newupstream.local entries that might remain. You can now run:
+After running this command, also verify that any related /etc/hosts entries were deleted during the destory process. Manually remove any <SITENAME>.local entries that might remain. You can now run:
 
 ```
 vagrant up
 ```
 
-This will create a fresh virtual machine. Again watch the build process closely for any errors (especially related to host entries.) If all goes good, the process should complete and you should be able to run ```drush @newupstream.local status``` and return a successful Drupal bootstrap.
+This will create a fresh virtual machine. Again watch the build process closely for any errors (especially related to host entries.) If all goes good, the process should complete and you should be able to run ```drush @<SITENAME>.local status``` and return a successful Drupal bootstrap.
 
 ## Linux and Windows
 
@@ -568,10 +568,10 @@ These instructions were tested and derived on Mac OS but others have had success
 * Linux: http://docs.drupalvm.com/en/latest/getting-started/installation-linux/
 * Windows: http://docs.drupalvm.com/en/latest/getting-started/installation-windows/
 
-[Back to top](#center-for-inclusive-childcare)
+[Back to top](#<SITENAME-MD>)
 
 ## Support and feedback
 
 If you need support or can contribute additional notes regarding Linux or Windows installs please contact <tim@electriccitizen.com>.
 
-[Back to top](#center-for-inclusive-childcare)
+[Back to top](#<SITENAME-MD>)

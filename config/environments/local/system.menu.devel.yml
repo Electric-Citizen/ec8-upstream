@@ -1,4 +1,4 @@
-uuid: 73d21a60-e2d5-475e-bf42-5a1b7dd59b52
+uuid: b6e6b971-eb9f-4a9d-9f3e-c4ae2bc6cbfc
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - devel
 _core:
-  default_config_hash: 3V-l1uuTcyirYOGLPZV5HWaDfr02uEbWZJIwc8Byz-c
+  default_config_hash: mYceWZ4FHflXMWwxiO7ePCeXvKMl9F-ARIQ9p4IpvWE
 id: devel
 label: Development
 description: 'Links related to Devel module.'
