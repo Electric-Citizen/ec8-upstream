@@ -83,3 +83,4 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
  */
 
 $conf['install_profile'] = 'oc';
+$settings['install_profile'] = 'oc';
