@@ -39,84 +39,6 @@ function ec_drush_command() {
   return $commands;
 }
 
-/**
- * Drush command logic.
- * drush_[MODULE_NAME]_[COMMAND_NAME]().
- */
-
-function drush_ec_install() {
-
-  $break = '------------------------------------------------------------------------';
-
-  // get site config for vm
-  $site = yaml_parse_file('/var/www/drupalvm/drupalvm/config.yml');
-
-  // change to web root
-  chdir('/var/www/drupalvm/web');
-
-  //update source branch
-  drush_print($break);
-  drush_print('Pull fresh '.$site['branch'].' branch');
-  drush_print($break);
-
-  exec('git checkout '.$site['branch']);
-  exec('git pull origin '.$site['branch']);
-
-  // run composer install again
-  drush_print($break);
-  drush_print('Install  on '.$site['alias_local'].' branch');
-  drush_print($break);
-
-  exec('composer install');
-
-  // sync db
-  drush_print($break);
-  drush_print('Sync database from '.$site['alias_remote']);
-  drush_print($break);
-
-  if (!$status = drush_invoke_process('@self', 'sql-sync -y', array($site['alias_remote'], '@self'), array())) {
-    drush_log(dt('Unable to sync db !alias', array('!alias' => $site['alias_remote'])), 'warning');
-  }
-
-  // sync files
-  drush_print($break);
-  drush_print('Sync files from '.$site['alias_remote']);
-  drush_print($break);
-  exec('rsync -rlvz --size-only --ipv4 --progress -e \'ssh -p 2222\' '.$site['env'].'.'.$site['site'].'@appserver.'.$site['env'].'.'.$site['site'].'.drush.in:files/ sites/default/files');
-
-  // export config
-  drush_print($break);
-  drush_print('Export active config to '.$site['alias_local']);
-  drush_print($break);
-
-  if (!$status = drush_invoke_process('@self', 'cex', array(), array())) {
-    drush_log(dt('Unable to export config to !alias', array('!alias' => '$self')), 'warning');
-  }
-
-  // import config (test)
-  drush_print($break);
-  drush_print('Import config to '.$site['alias_local'].' [TEST]');
-  drush_print($break);
-
-  exec('drush '.$site['local_alias'].' cim sync');
-
-  // clear cache
-  drush_print($break);
-  drush_print('Clear caches on '.$site['alias_local']);
-  drush_print($break);
-  if (!$status = drush_invoke_process('@self', 'cr all', array(), array())) {
-    drush_log(dt('Unable to display status !alias', array('!alias' => '@self')), 'warning');
-  }
-
-  // return a status
-  drush_print($break);
-  drush_print('Ready to rock.');
-  drush_print($break);
-
-}
-
-
-
 function drush_ec_refresh($nodb=NULL, $nofiles=NULL) {
 
   $break = '------------------------------------------------------------------------';
@@ -131,11 +53,16 @@ function drush_ec_refresh($nodb=NULL, $nofiles=NULL) {
   drush_print($break);
   drush_print('Update '.$site['branch'].' branch');
   drush_print($break);
-
   exec('git checkout '.$site['branch']);
   exec('git pull origin '.$site['branch']);
 
-  // get arguments
+  // run composer install
+  drush_print($break);
+  drush_print('composer install on '.$site['alias_local']);
+  drush_print($break);
+  exec('composer install');
+
+  // get db and files arguments
   $nodb = drush_get_option('nodb', NULL);
   $nofiles = drush_get_option('nofiles', NULL);
 
@@ -154,6 +81,16 @@ function drush_ec_refresh($nodb=NULL, $nofiles=NULL) {
     drush_print('--nodb can only be set to 1: file sync failed');
 
   }
+
+  // drush updb
+  drush_print($break);
+  drush_print('Run database updates on '.$site['alias_local']);
+  drush_print($break);
+
+  if (!$status = drush_invoke_process('@self', 'updb -y"', array(), array())) {
+    drush_log(dt('Unable to run drush updb on !alias', array('!alias' => '$self')), 'warning');
+  }
+
   // sync files
   drush_print($break);
   drush_print('Sync files from '.$site['alias_remote']);
@@ -179,13 +116,12 @@ function drush_ec_refresh($nodb=NULL, $nofiles=NULL) {
 
   // import config (test)
   drush_print($break);
-  drush_print('Import config to '.$site['alias_local'].' [test]');
+  drush_print('Import config to '.$site['alias_local']);
   drush_print($break);
 
   if (!$status = drush_invoke_process('@self', 'cim sync', array(), array())) {
     drush_log(dt('Unable to import config to !alias', array('!alias' => '$self')), 'warning');
   }
-
 
   // change admin pwd
   drush_print($break);
@@ -193,7 +129,7 @@ function drush_ec_refresh($nodb=NULL, $nofiles=NULL) {
   drush_print($break);
 
   if (!$status = drush_invoke_process('@self', 'upwd admin --password="admin"', array(), array())) {
-    drush_log(dt('Unable to import config to !alias', array('!alias' => '$self')), 'warning');
+    drush_log(dt('Unable to change password user 1 pwd on !alias', array('!alias' => '$self')), 'warning');
   }
 
   // clear cache
@@ -204,9 +140,9 @@ function drush_ec_refresh($nodb=NULL, $nofiles=NULL) {
     drush_log(dt('Unable to display status !alias', array('!alias' => '@self')), 'warning');
   }
 
-  // STATUS
+  // ready
   drush_print($break);
-  drush_print('Ready to rock.');
+  drush_print('Ready: please review the output for any error messages that may need to be resolved.');
   drush_print($break);
 
 }

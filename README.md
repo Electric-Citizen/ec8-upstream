@@ -1,10 +1,10 @@
-# <SITENAME> <SITENAME-MD>
+# EC8 MASTER README <SITENAME> <SITEID> <SITENAME-MD>
 
 [![CircleCI](https://circleci.com/gh/electriccitizen/<SITENAME>.svg?style=shield)](https://circleci.com/gh/electriccitizen/<SITENAME>)
 [![Dashboard <SITENAME>](https://img.shields.io/badge/dashboard-<SITENAME>-yellow.svg)](https://dashboard.pantheon.io/sites/cbc91b53-e053-4c27-8ad4-7502151a02ed#dev/code)
 [![Dev Site <SITENAME>](https://img.shields.io/badge/site-<SITENAME>-blue.svg)](http://dev-<SITENAME>.pantheonsite.io/)
 
-Center for Inclusive Childcare is a Composer-based Drupal 8 application hosted on [Pantheon](http://dashboard.getpantheon.com). The application integrates with [Circle CI](https://circleci.com/dashboard) for continuous integration testing. All development and theming is done on a local virtual machine running [Drupal VM](http://drupalvm.com). Please review this README and be sure to understand the core concepts and workflow described below prior to beginning.
+<SITENAME> is a Composer-based Drupal 8 application hosted on [Pantheon](http://dashboard.getpantheon.com). The application integrates with [Circle CI](https://circleci.com/dashboard) for continuous integration testing. All development and theming is done on a local virtual machine running [Drupal VM](http://drupalvm.com). Please review this README and be sure to understand the core concepts and workflow described below prior to beginning.
 
 #### Onboarding and development
 
@@ -34,9 +34,9 @@ This repository contains the project build files (composer.json, exported config
 
 See the small icon links at the top of this README for direct links to:
 
-* Circle CI tests
-* Pantheon Dashboard
-* Pantheon Development site
+* [Circle CI tests](https://circleci.com/gh/electriccitizen/<SITENAME>)
+* [Pantheon Dashboard](https://dashboard.pantheon.io/sites/<SITEID>#dev/code)
+* [Pantheon Development site](http://dev-<SITENAME>.pantheonsite.io/)
 
 Also see the [Drupal VM Dashboard](http://dashboard.<SITENAME>.local) for error logs, MySQL/Adminer, and Mailhog.
 
@@ -46,7 +46,7 @@ Also see the [Drupal VM Dashboard](http://dashboard.<SITENAME>.local) for error 
 
 Make sure you have the basic skills necessary to effectively use this platform. You should have a solid understanding of the command line, configuration management for teams, git branching, pull requests, Composer/dependency management, and a CI-based deployment process. You will also need to have relatively up-to-date versions of the following components running on your local machine:
 
-* [Git](https://git-scm.com/downloads)
+* [Git](https://git-scm.com/downloads) ```git version```
 * [Composer](https://getcomposer.org/doc/00-intro.md) ```composer self-update```
 * PHP 5.6+ ```php --version```
 * [Drush 8.1.1+](http://docs.drush.org/en/master/install/) ```drush version```
@@ -68,7 +68,7 @@ See the Drupal VM [Quickstart Guide](https://github.com/geerlingguy/drupal-vm#qu
 
 **Pantheon and Github accounts**
 
-> You will also need both a Pantheon account and a Github account. Make sure both accounts have been added to the respective teams and that your public SSH key has been added to your profiles.
+> You will need a Pantheon account and a Github account. Make sure both accounts have been added to the respective teams and that your public SSH key has been added to your profiles.
 
 > * [Adding public key to Pantheon](https://pantheon.io/docs/ssh-keys/)
 > * [Adding pubic key to Github](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
@@ -83,22 +83,26 @@ Make sure your user account has been added to both the Github team and to the Pa
 
 **Refresh your Pantheon alias file**
 
-You can download and install the Pantheon alias files by clicking the ```Drush aliases``` link at the top of your Pantheon dashboard. Download the ```pantheon.aliases.drushrc.php```` file and place it your ```~/.drush``` folder. If you use Terminus you can do this automatically by authenticating and running:
+You can download and install the Pantheon alias files by clicking the ```Drush aliases``` link at the top of your Pantheon dashboard. Download the ```pantheon.aliases.drushrc.php``` file and place it your ```~/.drush``` folder.
 
-```terminus aliases```
+If you use Terminus you can do this automatically:
+
+```
+terminus auth
+terminus aliases
+```
 
 You can run ```drush @<SITENAME>.dev status``` to verify you have the correct alias.
 
+**Create a local alias file**
 
-**Create a local alias:** The local ```@<SITENAME>.local``` alias is generated automatically by the VM however we recommend creating your own copy so that you can run both aliases from anywhere within your ```<project-root>```. To use your own local alias, create a new alias file in your ```~/.drush``` folder called ```<SITENAME>.local.aliases.drushrc.php``` and paste in the following code:
+The ```@<SITENAME>.local``` alias is generated automatically by the VM however we recommend creating your own copy so you can run all aliases from anywhere within your ```<project-root>```. To use your own local alias, create a new alias file in your ```~/.drush``` folder called ```<SITENAME>.local.aliases.drushrc.php``` and paste in the following code:
 
 ```
 <?php
 
 /**
 * Drupal VM drush aliases.
-*
-* @see example.aliases.drushrc.php.
 */
 
 $aliases['<SITENAME>.local'] = array(
@@ -136,19 +140,15 @@ composer install
 vagrant up
 ```
 
-This takes about 10 minutes but you only need to do it once. Sometimes the build will fail due to network errors or downtime at one of the external repositories. If your build fails you can try running:
-
-```vagrant provision```
-
-and it will often fix the build.
+This takes about 10-15 minutes but you only need to do it once. Sometimes the build will fail due to network errors or downtime at one of the external repositories (this seems to be especially common when building the ```mailhog``` app). If your build fails, you can try running: ```vagrant provision``` and it may fix the build. If not, you may need to run ```vagrant destroy``` and attempt again.
 
 **Install the Drupal site:**
 
 ```
-drush @<SITENAME>.local site:install
+drush @<SITENAME>.local site:refresh
 ```
 
-You should now have a local environment in a 1:1 state with the development site including code, files, and database. The ```drush site:install``` command only needs to be run the first time you set up your local environment. When you need to refresh your local environment, you will run ```drush site:refresh``` instead (see below).
+Whenever you run ```site:refresh``` check the output for any errors that may need to be addressed. If ```site:refresh``` runs without reporting any errors you should have a local environment in a 1:1 state with the development site including code, files, and database.
 
 [Back to top](#<SITENAME-MD>)
 
@@ -398,12 +398,6 @@ As outlined above you can submit a pull request into ```master``` once your chan
 The various build commands available for the project are simple wrappers that automatically issue a series of commands on the virtual machine and perform a series of sanity checks. For debugging or troubleshooting, you may need to run standard commands individually against the vm instead of relying on the wrappers.
 
 ```
-drush site:install
-```
-
-The ```site:install``` command is typically only issued during onboarding. It makes sure you are on the current ```master``` branch, runs ```composer install```, and syncs your database and files from ```<SITENAME>.dev``` to ```<SITENAME>.local```.
-
-```
 drush site:refresh
 ```
 
@@ -465,7 +459,9 @@ brew install npm nvm
 
 ## General tips
 
-* You can run individual commands at any time instead of using the ```site:[command]``` wrappers. This is often necessary for troubleshooting.
+* If you run multiple virtual machines for different projects you may run into system-wide memory problems. Keep your vms in a shutdown state unless you are actively working by running ```vagrant halt``` and then another ```vagrant up``` when you need to use the vm again.
+
+* You can run individual drush commands at any time instead of using the ```site:[command]``` wrappers. This is often necessary for troubleshooting.
 
 * If you are running into random issues, make sure to update to the latest versions of the requirements listed above unless otherwise noted in an issue queue.
 
@@ -489,13 +485,9 @@ You should have a ```@<SITENAME>.local``` and a ```@<SITENAME>.dev``` alias avai
 
 * Make sure you are in the ```web``` folder of your project root
 
-* If still not working try the following:
+* If still not working try again to download and install a new alias file from your Pantheon dashboard into your ```~/.drush``` folder
 
-  * Download and install a new alias file from your Pantheon dashboard into your ```~/.drush``` folder
-
-  * Try the following aliases instead of ```@<SITENAME>.dev```:
-
-  ```@pantheon.<SITENAME>.dev```
+* See the onboarding notes above for the most effective alias setup.
 
 **PHP Memory Limit**
 
@@ -509,25 +501,27 @@ And in your php.ini file change or set your memory limit to:
 
 ```
 memory_limit = 2G
+
+or
+
+memory_limit = -1 (for unlimited memory)
 ```
 
-**Could not find the alias:**  Your local alias should be generated automatically but if you get an alias not found for your local VM you can regenerate with this command:ss
+**Could not find the alias**
 
-```
-composer run-script blt-alias
-```
-
-**Could not find the alias:** Make sure you are running all local drush commands (e.g drush $my.local status) within the docroot folder:
+If your ~/.drush aliases are not setup correctly, try running your commands directly in the web folder:
 
 ```
 cd your_project_root/web
 
-drush <your-command>
+drush @<SITENAME>.local <your-command>
 ```
 
-**Can’t connect to local.yourproject.com:** Sometimes your /etc/hosts file can get messed up, especially if you have attempted multiple attempts on your VM build. Examine and fix your /etc/hosts file with any badly formed or extraneous entries.
+**Can’t connect to <SITENAME>.local:**
 
-This is often due to a missing vagrant-hostupdater plugin (see above for install) or a problem with your generated /etc/hosts file. Sometimes Drupal VM does not insert a proper line break between host entries, so you may see something similar to this in your system's /etc/hosts file:
+Sometimes your ```/etc/hosts``` file can become badly formatted, especially if you have attempted multiple attempts on your VM build. Examine and fix your ```/etc/hosts``` file with any badly formed or extraneous entries.
+
+This is often due to a missing ```vagrant-hostupdater``` plugin (see above for install) or a problem with your generated ```/etc/hosts``` file. Sometimes Drupal VM does not insert a proper line break between host entries, so you may see something similar to this in your system's /etc/hosts file:
 
 ```
 127.0.0.1       anothersite.dd192.168.189.178<SITENAME>.local # VAGRANT: 461be619b044d8d6d99ca1ea37fc68be
@@ -545,7 +539,7 @@ sudo nano /etc/hosts
 etc.
 ```
 
-Examine your /etc/hosts file to make sure it looks sane and that there are not competing entries for your Drupal VM IP address or other obvious problems.
+Examine your ```/etc/hosts``` file to make sure it looks sane and that there are not competing entries for your Drupal VM IP address or other obvious problems.
 
 If you continue to have issues you can also destroy and rebuild the virtual machine in order to start fresh.
 
@@ -553,17 +547,17 @@ If you continue to have issues you can also destroy and rebuild the virtual mach
 vagrant destroy
 ```
 
-After running this command, also verify that any related /etc/hosts entries were deleted during the destory process. Manually remove any <SITENAME>.local entries that might remain. You can now run:
+After running this command, also verify that any related ```/etc/hosts``` entries were deleted during the destroy process. Manually remove any <SITENAME>.local entries that might remain. You can now run:
 
 ```
 vagrant up
 ```
 
-This will create a fresh virtual machine. Again watch the build process closely for any errors (especially related to host entries.) If all goes good, the process should complete and you should be able to run ```drush @<SITENAME>.local status``` and return a successful Drupal bootstrap.
+Watch the build process closely for any errors (especially related to host entries.) If all goes good, the process should complete and you should be able to run ```drush @<SITENAME>.local status``` and return a successful Drupal bootstrap.
 
 ## Linux and Windows
 
-These instructions were tested and derived on Mac OS but others have had success running Drupal VM on Linux or Windows. More specific instructions are available below. Godspeed:
+These instructions were tested and derived on Mac OS but others have had success running Drupal VM on Linux or Windows. More specific instructions are available below.
 
 * Linux: http://docs.drupalvm.com/en/latest/getting-started/installation-linux/
 * Windows: http://docs.drupalvm.com/en/latest/getting-started/installation-windows/
@@ -572,6 +566,6 @@ These instructions were tested and derived on Mac OS but others have had success
 
 ## Support and feedback
 
-If you need support or can contribute additional notes regarding Linux or Windows installs please contact <tim@electriccitizen.com>.
+If you need support or find any errors or suggested improvements in this README contact <tim@electriccitizen.com>.
 
 [Back to top](#<SITENAME-MD>)

@@ -7,7 +7,7 @@ env: dev
 
 vagrant_hostname: ec8-upstream.local
 vagrant_machine_name: ec8-upstream
-vagrant_ip: 192.168.88.102
+vagrant_ip: 192.168.88.<SITEIP>
 
 drupal_site_name: "ec8-upstream"
 drupal_enable_modules: []
