@@ -137,3 +137,4 @@ mosaic_instructions:
   "STYEGUIDE & DRUPAL: The mosaic gallery pl template is not carried into Drupal, 
   but the tile image template is (even though it is not shown in pl). The field-mosaic-tile field template
   in Drupal is also customized to get the correct html structure to work with Masonry.js."
+

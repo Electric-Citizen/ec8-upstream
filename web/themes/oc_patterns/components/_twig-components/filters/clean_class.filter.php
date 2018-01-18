@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Add "clean_class" filter for Pattern Lab.

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Add "link" function for Pattern Lab.

@@ -24,3 +24,4 @@ oc_patterns.images.bigdesk:
   weight: 3
   multipliers:
     - 1x
+

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Add "safe_join" filter for Pattern Lab.

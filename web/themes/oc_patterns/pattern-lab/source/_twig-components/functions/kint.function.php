@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Add "kint" function for Pattern Lab.

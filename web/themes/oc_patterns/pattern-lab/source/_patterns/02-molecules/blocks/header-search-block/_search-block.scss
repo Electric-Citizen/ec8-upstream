@@ -34,7 +34,7 @@
 	}
 
 	//center search box on mobile and set height to 0 so can open under header when toggled
-	#search-block-form {
+	#search-block-form,#views-exposed-form-site-search-search-results {
 		height: 0;
 		overflow: hidden;
 		text-align: center;
@@ -69,7 +69,7 @@
 		}
 
 		//search box input
-		.js-form-type-search{
+		.js-form-type-search,.js-form-item-search-api-fulltext{
 			padding: 10px 0;
 			width: 100%;
 			margin-bottom: 0;
@@ -77,14 +77,14 @@
 				width: 320px;
 			}
 			input{
-				width: 100.15%;
+				width: 100%;
 				@include deskmenu{
 					width: 100%;
 				}
 				padding: 9px 10px;
 				font-size: 13px;
 				border: none;
-				border: 1px solid $black;
+				border: 1px solid $border-rule;
 				//from forms.scss
 				@include placeholder;
 				&:focus{

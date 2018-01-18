@@ -38,3 +38,5 @@ menu:
 footer_instructions:
   "STYLEGUIDE ONLY: This template is not embedded into Drupal, but the footer macro variables will work in both. 
    Available variables are: fixed, non-fixed."
+
+  

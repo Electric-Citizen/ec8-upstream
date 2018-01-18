@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Add "without" filter for Pattern Lab.

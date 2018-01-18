@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Add "Project_trans_Node" class.
@@ -20,12 +19,12 @@ if (!class_exists("Project_trans_Node")) {
      * {@inheritdoc}
      */
     public function __construct(\Twig_Node $body, \Twig_Node $plural = NULL, \Twig_Node_Expression $count = NULL, \Twig_Node_Expression $options = NULL, $lineno, $tag = NULL) {
-      parent::__construct([
+      parent::__construct(array(
         'count' => $count,
         'body' => $body,
         'plural' => $plural,
         'options' => $options,
-      ], [], $lineno, $tag);
+      ), array(), $lineno, $tag);
     }
 
     /**
@@ -57,10 +56,10 @@ if (!class_exists("Project_trans_Node")) {
      */
     protected function compileString(\Twig_Node $body) {
       if ($body instanceof \Twig_Node_Expression_Name || $body instanceof \Twig_Node_Expression_Constant || $body instanceof \Twig_Node_Expression_TempName) {
-        return [$body, []];
+        return array($body, array());
       }
 
-      $tokens = [];
+      $tokens = array();
       if (count($body)) {
         $text = '';
 
@@ -97,7 +96,7 @@ if (!class_exists("Project_trans_Node")) {
               $args = $args->getNode('node');
             }
             if ($args instanceof \Twig_Node_Expression_GetAttr) {
-              $argName = [];
+              $argName = array();
               // Reuse the incoming expression.
               $expr = $args;
               // Assemble a valid argument name by walking through the
@@ -136,12 +135,12 @@ if (!class_exists("Project_trans_Node")) {
         $text = $body->getAttribute('data');
       }
 
-      return [
+      return array(
         new \Twig_Node(
-          [new \Twig_Node_Expression_Constant(trim($text), $body->getLine())]
+          array(new \Twig_Node_Expression_Constant(trim($text), $body->getLine()))
         ),
         $tokens,
-      ];
+      );
     }
 
   }
@@ -176,11 +175,11 @@ if (!class_exists("Project_trans_TokenParser")) {
       }
       if (!$body) {
         $stream->expect(\Twig_Token::BLOCK_END_TYPE);
-        $body = $this->parser->subparse([$this, 'decideForFork']);
+        $body = $this->parser->subparse(array($this, 'decideForFork'));
         if ('plural' === $stream->next()->getValue()) {
           $count = $this->parser->getExpressionParser()->parseExpression();
           $stream->expect(\Twig_Token::BLOCK_END_TYPE);
-          $plural = $this->parser->subparse([$this, 'decideForEnd'], TRUE);
+          $plural = $this->parser->subparse(array($this, 'decideForEnd'), TRUE);
         }
       }
 
@@ -197,7 +196,7 @@ if (!class_exists("Project_trans_TokenParser")) {
      * Detect a 'plural' switch or the end of a 'trans' tag.
      */
     public function decideForFork($token) {
-      return $token->test(['plural', 'endtrans']);
+      return $token->test(array('plural', 'endtrans'));
     }
 
     /**
