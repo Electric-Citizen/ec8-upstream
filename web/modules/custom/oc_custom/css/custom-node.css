@@ -4,50 +4,6 @@
  */
 
 
-/* USED WHEN SHOWING LAYOUTS GRID ON ADMIN SIDE (NEEEDS JS ENABLED) */
-/*
-.flextable .draggable.grid{
-  	display: inline-block;
-  	font-size: 0;
-  	width: 100%;
-  	border-top: 1px solid #ddd;
-  	border-left: 1px solid #ddd;
-  	border-right: 1px solid #ddd;
-}
-.flextable .draggable.grid td{
-	display: inline-block;
-	font-size: 12px;
-}
-.flextable .draggable.grid td:not(.field-multiple-drag){
-	width: calc(100% - 32px);
-	width: -moz-calc(100% - 32px);
-	width: -web-calc(100% - 32px);
-	text-align: right;
-}
-
-@media screen and (min-width: 760px){
-	.flextable .draggable.grid.auto{
-		width: auto;
-	}
-  	.flextable .draggable.grid.quarter{
-    	width: 50%;
-  	}
-}
-@media screen and (min-width: 1200px){
-  	.flextable .draggable.grid.half{
-    	width: 50%;
-  	}
-  	.flextable .draggable.grid.third{
-    	width: 33.333%;
-  	}
-  	.flextable .draggable.grid.quarter{
-    	width: 25%;
-  	}
-}
-
-*/
-
-
 /* style media image fields inside admin widgets */
 .field--widget-entity-reference-paragraphs img{
   max-width: 100%;
@@ -66,37 +22,6 @@
 }
 
 
-
-
-/*  ADMIN REMINDERS
-------------------- */
-.reminder{
-  position: fixed;
-  bottom: 50px;
-  right: -350px;
-  background: #02acd7;
-  color: #fff;
-  z-index: 20;
-  box-shadow: 3px 3px 0 #d2d2d2;
-  padding: 10px 20px;
-  max-width: 300px;
-}
-.reminder .close{
-  display: block;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  background: url(../../images/reminder-close.png) no-repeat center center;
-  background-size: 12px 12px;
-}
-.reminder .close:hover{
-  background: url(../../images/reminder-close-hover.png) no-repeat center center;
-}
-
-
 /* paragraph add buttons 
 ------------------------- */
 .field--widget-paragraphs:after{
@@ -105,7 +30,19 @@
   clear: both;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input.field-add-more-submit{
+/* WIDGET CONTENT SPACING
+-------------------------- */
+.paragraphs-content{
+  margin-bottom: 1em;
+}
+
+/* widget helptext
+------------------- */
+.field--widget-paragraphs .description strong span{
+  color: #dd241b ;
+}
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper input.field-add-more-submit:not([value="Add another item"]){
   padding-left: 30px;
   border: 2px solid #02acd7;
   color: #535353;
@@ -116,125 +53,112 @@
   margin-right: 15px;
 }
 
+.field--widget-paragraphs .paragraphs-tabs-wrapper .clearfix{
+  margin-bottom: 2em;
+}
+
 .field--widget-paragraphs .paragraphs-tabs-wrapper input.field-add-more-submit:hover{
   border-color: #005b8a !important;
   background-color: rgba(205,232,246,0.3) !important;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Admin View Placer"]{
-  background: url(../icons/svg/view-placer.svg) no-repeat;
-}
-}
-
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Accordion Group"]{
-  background: url(../icons/svg/accordion.svg) no-repeat;
+  background: url(../icons/accordion.svg) no-repeat;
 }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Accordion Item"]{
-  background: url(../icons/svg/accordion.svg) no-repeat;
+  background: url(../icons/accordion.svg) no-repeat;
+}
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Basic Page Section"] {
+  background: url(../icons/section.svg) no-repeat;
 }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Block Placer"]{
-  background: url(../icons/svg/block.svg) no-repeat;
-}
-
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Buttons"]{
-  background: url(../icons/svg/button.svg) no-repeat;
+  background: url(../icons/block.svg) no-repeat;
 }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Call to Action"]{
-  background: url(../icons/svg/cta.svg) no-repeat;
-}
-
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Content Item"]{
-  background: url(../icons/svg/content.svg) no-repeat;
-}
-
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Contact Info"]{
-  background: url(../icons/svg/contact.svg) no-repeat;
-}
-
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Custom Code"]{
-  background: url(../icons/svg/custom.svg) no-repeat;
+  background: url(../icons/cta.svg) no-repeat;
 }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Events by Category"]{
-  background: url(../icons//svg/events.svg) no-repeat;
+  background: url(../icons/events.svg) no-repeat;
 }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Form"]{
-  background: url(../icons/svg/form.svg) no-repeat;
+  background: url(../icons/form.svg) no-repeat;
 }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Horizontal Rule"]{
-  background: url(../icons/svg/hr.svg) no-repeat;
+  background: url(../icons/hr.svg) no-repeat;
 }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Image"]{
-  background: url(../icons/svg/image.svg) no-repeat;
+  background: url(../icons/image.svg) no-repeat;
+}
+
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Landing Page Section"] {
+  background: url(../icons/section.svg) no-repeat;
 }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Links & Files"]{
-  background: url(../icons/svg/link.svg) no-repeat;
+  background: url(../icons/link.svg) no-repeat;
 }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Lightbox Gallery"]{
-  background: url(../icons/svg/gallery.svg) no-repeat;
+  background: url(../icons/gallery.svg) no-repeat;
 }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Map"]{
-  background: url(../icons//svg/map.svg) no-repeat;
+  background: url(../icons/map.svg) no-repeat;
 }
-
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Mosaic Gallery"]{
-  background: url(../icons//svg/mosaic.svg) no-repeat;
-}
-
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add News by Category"]{
-  background: url(../icons//svg/news.svg) no-repeat;
+  background: url(../icons/news.svg) no-repeat;
 }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Pullquote"]{
-  background: url(../icons/svg/pullquote.svg) no-repeat;
-}
-
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Reveal Group"]{
-  background: url(../icons/svg/reveal.svg) no-repeat;
-}
-
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Reveal Section"]{
-  background: url(../icons/svg/reveal.svg) no-repeat;
+  background: url(../icons/pullquote.svg) no-repeat;
 }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Slideshow"]{
-  background: url(../icons/svg/slider.svg) no-repeat;
-}
-
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Social Media"]{
-  background: url(../icons/svg/social-media.svg) no-repeat;
-}
-
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Social Platform"]{
-  background: url(../icons/svg/social-media.svg) no-repeat;
+  background: url(../icons/slider.svg) no-repeat;
 }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Text"]{
-  background: url(../icons/svg/text.svg) no-repeat;
+  background: url(../icons/text.svg) no-repeat;
 }
 
-.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Tile Image"]{
-  background: url(../icons//svg/mosaic.svg) no-repeat;
+.field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add View Placer"]{
+  background: url(../icons/view-placer.svg) no-repeat;
 }
 
 .field--widget-paragraphs .paragraphs-tabs-wrapper input[value="Add Video"]{
-  background: url(../icons/svg/video.svg) no-repeat;
+  background: url(../icons/video.svg) no-repeat;
 }
 
+/* CUSTOM WARNINGS
+------------------ */
+.node-form .custom-warning{
+  color: #000000;
+  font-size: 12px;
+  border: 2px solid #dd241b;
+  background: rgba(221,36,27,0.2);
+  padding: .25em 1em;
+  display: inline-block;
+}
 
+/* WIDGET LABEL */
+.js .paragraph-type-top .paragraph-type-title{
+  min-width: 300px;
+}
+.paragraph-type-title .paragraph-type-label{
+  font-weight: bold;
+}
 
 /* WIDGET ADMIN DESCRIPTION */
-.field--name-field-admin-description .field-item{
+.field--name-field-admin-description,.field--name-field-admin-description .field-item{
   color: #ec2f10;
 }
  
@@ -243,8 +167,11 @@
   margin-bottom: 1em;
 }
 
-
-
+/* HIDE SETTINGS ON FORM WIDGET
+----------------------- */
+.field--widget-paragraphs .field--name-field-oc-form .js-form-type-select + .js-form-wrapper{
+  display: none;
+}
 
 
  
