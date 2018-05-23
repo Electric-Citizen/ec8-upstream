@@ -85,7 +85,6 @@ dependencies:
   - search_api
   - search_api_db
   - shortcut
-  - simple_block
   - superfish
   - system
   - taxonomy

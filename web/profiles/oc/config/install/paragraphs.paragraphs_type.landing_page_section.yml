@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: landing_page_section
+label: 'Landing Page Section'
+icon_uuid: null
+description: 'Section widgets holder for landing pages.'
+behavior_plugins: {  }

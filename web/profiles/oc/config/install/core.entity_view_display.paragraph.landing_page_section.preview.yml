@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.landing_page_section.field_admin_description
+    - field.field.paragraph.landing_page_section.field_anchor_link
+    - field.field.paragraph.landing_page_section.field_background_image
+    - field.field.paragraph.landing_page_section.field_background_style
+    - field.field.paragraph.landing_page_section.field_layout
+    - field.field.paragraph.landing_page_section.field_section_title
+    - paragraphs.paragraphs_type.landing_page_section
+  module:
+    - options
+id: paragraph.landing_page_section.preview
+targetEntityType: paragraph
+bundle: landing_page_section
+mode: preview
+content:
+  field_admin_description:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_background_style:
+    weight: 2
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_layout:
+    weight: 1
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  field_anchor_link: true
+  field_background_image: true
+  field_section_title: true

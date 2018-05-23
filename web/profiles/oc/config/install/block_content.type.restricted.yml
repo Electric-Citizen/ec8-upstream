@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: restricted
+label: Restricted
+revision: 0
+description: 'A restricted block that should never have its block title changed.'

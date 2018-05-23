@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.basic_page_section.field_admin_description
+    - field.field.paragraph.basic_page_section.field_anchor_link
+    - field.field.paragraph.basic_page_section.field_background_image
+    - field.field.paragraph.basic_page_section.field_background_style
+    - field.field.paragraph.basic_page_section.field_layout
+    - field.field.paragraph.basic_page_section.field_section_title
+    - field.field.paragraph.basic_page_section.field_section_widgets
+    - paragraphs.paragraphs_type.basic_page_section
+  module:
+    - options
+id: paragraph.basic_page_section.preview
+targetEntityType: paragraph
+bundle: basic_page_section
+mode: preview
+content:
+  field_admin_description:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_background_style:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_layout:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  field_anchor_link: true
+  field_background_image: true
+  field_section_title: true
+  field_section_widgets: true

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hr_default
+    - paragraphs.paragraphs_type.horizontal_rule
+id: paragraph.horizontal_rule.field_hr_default
+field_name: field_hr_default
+entity_type: paragraph
+bundle: horizontal_rule
+label: 'HR Default'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'HR Default'
+default_value_callback: ''
+settings: {  }
+field_type: string

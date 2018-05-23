@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: basic_page_section
+label: 'Basic Page Section'
+icon_uuid: null
+description: 'Section widgets holder for basic pages.'
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.restricted
+    - field.field.block_content.restricted.body
+  module:
+    - text
+id: block_content.restricted.default
+targetEntityType: block_content
+bundle: restricted
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
