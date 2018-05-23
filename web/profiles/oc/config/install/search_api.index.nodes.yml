@@ -5,12 +5,12 @@ dependencies:
     - field.storage.node.body
     - field.storage.node.field_oc_widgets
     - field.storage.paragraph.field_widget_title
-    - field.storage.paragraph.field_viewfield
-    - field.storage.node.field_event_pin_info
     - field.storage.paragraph.field_accordion_item
     - field.storage.paragraph.field_oc_long_text
     - field.storage.paragraph.field_accordion_header
     - field.storage.node.field_position
+    - field.storage.paragraph.field_section_intro
+    - field.storage.paragraph.field_section_title
     - search_api.server.local
   module:
     - paragraphs
@@ -32,12 +32,11 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: body
     type: text
-    boost: !!float 13
     dependencies:
       config:
         - field.storage.node.body
   field_widget_title:
-    label: 'Widgets » Paragraph » Widget Title'
+    label: 'Widget Title'
     datasource_id: 'entity:node'
     property_path: 'field_oc_widgets:entity:field_widget_title'
     type: text
@@ -48,27 +47,8 @@ field_settings:
         - field.storage.paragraph.field_widget_title
       module:
         - paragraphs
-  field_viewfield:
-    label: 'Widgets » Paragraph » Viewfield'
-    datasource_id: 'entity:node'
-    property_path: 'field_oc_widgets:entity:field_viewfield'
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_oc_widgets
-        - field.storage.paragraph.field_viewfield
-      module:
-        - paragraphs
-  field_event_pin_info:
-    label: 'Event Pin Info'
-    datasource_id: 'entity:node'
-    property_path: field_event_pin_info
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_event_pin_info
   field_oc_long_text_1:
-    label: 'Widgets » Paragraph » Accordion » Paragraph » Accordion Content'
+    label: 'Accordion Content'
     datasource_id: 'entity:node'
     property_path: 'field_oc_widgets:entity:field_accordion_item:entity:field_oc_long_text'
     type: text
@@ -81,11 +61,11 @@ field_settings:
         - paragraphs
         - paragraphs
   field_accordion_header_1:
-    label: 'Widgets » Paragraph » Accordion » Paragraph » Accordion Header'
+    label: 'Accordion Header'
     datasource_id: 'entity:node'
     property_path: 'field_oc_widgets:entity:field_accordion_item:entity:field_accordion_header'
     type: text
-    boost: !!float 5
+    boost: !!float 3
     dependencies:
       config:
         - field.storage.node.field_oc_widgets
@@ -99,10 +79,43 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: field_position
     type: text
-    boost: !!float 2
     dependencies:
       config:
         - field.storage.node.field_position
+  field_section_intro:
+    label: 'Section Intro'
+    datasource_id: 'entity:node'
+    property_path: 'field_oc_widgets:entity:field_section_intro'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_oc_widgets
+        - field.storage.paragraph.field_section_intro
+      module:
+        - paragraphs
+  field_section_title:
+    label: 'Section Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_oc_widgets:entity:field_section_title'
+    type: text
+    boost: !!float 13
+    dependencies:
+      config:
+        - field.storage.node.field_oc_widgets
+        - field.storage.paragraph.field_section_title
+      module:
+        - paragraphs
+  field_oc_long_text:
+    label: 'Text Widget'
+    datasource_id: 'entity:node'
+    property_path: 'field_oc_widgets:entity:field_oc_long_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_oc_widgets
+        - field.storage.paragraph.field_oc_long_text
+      module:
+        - paragraphs
 datasource_settings:
   'entity:node':
     bundles:
@@ -119,11 +132,12 @@ processor_settings:
       - title
       - body
       - field_widget_title
-      - field_viewfield
-      - field_event_pin_info
       - field_oc_long_text_1
       - field_accordion_header_1
       - field_position
+      - field_section_intro
+      - field_section_title
+      - field_oc_long_text
     exceptions:
       texan: texa
       mexican: mexic
@@ -135,16 +149,12 @@ processor_settings:
   aggregated_field: {  }
   entity_status: {  }
   tokenizer:
-    all_fields: true
+    all_fields: false
     fields:
-      - title
       - body
-      - field_widget_title
-      - field_viewfield
-      - field_event_pin_info
       - field_oc_long_text_1
-      - field_accordion_header_1
-      - field_position
+      - field_section_intro
+      - field_oc_long_text
     spaces: ''
     overlap_cjk: 1
     minimum_word_size: '3'
@@ -157,11 +167,12 @@ processor_settings:
       - title
       - body
       - field_widget_title
-      - field_viewfield
-      - field_event_pin_info
       - field_oc_long_text_1
       - field_accordion_header_1
       - field_position
+      - field_section_intro
+      - field_section_title
+      - field_oc_long_text
     weights:
       preprocess_index: -48
       preprocess_query: -48
@@ -176,20 +187,15 @@ processor_settings:
           news: !!float 0
           page: !!float 3
           profiles: !!float 0
-          support_book: !!float 0
     weights:
       preprocess_index: -42
   html_filter:
-    all_fields: true
+    all_fields: false
     fields:
-      - title
       - body
-      - field_widget_title
-      - field_viewfield
-      - field_event_pin_info
       - field_oc_long_text_1
-      - field_accordion_header_1
-      - field_position
+      - field_section_intro
+      - field_oc_long_text
     title: true
     alt: true
     tags:
@@ -205,7 +211,8 @@ processor_settings:
       preprocess_index: -46
       preprocess_query: -46
 tracker_settings:
-  default: {  }
+  default:
+    indexing_order: fifo
 options:
   index_directly: true
   cron_limit: 50

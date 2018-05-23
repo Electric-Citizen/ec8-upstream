@@ -78,7 +78,7 @@ display:
         type: default
         options:
           grouping: {  }
-          row_class: horizontal
+          row_class: ''
           default_row_class: true
       row:
         type: fields
@@ -156,7 +156,7 @@ display:
         path:
           id: path
           table: node
-          field: path
+          field: view_node
           relationship: none
           group_type: group
           admin_label: ''
@@ -203,7 +203,8 @@ display:
           hide_alter_empty: true
           absolute: false
           entity_type: node
-          plugin_id: node_path
+          plugin_id: entity_link
+          output_url_as_text: true
         body:
           id: body
           table: node__body
@@ -373,7 +374,7 @@ display:
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
-          element_wrapper_class: card-image
+          element_wrapper_class: ''
           element_default_classes: true
           empty: ''
           hide_empty: false
@@ -436,7 +437,7 @@ display:
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
-          element_wrapper_class: card-text
+          element_wrapper_class: ''
           element_default_classes: true
           empty: ''
           hide_empty: false
@@ -492,6 +493,9 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -532,6 +536,7 @@ display:
               administrator: '0'
               senior_editor: '0'
               editor: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''

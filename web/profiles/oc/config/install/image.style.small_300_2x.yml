@@ -1,6 +1,8 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - image_style_quality
 name: small_300_2x
 label: 'Small (300) 2x'
 effects:
@@ -12,3 +14,9 @@ effects:
       width: 600
       height: null
       upscale: true
+  ec68e819-7870-4e5f-929f-407ac804db5d:
+    uuid: ec68e819-7870-4e5f-929f-407ac804db5d
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 40

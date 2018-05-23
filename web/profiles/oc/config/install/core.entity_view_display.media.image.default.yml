@@ -31,6 +31,7 @@ content:
     type: image
     region: content
 hidden:
+  addtoany: true
   created: true
   name: true
   thumbnail: true

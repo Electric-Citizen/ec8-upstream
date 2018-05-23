@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.map.field_admin_description
-    - field.field.paragraph.map.field_layout
     - field.field.paragraph.map.field_location
     - field.field.paragraph.map.field_oc_long_text
     - field.field.paragraph.map.field_pin_info
@@ -24,12 +23,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_layout:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_location:
     weight: 4

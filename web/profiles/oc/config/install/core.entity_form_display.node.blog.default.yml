@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.blog.field_author
     - field.field.node.blog.field_banner
     - field.field.node.blog.field_metatags
-    - field.field.node.blog.field_oc_widgets
     - field.field.node.blog.field_tags
     - field.field.node.blog.panelizer
     - node.type.blog
@@ -15,7 +14,6 @@ dependencies:
     - entity_browser_entity_form
     - inline_entity_form
     - metatag
-    - paragraphs
     - path
     - text
 id: node.blog.default
@@ -59,20 +57,6 @@ content:
     third_party_settings: {  }
     type: metatag_firehose
     region: content
-  field_oc_widgets:
-    weight: 4
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: closed
-      closed_mode: preview
-      autocollapse: all
-      add_mode: button
-      form_display_mode: default
-      default_paragraph_type: _none
-    third_party_settings: {  }
-    type: paragraphs
-    region: content
   field_tags:
     weight: 5
     settings: {  }
@@ -99,6 +83,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
+  url_redirects:
+    weight: 50
     region: content
 hidden:
   created: true

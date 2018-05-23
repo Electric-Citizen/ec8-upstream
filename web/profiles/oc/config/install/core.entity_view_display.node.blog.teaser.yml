@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.blog.field_author
     - field.field.node.blog.field_banner
     - field.field.node.blog.field_metatags
-    - field.field.node.blog.field_oc_widgets
     - field.field.node.blog.field_tags
     - field.field.node.blog.panelizer
     - node.type.blog
@@ -46,7 +45,6 @@ hidden:
   addtoany: true
   field_banner: true
   field_metatags: true
-  field_oc_widgets: true
   field_tags: true
   flippy_pager: true
   links: true

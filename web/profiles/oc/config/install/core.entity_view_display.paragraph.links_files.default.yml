@@ -3,9 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.links_files.field_admin_description
-    - field.field.paragraph.links_files.field_background_image
-    - field.field.paragraph.links_files.field_background_style
-    - field.field.paragraph.links_files.field_layout
     - field.field.paragraph.links_files.field_oc_file_multi
     - field.field.paragraph.links_files.field_oc_link_multi
     - field.field.paragraph.links_files.field_oc_long_text
@@ -13,36 +10,12 @@ dependencies:
     - paragraphs.paragraphs_type.links_files
   module:
     - link
-    - options
     - text
 id: paragraph.links_files.default
 targetEntityType: paragraph
 bundle: links_files
 mode: default
 content:
-  field_background_image:
-    weight: 6
-    label: hidden
-    settings:
-      link: true
-      view_mode: default
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: content
-  field_background_style:
-    weight: 5
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_layout:
-    weight: 2
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
   field_oc_file_multi:
     weight: 4
     label: hidden

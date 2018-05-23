@@ -32,6 +32,7 @@ content:
       image_link: ''
     third_party_settings: {  }
 hidden:
+  addtoany: true
   created: true
   name: true
   thumbnail: true

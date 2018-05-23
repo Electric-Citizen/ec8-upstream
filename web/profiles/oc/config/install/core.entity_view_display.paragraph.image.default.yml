@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.field.paragraph.image.field_admin_description
     - field.field.paragraph.image.field_image_style
-    - field.field.paragraph.image.field_layout
     - field.field.paragraph.image.field_oc_image
     - field.field.paragraph.image.field_oc_link
     - field.field.paragraph.image.field_oc_long_text
@@ -21,13 +20,6 @@ mode: default
 content:
   field_image_style:
     weight: 2
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
-  field_layout:
-    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }

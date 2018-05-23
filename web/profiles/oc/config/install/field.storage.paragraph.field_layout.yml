@@ -11,26 +11,17 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: single
-      label: Full-width
+      value: full
+      label: 'Full Width Widgets'
     -
-      value: three-quarter
-      label: 75%
+      value: columned
+      label: 'Two columns'
     -
-      value: two-thirds
-      label: 66%
+      value: left
+      label: '50% Left'
     -
-      value: half
-      label: 50%
-    -
-      value: third
-      label: 33%
-    -
-      value: quarter
-      label: 25%
-    -
-      value: fill
-      label: 'Fill Remainder'
+      value: right
+      label: '50% Right'
   allowed_values_function: ''
 module: options
 locked: false

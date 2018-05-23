@@ -3,6 +3,7 @@ status: true
 dependencies:
   module:
     - focal_point
+    - image_style_quality
 name: oc_thumbnail_large_2x
 label: 'OC Thumbnail Large 2x'
 effects:
@@ -13,3 +14,10 @@ effects:
     data:
       width: 500
       height: 400
+      crop_type: focal_point
+  bed7ad41-a0ba-4fbe-be0a-a78ee39adcb2:
+    uuid: bed7ad41-a0ba-4fbe-be0a-a78ee39adcb2
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 40

@@ -4,13 +4,10 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.form.field_admin_description
-    - field.field.paragraph.form.field_layout
     - field.field.paragraph.form.field_oc_form
     - field.field.paragraph.form.field_oc_long_text
     - field.field.paragraph.form.field_widget_title
     - paragraphs.paragraphs_type.form
-  module:
-    - options
 id: paragraph.form.preview
 targetEntityType: paragraph
 bundle: form
@@ -23,13 +20,6 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    region: content
-  field_layout:
-    weight: 1
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
 hidden:
   field_oc_form: true

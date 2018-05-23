@@ -2,20 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.horizontal_rule.field_layout
+    - field.field.paragraph.horizontal_rule.field_hr_default
     - paragraphs.paragraphs_type.horizontal_rule
 id: paragraph.horizontal_rule.default
 targetEntityType: paragraph
 bundle: horizontal_rule
 mode: default
-content:
-  field_layout:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
+content: {  }
 hidden:
   created: true
+  field_hr_default: true
   status: true
   uid: true

@@ -14,12 +14,6 @@ settings:
       value: grey
       label: grey
     -
-      value: blue
-      label: blue
-    -
-      value: orange
-      label: orange
-    -
       value: image
       label: image
   allowed_values_function: ''

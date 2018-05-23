@@ -4,7 +4,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.support_book.body
-    - field.field.node.support_book.field_oc_widgets
     - field.field.node.support_book.panelizer
     - node.type.support_book
   module:
@@ -28,5 +27,4 @@ content:
     region: content
 hidden:
   addtoany: true
-  field_oc_widgets: true
   panelizer: true

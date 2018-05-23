@@ -11,14 +11,14 @@ field_name: field_media_file
 entity_type: media
 bundle: document
 label: File
-description: 'Allowed file types are: txt, pdf, doc, docx, zip, xsl, xslx.  There is a 20mb size limit'
+description: 'Allowed file types are: txt, pdf, doc, docx, zip, xsl, xslx, ppt, .pptx.  There is a 20mb size limit'
 required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: ''
-  file_extensions: 'txt pdf doc docx zip xsl xslx'
+  file_extensions: 'txt pdf doc docx zip xls xlsx ppt pptx'
   max_filesize: 20mb
   description_field: true
   handler: 'default:file'

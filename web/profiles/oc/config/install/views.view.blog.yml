@@ -653,7 +653,7 @@ display:
           click_sort_column: value
           type: timestamp
           settings:
-            date_format: oc_text_date_only
+            date_format: oc_short_date_only
             custom_date_format: ''
             timezone: ''
           group_column: value
@@ -672,7 +672,7 @@ display:
         path:
           id: path
           table: node
-          field: path
+          field: view_node
           relationship: none
           group_type: group
           admin_label: ''
@@ -719,7 +719,8 @@ display:
           hide_alter_empty: true
           absolute: false
           entity_type: node
-          plugin_id: node_path
+          plugin_id: entity_link
+          output_url_as_text: true
         body:
           id: body
           table: node__body
@@ -834,7 +835,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_entity_view
           settings:
-            view_mode: large_rectangle
+            view_mode: large_thumb
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -1003,6 +1004,7 @@ display:
               administrator: '0'
               senior_editor: '0'
               editor: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''

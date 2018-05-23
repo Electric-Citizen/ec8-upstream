@@ -52,7 +52,7 @@ third_party_settings:
               label: hidden
               type: entity_reference_entity_view
               settings:
-                view_mode: banner_narrow
+                view_mode: square
               third_party_settings: {  }
               weight: 0
             region: top

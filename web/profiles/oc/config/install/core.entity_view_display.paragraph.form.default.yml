@@ -3,13 +3,11 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.form.field_admin_description
-    - field.field.paragraph.form.field_layout
     - field.field.paragraph.form.field_oc_form
     - field.field.paragraph.form.field_oc_long_text
     - field.field.paragraph.form.field_widget_title
     - paragraphs.paragraphs_type.form
   module:
-    - options
     - text
     - webform
 id: paragraph.form.default
@@ -17,13 +15,6 @@ targetEntityType: paragraph
 bundle: form
 mode: default
 content:
-  field_layout:
-    weight: 2
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
   field_oc_form:
     weight: 3
     label: hidden

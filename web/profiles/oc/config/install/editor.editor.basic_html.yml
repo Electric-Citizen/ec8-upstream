@@ -23,6 +23,7 @@ settings:
             - JustifyLeft
             - JustifyCenter
             - JustifyRight
+            - Indent
         -
           name: Lists
           items:

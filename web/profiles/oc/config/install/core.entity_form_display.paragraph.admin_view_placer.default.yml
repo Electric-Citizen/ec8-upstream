@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.field.paragraph.admin_view_placer.field_admin_description
     - field.field.paragraph.admin_view_placer.field_display_machine_name
-    - field.field.paragraph.admin_view_placer.field_layout
     - field.field.paragraph.admin_view_placer.field_view_machine_name
     - field.field.paragraph.admin_view_placer.field_viewfield
     - field.field.paragraph.admin_view_placer.field_widget_title
@@ -29,12 +28,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_layout:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_view_machine_name:
     weight: 3

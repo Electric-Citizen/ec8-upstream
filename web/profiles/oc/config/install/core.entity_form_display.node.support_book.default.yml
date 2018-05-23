@@ -3,11 +3,9 @@ status: true
 dependencies:
   config:
     - field.field.node.support_book.body
-    - field.field.node.support_book.field_oc_widgets
     - field.field.node.support_book.panelizer
     - node.type.support_book
   module:
-    - paragraphs
     - path
     - text
 id: node.support_book.default
@@ -23,20 +21,6 @@ content:
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
-    region: content
-  field_oc_widgets:
-    weight: 2
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: closed
-      closed_mode: preview
-      autocollapse: all
-      add_mode: button
-      form_display_mode: default
-      default_paragraph_type: _none
-    third_party_settings: {  }
-    type: paragraphs
     region: content
   path:
     type: path
@@ -58,6 +42,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
+  url_redirects:
+    weight: 50
     region: content
 hidden:
   created: true

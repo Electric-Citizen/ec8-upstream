@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.field.paragraph.block_placer.field_admin_description
     - field.field.paragraph.block_placer.field_block
-    - field.field.paragraph.block_placer.field_layout
     - field.field.paragraph.block_placer.field_widget_title
     - paragraphs.paragraphs_type.block_placer
 id: paragraph.block_placer.default
@@ -22,12 +21,6 @@ content:
     region: content
   field_block:
     weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_layout:
-    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select

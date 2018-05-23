@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - image.style.oc_thumbnail
     - image.style.oc_thumbnail_large
     - image.style.thumbnail
     - media_entity.bundle.document
@@ -735,6 +734,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1178,6 +1178,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1288,7 +1289,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: oc_thumbnail
+            image_style: thumbnail
             image_link: ''
           group_column: ''
           group_columns: {  }
@@ -1466,6 +1467,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1794,6 +1796,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1877,33 +1880,6 @@ display:
       css_class: eb-media
     cache_metadata:
       max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - url.query_args
-        - user.permissions
-      tags: {  }
-  media_page_list:
-    display_plugin: page
-    id: media_page_list
-    display_title: Media
-    position: 1
-    display_options:
-      display_extenders: {  }
-      path: admin/content/media
-      menu:
-        type: tab
-        title: Media
-        description: ''
-        expanded: false
-        parent: ''
-        weight: 0
-        context: '0'
-        menu_name: main
-      display_description: ''
-    cache_metadata:
-      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -2149,6 +2125,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''

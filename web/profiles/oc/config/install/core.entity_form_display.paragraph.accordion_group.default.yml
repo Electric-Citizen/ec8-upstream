@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.field.paragraph.accordion_group.field_accordion_item
     - field.field.paragraph.accordion_group.field_admin_description
-    - field.field.paragraph.accordion_group.field_layout
     - field.field.paragraph.accordion_group.field_widget_title
     - paragraphs.paragraphs_type.accordion_group
   module:
@@ -16,7 +15,7 @@ mode: default
 content:
   field_accordion_item:
     type: paragraphs
-    weight: 3
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -25,7 +24,7 @@ content:
       autocollapse: all
       add_mode: button
       form_display_mode: default
-      default_paragraph_type: accordion_item
+      default_paragraph_type: _none
     third_party_settings: {  }
     region: content
   field_admin_description:
@@ -35,12 +34,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_layout:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_widget_title:
     weight: 0

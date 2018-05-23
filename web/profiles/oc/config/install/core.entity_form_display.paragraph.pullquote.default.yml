@@ -3,16 +3,11 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.pullquote.field_admin_description
-    - field.field.paragraph.pullquote.field_background_image
-    - field.field.paragraph.pullquote.field_background_style
-    - field.field.paragraph.pullquote.field_layout
     - field.field.paragraph.pullquote.field_oc_long_text
     - field.field.paragraph.pullquote.field_oc_short_text
     - field.field.paragraph.pullquote.field_widget_title
     - paragraphs.paragraphs_type.pullquote
   module:
-    - entity_browser_entity_form
-    - inline_entity_form
     - text
 id: paragraph.pullquote.default
 targetEntityType: paragraph
@@ -26,33 +21,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_background_image:
-    weight: 6
-    settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      override_labels: false
-    third_party_settings:
-      entity_browser_entity_form:
-        entity_browser_id: image_browser
-    type: inline_entity_form_complex
-    region: content
-  field_background_style:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_layout:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_oc_long_text:
     weight: 3

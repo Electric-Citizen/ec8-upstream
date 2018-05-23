@@ -4,6 +4,7 @@ dependencies:
   module:
     - editor
     - entity_embed
+    - pathologic
 name: 'Basic HTML'
 format: basic_html
 weight: 0
@@ -72,3 +73,13 @@ filters:
     weight: -47
     settings:
       filter_url_length: 72
+  filter_pathologic:
+    id: filter_pathologic
+    provider: pathologic
+    status: true
+    weight: 50
+    settings:
+      settings_source: global
+      local_settings:
+        protocol_style: full
+        local_paths: ''

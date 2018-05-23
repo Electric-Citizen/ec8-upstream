@@ -6,12 +6,10 @@ dependencies:
     - field.field.node.blog.field_author
     - field.field.node.blog.field_banner
     - field.field.node.blog.field_metatags
-    - field.field.node.blog.field_oc_widgets
     - field.field.node.blog.field_tags
     - field.field.node.blog.panelizer
     - node.type.blog
   module:
-    - entity_reference_revisions
     - metatag
     - panelizer
     - text
@@ -41,23 +39,6 @@ third_party_settings:
             uuid: e0d39356-329f-46e2-b7ec-474480d5ea98
             context_mapping:
               entity: '@panelizer.entity_context:entity'
-          567a071e-a5a9-4366-a36d-425b7bf487be:
-            id: 'entity_field:node:field_oc_widgets'
-            label: Widgets
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: hidden
-              type: entity_reference_revisions_entity_view
-              settings:
-                view_mode: default
-              third_party_settings: {  }
-              weight: 0
-            region: main
-            weight: -8
-            uuid: 567a071e-a5a9-4366-a36d-425b7bf487be
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
           439f3461-69eb-43ee-8357-0d6586ad3658:
             id: system_breadcrumb_block
             label: Breadcrumbs
@@ -76,7 +57,7 @@ third_party_settings:
               label: inline
               type: entity_reference_label
               settings:
-                link: true
+                link: false
               third_party_settings: {  }
               weight: 0
             region: main
@@ -356,15 +337,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
-    region: content
-  field_oc_widgets:
-    weight: 102
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
     region: content
   field_tags:
     weight: 104

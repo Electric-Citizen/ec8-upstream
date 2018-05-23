@@ -31,7 +31,7 @@ third_party_settings:
               label: hidden
               type: timestamp
               settings:
-                date_format: oc_text_date_only
+                date_format: oc_short_date_only
                 custom_date_format: ''
                 timezone: ''
               third_party_settings: {  }
@@ -66,7 +66,7 @@ third_party_settings:
               label: hidden
               type: entity_reference_entity_view
               settings:
-                view_mode: banner_narrow
+                view_mode: square
               third_party_settings: {  }
               weight: 0
             region: top

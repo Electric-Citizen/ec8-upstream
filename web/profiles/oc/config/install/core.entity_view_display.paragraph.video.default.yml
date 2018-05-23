@@ -3,26 +3,17 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.video.field_admin_description
-    - field.field.paragraph.video.field_layout
     - field.field.paragraph.video.field_oc_long_text
     - field.field.paragraph.video.field_oc_video
     - field.field.paragraph.video.field_widget_title
     - paragraphs.paragraphs_type.video
   module:
-    - options
     - text
 id: paragraph.video.default
 targetEntityType: paragraph
 bundle: video
 mode: default
 content:
-  field_layout:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
   field_oc_long_text:
     weight: 3
     label: hidden

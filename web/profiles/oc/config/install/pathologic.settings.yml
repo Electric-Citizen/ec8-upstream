@@ -4,4 +4,4 @@ scheme_whitelist:
   - files
   - internal
 protocol_style: full
-local_paths: "http://oc8-base.dd:8083/\r\nhttp://dev-oc8-base.pantheonsite.io/"
+local_paths: "http://newupstream.docksal/\r\nhttp://dev-newupstream.pantheonsite.io/"

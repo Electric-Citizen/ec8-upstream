@@ -5,10 +5,10 @@ dependencies:
     - core.entity_view_mode.media.full
     - field.field.media.image.field_caption
     - field.field.media.image.field_media_image
-    - image.style.max_2600x2600
     - media_entity.bundle.image
+    - responsive_image.styles.full_1200
   module:
-    - image
+    - responsive_image
 id: media.image.full
 targetEntityType: media
 bundle: image
@@ -23,15 +23,16 @@ content:
     third_party_settings: {  }
     region: content
   field_media_image:
+    type: responsive_image
     weight: 0
+    region: content
     label: hidden
     settings:
-      image_style: max_2600x2600
+      responsive_image_style: full_1200
       image_link: ''
     third_party_settings: {  }
-    type: image
-    region: content
 hidden:
+  addtoany: true
   created: true
   name: true
   thumbnail: true

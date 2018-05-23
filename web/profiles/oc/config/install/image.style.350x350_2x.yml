@@ -3,6 +3,7 @@ status: true
 dependencies:
   module:
     - focal_point
+    - image_style_quality
 name: 350x350_2x
 label: '350x350 2x'
 effects:
@@ -13,3 +14,10 @@ effects:
     data:
       width: 700
       height: 700
+      crop_type: focal_point
+  3cf78d2e-fdc4-4a1e-8f70-81929a6fec9f:
+    uuid: 3cf78d2e-fdc4-4a1e-8f70-81929a6fec9f
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 35

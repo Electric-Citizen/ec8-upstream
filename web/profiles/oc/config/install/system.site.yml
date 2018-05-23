@@ -1,6 +1,6 @@
-name: 'EC Upstream'
+name: Upstream
 mail: info@electriccitizen.com
-slogan: ''
+slogan: 'The bird'
 page:
   403: ''
   404: /node/2

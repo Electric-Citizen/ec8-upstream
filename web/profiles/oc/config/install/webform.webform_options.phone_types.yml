@@ -7,4 +7,5 @@ dependencies:
 id: phone_types
 label: 'Phone type'
 category: Demographic
+likert: false
 options: "Home: Home\nOffice: Office\nCell: Cell\n"

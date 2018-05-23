@@ -3,11 +3,9 @@ status: true
 dependencies:
   config:
     - field.field.node.support_book.body
-    - field.field.node.support_book.field_oc_widgets
     - field.field.node.support_book.panelizer
     - node.type.support_book
   module:
-    - entity_reference_revisions
     - panelizer
     - text
     - user
@@ -36,24 +34,6 @@ third_party_settings:
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 1ccaf0d3-577d-4fed-ac32-4fc6d8436271
-          4cf068aa-b4ea-49c4-ab92-0142bf06a4a6:
-            id: 'entity_field:node:field_oc_widgets'
-            label: Widgets
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: above
-              type: entity_reference_revisions_entity_view
-              settings:
-                view_mode: default
-                link: ''
-              third_party_settings: {  }
-              weight: 0
-            region: main
-            weight: 1
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
-            uuid: 4cf068aa-b4ea-49c4-ab92-0142bf06a4a6
           f585c0a0-b836-423f-be62-bbe33c0fb92a:
             id: 'entity_field:node:title'
             label: Title
@@ -113,15 +93,6 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_oc_widgets:
-    weight: 102
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
     region: content
   links:
     weight: 100

@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.form.field_admin_description
-    - field.field.paragraph.form.field_layout
     - field.field.paragraph.form.field_oc_form
     - field.field.paragraph.form.field_oc_long_text
     - field.field.paragraph.form.field_widget_title
@@ -23,12 +22,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_layout:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_oc_form:
     weight: 4
