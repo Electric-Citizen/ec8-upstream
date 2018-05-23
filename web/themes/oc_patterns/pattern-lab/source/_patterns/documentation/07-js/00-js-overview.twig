@@ -1,0 +1,15 @@
+<a name="js-overview" id="js-overview"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">JS in PL and Drupal</h4>
+		<div class="doc-section-inner">
+			<p><strong>jQuery—</strong> jQuery is what we use to write 98% of the JS on a site. jQuery is a core Drupal dependency and all of the JS files in the theme are set up to use jQuery functions inside of Drupal behaviors.</p>
+			<p>When adding a new file, its usually easiest to copy an existing theme JS file and just delete everything between the opening line: <span class="code">(function($, Drupal) {</span> and the  closing line: <span>})(jQuery, Drupal);</span>. Those two lines let Drupal know that it should use its core jQuery file to execute the behaviors inside the file. If you do create a new file from scratch or adding new behaviors to a file, make sure that everything is between those lines.</p>
+			<p><strong><a name="drupal-behaviors" id="drupal-behaviors">Drupal Behaviors—</strong> All jQuery functions in theme JS files need to be inside of <a href="https://www.drupal.org/node/304258#drupal-behaviors">Drupal Behaviors</a>. This ensures that all jQuery code gets called after the DOM has loaded so that you code is not jumping ahead of things it might need to function (like ajax). Drupal behaviors also comes with another line that attaches a context function. Using context ensures that your script is only searched within the given context rather than the entire document. <p>Example: <span class="code">Drupal.behaviors.slideshow = {<br>attach: function (context, settings) {<br>$(".paragraph--type--slideshow", context).once('slider').each(function(){ </span> <strong>Drupal behaviors and contexts should never be repeated.</strong> ANy duplicate behavior will not be called in the DOM.</p>
+			<p>The above example opening lines of a behavior and context will search only instances of <span class="code">.paragraph--type--slideshow</span> and will only run the code once for each instance it finds in the DOM. Using context helps make sure that you are not slowing down the site by searching the whole DOM for elements that are not there and by ensuring that code is only run once, rather than looping through each instance and running multiple times. This is especially important with .resize() responsive functions.</p>
+			<p><strong>Limit JS as much as possible—</strong> While JS is a powerful tool, Twig & CSS expressions/animations can do a lot of what we used to need JS for. It is preferable to use Twig or CSS whenever possible to both limit the amount of files being called as well as proofing again people who have JS turned off in their browser and errors from external scripts/applications interfering with your scripts.</p>
+		</div>
+	</div>
+</div>
+

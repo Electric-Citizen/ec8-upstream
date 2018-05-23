@@ -1,0 +1,23 @@
+<a name="site-specific-logo" id="site-specific-logo"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">Site Logo</h4>
+		<div class="doc-section-inner">
+			<p>The site logo is found in the root folder (logo.svg). To update, just replace the file. <strong>Logos should always be svgs</strong>. If an svg is not available, it is preferable to remake the logo into an svg in Adobe Illustrator rather than loading a png (unless it is absolute necessary to use a png).</p>
+			<p>Once the new logo file is in place, it is usually necessary to go to Structure > Appearances > OC Patterns Settings in the site and uncheck the box that says 'Use logo supplied by the theme', Save, then recheck the box and clear cache. NOTE: When logged-in in Chrome you may need to clear cache a couple of times and even wipe an hour or two of your browser history to get the logo to kick in.</p>
+			<p>Logo theming can be editing in 02-molecules/blocks/header-branding-block/_branding-block.scss and its placement and size can be edited in 03-organisms/03-site/01-site-header/_site-header.scss.</p>
+		</div>
+	</div>
+	<div class="doc-section">
+		<h4 class="doc-section-title">Site Favicon</h4>
+		<div class="doc-section-inner">
+			{% set headerBlock = '{% block headInsert %}' %}
+			<p>The site favicon is not usually provided by the client or the designer and is usually just created out of the logo by the developer using Adobe Illustrator exported as a svg at least 260x260px.</p>
+			<p>The favicon is then uploaded to a <a href="https://realfavicongenerator.net/" target="_blank">favicon generator</a> that will generate all of the favicon and touch icons files needed for different devices as well as the meta code to be installed in the header.</p>
+			<p>The favicon files should be stored in a /favicons folder created in the theme root folder and the meta code should added in the <span class="code">{{ headerBlock }}</span> block in /templates/zzz-custom/layout/html.html.twig template. The favicon usually shows up after just a cache clear.</p>
+		</div>
+	</div>
+</div>
+
+

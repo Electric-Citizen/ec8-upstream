@@ -1,0 +1,16 @@
+<a name="admin-oc-custom" id="admin-oc-custom"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">OC Custom Module</h4>
+		<div class="doc-section-inner">
+			<p>The OC Custom module is a module that is set for theming the admin side of Drupal 8 and performing other non-theme related tasks. The module is stored in web/modules/custom/oc_custom.</p>
+			<p><strong>Admin CSS—</strong> Admin CSS is handled through two files in OC Custom: custom-global.css and custom-node.css. CSS files are used because installing node and Gulp and compiling Scss files for the small amount of code used in these files is a bit of an overkill.</p>
+			<p>Custom Global is used for all CSS outside of the node/add and node/edit forms (admin views, select lists, media browser and the admin toolbar.  Custom Node is used for all node related admin theming (field spacing, paragraph buttons, help text, labels, etc).</p>
+			<p><strong>Admin JS—</strong> Admin JS is also stored in two files: custom-global.js and custom-node.js. Custom Global is attached to every admin page using the oc_custom.libraries.yml and an admin page-alter function in the .module file. Custom-global is used to call the Select2 JS file on all select lists on the site (both admin and front-facing). Select2 makes select lists easier to style and adds autocomplete and drop-up/drop-down functionality.</p>
+			<p>Custom Node is used for showing and hiding node form fields and other tasks that will effect the editing experience. Some fields, for instance, should only be shown if another field is used or has a certain value selected. Custom Node JS fills that need. <strong>NOTE:</strong> Any field that is dependent on the output of another in custom-node.js should have that same output dependency required on the front-end (through Twig, JS, or Scss).</p>
+		</div>
+	</div>
+</div>
+
+

@@ -1,0 +1,38 @@
+{#
+	STYLEGUIDE ONLY: This template is not carried into Drupal.
+#}
+
+{{ events_category_instructions }}
+
+{% block plwidgetopen %}
+	<div class="paragraph paragraph--type--event-by-category">
+{% endblock %}
+
+	{% if widget_title %}
+		<h3 class="widget-title">{{widget_title}}</h3>
+	{% endif %}
+
+	<div class="views-element-container">
+		<div class="view oc-widgets events-by-category">
+			<div class="view-content">
+				{% for event in events %}
+					{% if event.tag == categories %}
+						<div class="views-row">
+							<div class="event-item">
+								<h3><a href="{{ event.path }}">{{ event.title }}</a></h3>
+									<div class="date">{{ event.date }}</div>
+									<div class="event-body">
+										{{ event.body }}
+									</div>
+							</div>
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+				
+{% block plwidgetclose %}				
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+<a name="js-best-practices" id="js-best-practices"></a>
+
+<div class="doc-text">
+	<p>behaviors, context, only use if absolutely necessary—can do a lot through css & twig, always use as specifically as possible, some debugging practices.</p>
+	<div class="doc-section">
+		<h4 class="doc-section-title">JS Best Practices</h4>
+		<div class="doc-section-inner">
+			<ol class="big-number">
+				<li>Always use jQuery functions inside of <a href="#drupal-behaviors">Drupal Behaviors</a> and contexts. <strong>Behaviors and Contexts should never be repeated.</strong> Any duplicate behavior will not be used.</li>
+				<li>Use component JS files attached to Twig component templates in all cases except when you are sure the script is needed on every single page of the site.</li>
+				<li>When an OC Patterns library calls an external script (call though CDN whenever possible, if that library is used for more than one component, do not create a new library/file for each component. This will reduce the amount of external calls.</li>
+				<li><strong>Underscore JS—</strong> <a href="http://underscorejs.org/">UnderscoreJs</a> is an external library that is a Drupal Core dependency. OC Patterns uses it primarily for resize() responsive functions. <strong>Any time you need a function to be run each time the window is resized, use the Underscore <span class="code">._debounce() </span>function.</strong> Make sure that you specify core/underscore as a dependency of the library you create for that component.<br>Example:<br><span class="code">$(window).on('resize',  _.debounce( pageMenuMobile, 100 )).trigger('resize');</span><br> to call your custom:<br><span class="code">function pageMenuMobile({ scripts that happen on resize });</span>.</li>
+				<li>Use descriptive (<span class="code">//my great js function does this...</span>) comments in JS files the same as you would for Scss. File name comments are not needed since these are individual attached rather than compiled into one sheet. Component level comments are not needed because of behavior names but are also not discouraged—especially when multiple components are added to the same JS file (like global.js).</li>
+				<li><strong>Tabs—</strong> As with Scss files, OC Patterns uses tabs instead of spaces with a 3-space tab considered optimal (Sublime can be configured to do this for you automatically). Unfortunately there is no ESLint rule to enforce this.</li>
+			</ol>
+		</div>
+	</div>
+</div>
+

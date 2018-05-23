@@ -1,0 +1,28 @@
+<a name="sass-best-practices" id="sass-best-practices"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">OC Patterns Sass Best Practices & Conventions</h4>
+		<div class="doc-section-inner">
+			<ol class="big-number">
+			<li><p><strong>Comments—</strong> File names are commented at the start of Scss files.<br><span class="code">/*===================<br>MY GREAT FILE NAME<br>========================*/</span></p><p>Major sections/groups of Scss code are commented within the file. <br><span class="code">/* --------------------------<br>Section/Group name<br>--------------------------*/</span></p>
+			<p>Single Scss elements withing sections are commented within each section.<br><span class="code">/* Element Name */</span></p>
+			<p> Descriptive comments are added within each element above what they are describing.<br><span class="code">// my great descriptive comment</span></p>
+			<p>Closing comments are added to Scss element closing brackets using a description comment on the same line as the closing bracket.<br><span class="code">}//end .my-selector</span></p>
+			<p>Closing comments are also used when nest levels get more than 2 or 3 deep or it is not easy tell what a nested closing bracket pertains to due to the amount of nested code.</p></li>
+			<li><p><strong>Nesting—</strong> Top level selectors generally pertain to the component of each Scss file. Example: In 03-organisms/01-widgets/button/_button.scss all Scss code is nested within the <span class="code">.paragraph--type--buttons{} selector.</span> because that Scss file pertains to that specific component.</p>
+			<p>For files with multiple components (like _widgets.scss or _views.scss), top level selectors would generally be each main component in that file (each view instance would be its own top level selector).</p>
+			<p>Selectors should never be nested more than 5-6 levels deep and 2-4 is usually preferred for clarity. Example: A view selector would have the view content, views row, and each view field all as second level nested elements—rather than a view selector with view content nested then views row nested inside that, with view fields nested inside the row. Using shallower nesting techniques makes the view easier to read at a glance and allows for clearer and more specific breakpoint nesting.</p></li>
+			<li><p><strong>Breakpoint nesting—</strong> OC Patterns uses breakpoint mixins based on grid variables set in 00-base/00-breakpoints.scss for responsive theming. Each individual selector (nested or not) should have its breakpoint styles nested directly in the selector. Example: <span class="code">.views-row{ default styles for the row; @include tab{ tablet styles for the row;} }</span> and <span class="code">.my-viewfield{ default styles for the field; @include tab{ my tablet styles for the field;} }</span>.</p>
+			<p>Nesting breakpoint theming directly in the selector it pertains two provides an easier to read Scss file and limits the amount of selector repetition. <strong>Breakpoint theming should be at the end of each selector and should go in break point order: default, tab, desk, maxWidth, etc.</strong> Special breakpoints can also be used to limit theming to just phones (less than 500px) or just mobile menu widths for example.</p></li>
+			<li><p><strong>Grid theming—</strong> OC Patterns does not use any defined grid system like Singularity or CSS Grids. This is because needs of the design and the build does not often make a single simple system worthwhile since things move position between mobile and desktop or are grouped in complex ways. Instead we use flex theming whenever possible and floats if absolutely necessary.</p>
+			<p>Whenever possible use flex theming with the custom flex mixins defined in 00-base/_02-mixins. <span class="code">@include safeFlex($direction,$wrap,$justify,$align);</span> will provide all necessary arguments for any type of flex theming you need for layout elements and will ensure it works back to IE10. <span class="code">@include safeFlexOrder($order)</span> allows you to set the flex order of a child element with a flex layout and <span class"code">@include safeFlexSize($grow,$shrink,$size)</span> lets you set flex sizing on the child element (regular percentage, vw, or pixel sizing is usually used instead of safeFlexSize however).</p>
+			<li><p><strong>Mixin, Mixin, Mixin—</strong> Use mixins and placeholders whenever you find yourself repeating the same Scss code in more than a few spots. Mixins with arguments can definitely help your efficiency while placeholders help keep the CSS lean. View defined mixins and placeholders in the Base > Global > Mixins Reference sheet. <strong>Whenever you create a new mixin, make sure you add a mixin tile for it in 00-base/04-mixins/mixins.twig so that it because visible in the mixins reference sheet.</strong></p>
+			<p>In order for a mixin to be used in a file, the mixin must be assigned in the file hierarchy before it is called in a file. This is why the 01-mixins.scss is one of the first top level files in the theme. Any file that uses placeholders that are defined in 01-placeholders.scss must import the 01-placeholders.scss file.</p></li>
+			<li><strong>Variables—</strong> All colors, grid sizes and fonts should be assigned to a variable. Mixins should take advantage of argument variables whenever their is a contextual need (like setting a different height for the vertRule mixin in different uses). If a mixin does not use an argument, it should probably be a placeholder.</li>
+			<li><strong>Camel Casing—</strong> When creating mixins, placeholders, or variables, always use camelCasing instead of hyphens or underscores.</li>
+			</ol>
+		</div>
+	</div>
+</div>
+

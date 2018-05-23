@@ -1,0 +1,24 @@
+{#
+	STYLEGUIDE ONLY: This template is not sued in Drupal.
+#}
+
+{{ map_instructions }}
+<div class="paragraph paragraph--type--map">
+
+	{% if widget_title %}
+		<h3 class="widget-title">{{ widget_title }}</h3>
+	{% endif %}
+
+	<div class="wrapper">
+
+		<img class="placeholder" src="{{ map_placeholder }}" />
+
+		{% if map_summary %}
+			<div class="field field-oc-long-text">
+				{{ map_summary }}
+			</div>
+		{% endif %}
+			
+	</div>
+	
+</div>

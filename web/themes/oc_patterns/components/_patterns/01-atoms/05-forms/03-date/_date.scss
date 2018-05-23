@@ -1,0 +1,11 @@
+/* ===========
+   DATE
+================ */
+
+.js-form-type-date {
+	input{
+		@include textInput;
+		max-width: 180px;
+	}
+}
+

@@ -1,0 +1,21 @@
+<a name="js-component" id="js-component"></a>
+
+<div class="doc-text">
+	<p>Attaching libraries, when to borrow libraries from other components</p>
+	<div class="doc-section">
+		<h4 class="doc-section-title">Component JS Files</h4>
+		<div class="doc-section-inner">
+			{% set library = "{{ attach_library('oc_patterns/my_library') }}" %}
+			<p>Component JS files are files that are attached to the Twig template files for the components they relate to. This done through a library attachment Twig function. Each component will generally have its own JS file and library—with some exceptions:
+				<ol>
+					<li>Scripts that need external libraries (like Slick.js) should use the same library and be held in the same file to reduced the amount of calls to the external library.</li>
+					<li>Components that very like on another but would benefit from different component folders (like a news by category and events by category) could share the same JS file and library.</li>
+				</ol>
+			</p>
+			<p><strong>Attaching JS files to Twig—</strong> New JS files can be added to Drupal by attaching libraries. All JS files not hidden from PL will run in PL if the file is called in the meta/foot.twig file and the behavior is setup properly—the attach_library twig function is not available or needed in Pattern Lab. In most cases, you'll want to hide the new js file from PL with a leading _ and just use it in Drupal.</p>
+			<p>After creating the new file, open <span class="code">oc_patterns.libraries.yml</span> and add a new library following the existing conventions. Each library needs to have its dependencies listed along with any external libraries and css files needed. Don't worry about listing core dependencies in each library—they will not be called more than once if they are being called from other libraries loaded on the page.</p>
+			<p>After creating your library, open the Drupal Twig file you are attaching it to (in /templates/zzz-custom) and use <span class="code">{{ library }}</span> Twig function to attach that library to the template. Libraries and that files they hold will only be called when that template is loaded (i.e. when the component is on the page). After attaching the library, clear cache and look for the library in the scripts section at the bottom of the page code just inside the closing body tag.</p>
+		</div>
+	</div>
+</div>
+

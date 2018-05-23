@@ -1,0 +1,21 @@
+/* ==================
+    global views settings
+==================== */
+
+.view{
+	.item-list > ul{
+		@include listReset;
+		li{
+			width: 100%;
+			&:not(:last-child){
+				@include spacer(1.5);
+			}
+		}
+	}
+	.views-row{
+		width: 100%;
+		&:not(:last-child){
+			@include spacer(1.5);
+		}
+	}
+}//end view

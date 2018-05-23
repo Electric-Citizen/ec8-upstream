@@ -1,0 +1,12 @@
+/* =============
+   BLOCK PLACER WIDGET
+================ */
+.paragraph--type--block-placer{
+	.field-block{
+		.field.body{
+			max-width: $maxWidthText;
+			@include auto;
+		}
+	}
+}//end paragraph-block-placer
+

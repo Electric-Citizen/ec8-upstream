@@ -1,0 +1,19 @@
+{#
+	STYLEGUIDE ONLY: This file is not embedded into Drupal.
+#}
+{{block_instructions}}
+
+{% block plwidgetopen %}
+	<div class="paragraph--type--block-placer">
+{% endblock %}
+	{% if widget_title %}
+		<h3 class="widget-title">{{widget_title}}</h3>
+	{% endif %}
+		<div class="field-block">
+			{% block blockPlacer %}
+				{{ block_content }}
+			{% endblock %}
+		</div>
+{% block plwidgetclose %}
+	</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+<a name="background-sizing" id="background-sizing"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">SVG Background Icon Auto-sizing</h4>
+		<div class="doc-section-inner">
+			<p>OC Patterns has a background sizes file in the base folder (00-base/_03-background-sizes.scss). This file is used as an automatic background sizer for SVG icons used as backgrounds. This corrals all the background svgs into one area and necessitates only a few variable changes when a new icon is added rather than each instance of an svg background needing to be updated each time the sprite is generated.</p>
+			<p>The top of the file holds variables for <span class="code">$rows</span> and <span class="code">$columns</span>. These correspond to the generated svg sprite. Simple load the sprite from /dist/svg/sprite.css.svg into a browser or Adobe Illustrator and count the columns and rows. Changing these values when a new row of column is added while automatically update all background SVG icons to use the proper positioning.</p>
+			<p>When a new icon is added and is to be used as a background, a new entry in _03-background-sizes.scss should be created. This entry should follow the existing convention with a comment as to what scss file the icons is used in, a variable that matches the height and width of the element the icon is being used as a background for, then a mixin including the sprite mixin automatically generated for the icon (from 01-atoms/04-images/icons/_icon_sprite.scss) and the backgroundSize mixin that multiples the rows and columns in the sprite by the size variable for the element.</p>
+			<p>Example: </br><span class="code">/// used in SUPERFISH-BLOCK.SCSS</br>$hamburger: 25px;</br>@mixin hamburger{</br>@include sprite-hamburger;</br>@include backgroundSize($columns * $hamburger,$rows * $hamburger);</br>}</span></p>
+		</div>
+	</div>
+</div>

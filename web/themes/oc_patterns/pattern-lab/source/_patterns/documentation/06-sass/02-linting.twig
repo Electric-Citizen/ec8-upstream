@@ -1,0 +1,20 @@
+<a name="sass-linting" id="sass-linting"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">Sass Linting</h4>
+		<div class="doc-section-inner">
+			<p>Sass linting is a way to force good code standards and consistency on Scss files as well as checking for common mistakes that will break the CSS when compiled. Learn more about general Sass linting in this great <a href="https://www.electriccitizen.com/blog/sass-lint-or-how-i-learned-love-lint" target="_blank">Electric Citizen blog post.</a></p>
+			<p>OC Patterns uses some minimal Sass linting run by StyleLint through the <span class="code">gulp clean</span> task run on <span class="code">npm start</span>. Linting rules are defined in the theme root .stylelintrc file.</p>
+			<p>The default severity for rules is set to warning since none of the current rules is serious enough to prevent compiling. These warnings will show in the command line during the Scss compiling and will give the file name the infraction is in followed by line number and column number of the error, and a description of the rule being broken.</p>
+			<p>Current OC Pattern Specific Linting rules:
+				<ul class="spaced">
+					<li>Indentation: tabs</li>
+					<li>Allowed @ rules: include, mixin, extend, if, each, content, for, else.</li>
+				</ul>
+			</p>
+			<p>Besides these specific OC Patterns lint rules, the <span class="code">gulp theme</span> task run from <span class="code">npm start</span> will check for basic Scss syntax errors (example: margin-bottom: 20px: ) that will break the theme when compiled. These errors will show in red in the command line and will prevent the theme from compiling until fixed.</p>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,13 @@
+<a name="js-linting" id="js-linting"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">JS Linting with ESLint</h4>
+		<div class="doc-section-inner">
+			<p>OC Patterns Emulsify Gulp dependency introduced <a href="https://eslint.org/" target="_blank">ESLint</a> to the project. ESLint behaves in much the same ways as StyleLint in that it checks your Javascript code for common errors and forces a level of consistency and good practice.</p>
+			<p>The Emulsify Gulp repo brings ESLint in through the <span class="code">.eslintrc.yml</span>. This file extends the <a href="https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base/rules" target="_blank">airbnb-base rule library</a> and brings those rules into OC Patterns. The rules can overridden/altered by copying the <span class="code">.eslintrc.yml</span> into the OC Patterns base folder and written the changes you need.</p>
+			<p>Unlike Stylelint, ESLint will shutdown the theme if it finds a broke rule. It will alert you through the command what rule is broken and where it is broken. Once you have fixed the rule, you must the run <span class="code">npm start</span> to spin up the theme again.</p>
+		</div>
+	</div>
+</div>
+

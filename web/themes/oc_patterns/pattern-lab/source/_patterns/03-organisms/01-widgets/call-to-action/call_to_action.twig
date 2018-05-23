@@ -1,0 +1,29 @@
+{#
+  DRUPAL: This template is embedded into the Drupal Call To Action paragraph template.
+#}
+
+{{ cta_instructions }}
+
+{% block plwidgetopen %}
+	<div class="paragraph paragraph--type--call-to-action">
+{% endblock %}
+	{% if widget_title %}
+		<h3 class="widget-title">
+			{% if cta_url %}
+				<a href="{{ cta_url }}">{{ widget_title }}</a>
+			{% else %}
+				{{ widget_title }}
+			{% endif %}
+		</h3>
+	{% endif %}
+	<div class="wrapper">
+		{% block cta %}
+			<div class="field field-oc-long-text">{{ cta_text }}</div>
+			<div class="field field-oc-link">
+				<a href="{{ cta_url }}">{{ cta_link_text }}</a>
+			</div>
+		{% endblock %}
+	</div>
+{% block plwidgetclose %}				
+	</div>
+{% endblock %}

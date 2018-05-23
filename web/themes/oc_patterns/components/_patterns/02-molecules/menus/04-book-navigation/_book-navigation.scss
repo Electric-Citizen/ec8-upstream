@@ -1,0 +1,32 @@
+/* ================
+   BOOK NAVIGATION
+=================== */
+
+.block-book-navigation{
+	h2.block-title{
+		a{
+			color: $black;
+			&:hover,&:focus{
+				color: $link;
+				@include transAll(.3s);
+			}
+		}
+	}
+	ul{
+		@include listReset;
+		a:hover,a:focus{
+			@include transAll(.3s);
+		}
+	}
+}//end book navigation
+
+
+
+/* PATTERN LAB ONLY
+--------------------- */
+.pl .block-book-navigation{
+	h2.block-title{
+		text-align: left;
+		max-width: 100%;
+	}
+}

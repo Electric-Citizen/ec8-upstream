@@ -1,0 +1,14 @@
+<a name="pl-hidden-files" id="pl-hidden-files"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">Hidden Files in Pattern Lab</h4>
+		<div class="doc-section-inner">
+			<p>By default, all files of any type are visible to Pattern Lab. Each file's type will defined how it is used (as specified in the <a href="#file-types">File Types</a> documentation section). However, some files should not be visible to Pattern Lab. <strong>Files can be hidden from Pattern Lab by using a leading underscore <span class="code">_</span> (example: _styleguide-specific.scss).</strong></p>
+			<p>As previously specified, Scss files should NEVER be visible to Pattern Lab.</p> 
+			<p>JS files should be hidden unless they are specifically needed for Pattern Lab testing/demonstration. JS files visible to Pattern Lab must also be called in the theme/components/_meta/_01-foot.twig file.</p>
+			<p>YML files should always be visible to Pattern Lab as their configuration is necessary for their corresponding Twig files.</p>
+			<p>MD files should also always be visible to Pattern Lab because their very purpose is to document Pattern Lab components.</p>
+		</div>
+	</div>
+</div>

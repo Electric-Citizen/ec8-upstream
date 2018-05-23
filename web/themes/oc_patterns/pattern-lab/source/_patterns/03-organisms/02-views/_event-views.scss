@@ -1,0 +1,13 @@
+/* ==================
+    EVENTS VIEWS
+==================== */
+
+
+/* ALL UPCOMING
+------------- */
+.events.all-upcoming-events{
+	.view-content{
+		@include safeFlex(row,wrap,null,null);
+	}
+}
+

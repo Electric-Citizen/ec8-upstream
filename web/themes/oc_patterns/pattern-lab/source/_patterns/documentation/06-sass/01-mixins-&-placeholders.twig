@@ -1,0 +1,34 @@
+<a name="sass-mixins" id="sass-mixins"></a>
+
+<div class="doc-text">
+	<p>Differences, why we use primarily mixins, types of mixins, link to mixins reference (if can get to work from docs view all. Thoughts behind where a mixin goes and when to create new ones. How arguments & ifs work.</p>
+	<div class="doc-section">
+		<h4 class="doc-section-title">Mixins & Placeholders</h4>
+		<div class="doc-section-inner">
+			<p>A lot of the power of Sass comes from mixins and placeholders. These are bits of reusable code that prevent you from having to type the same thing over and over. Mixins are denoted as <span class="code">@mixin example{ my scss code here }</span> and called with includes: <span class="code">@include example;</span>. Placeholder are denoted as <span class="code">%example{ my scss code here}</span> and called with extends: <span class="code">@extend %example</span>.</p>
+			<p>The actual difference between Mixins and Placeholders can be tricky but here are a couple of key points:
+				<ol>
+					<li>Variable arguments cannot be passed through placeholders.</li>
+					<li>Placeholders must be used in the file they are declared in, or that file must be imported into the file they will be used in.</li>
+					<li>Mixins are printed for each selector instance, but place holders are printed once with the selectors using them grouped together.</li>
+				</ol>
+			The top two key differences definitely make the argument for using nothing but mixins, however, as noted in the last key difference they do slightly inflate the size of your stylesheet versus placeholders. </p>
+			<p>OC Patterns is generally favors mixins over placeholders because of the allowance of variable arguments, but placeholders are definitely recommended for static Scss mixins with no contextual needs.</p>
+		</div>
+	</div>
+	<div class="doc-section">
+		<h4 class="doc-section-title">OC Mixins</h4>
+		<div class="doc-section-inner">
+			<p>Most mixins are defined in 00-base/_02-mixins.scss. Background mixins are defined in 00-base/_03_background-sizes.scss and breakpoint mixins are set in 00-base/_00-breakpoints.scss. Some other more specific mixins are set in their respective component Scss files (example: <span class="code">@mixin blockTitle{}</span> set in 01-atoms/02-text/00-headings/_headings.scss).</p>
+			<p>All mixins set in the theme should be listed as a mixin-tile in 00-base/global/04-mixins/mixins.twig so that there is a visual Pattern Lab reference for them. The mixin tile should give the mixin name, the @include call for it, a short description, any argument values needed, and a list of similar mixins (similar mixins do not need to have a tile for each).</p>
+			<p>A new mixin should be created anytime a piece of Scss is being reused in multiple files of the theme and there are contextual variables being set in each instance. <br>Example:<br><span class="code">@mixin columns($columns, $gap){<br>-webkit-column-count: #{$columns};<br>-moz-column-count: #{$columns};<br>column-count: #{$columns};<br>-webkit-column-gap: #{$gap};<br>-moz-column-gap: #{$gap};<br>column-gap: #{$gap};<br>}</span></p>
+		</div>
+	</div>
+	<div class="doc-section">
+		<h4 class="doc-section-title">OC Placeholders</h4>
+		<div class="doc-section-inner">
+			<p>Most placeholders are defined in 00-base/_01-placeholders.scss (which is imported into other Scss files as needed. File specific placeholders can be defined within the file they are being used in.</p>
+			<p>A placeholder should be created for any common piece of Scss that is reused across the site (or within a single file) but no contextual arguments are needed. <br>Example:<br><span class="code">%listReset{<br>list-style:none;<br>padding: 0;<br>margin: 0;<br>}</span></p>
+		</div>
+	</div>
+</div>

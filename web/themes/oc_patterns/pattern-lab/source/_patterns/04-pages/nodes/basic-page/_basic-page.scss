@@ -1,0 +1,15 @@
+/* ============
+   BASIC PAGE
+================ */
+.node--type-page{
+	.field-banner{
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+	.block-region-main{
+		@include mainContentSide;
+	}
+
+}//end basic page

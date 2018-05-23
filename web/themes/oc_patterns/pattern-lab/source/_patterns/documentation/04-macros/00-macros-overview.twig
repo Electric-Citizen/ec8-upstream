@@ -1,0 +1,32 @@
+<a name="macros-overview" id="macros-overview"></a>
+
+<div class="field-oc=field-long-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">Twig Macros</h4>
+		<div class="doc-section-inner">
+			<p>Twig macros are very similar to Sass Mixins. They are a way for code to get passed from one template to another with the need to block inheritance or extensions (see <a href="#drupal-inheritance">Drupal Integration > Template Inheritance)</a>.</p>
+			<p>For OC Patterns, the true value in macros comes through in the passing of style classes through the macros into PL Twig and Drupal Twig templates to instantly change between style presets for various components.</p>
+			<p>Normally, Twig variables cannot transfer between PL and Drupal, nor between different Drupal entity templates.  Example: Block variables could not transfer into a Paragraphs template without either preprocessing or template inclusion and variable rewrites. This is still true with even with the use of macros, but text variables can pass through the macro to act as css classes.  You could also use macros to create reusable code mixins.</p>
+		</div>
+	</div>
+	<div class="doc-section">
+		<h4 class="doc-section-title">OC Patterns Styling Macros</h4>
+		<div class="doc-section-inner">
+			{% set macroExample = '{% macro menuAlign() %}right{% endmacro %}'%}
+			<p>All OC Patterns styling macros are defined in 00-Base/global/05-macros/macros.twig. Changing any other these macros will change the preset styles for the corresponding elements in both Pattern Lab and Drupal. <strong>Think of macros.twig as NASA Control.</strong></p>
+			<p>In the macros.twig file, macros are defined as macro tiles (for visual display in the initial PL reference sections). The macro name is followed by the allowed variables (preset styles) and the current variable. The actual macro follows inside the Twig statement delimiter: <span class="code">{{ macroExample }}</span>. When changing a macro, please change both the 'current' and the actual macro.</p>
+			<h5>OC Macros:</h5>
+			<ul class="spaced two-col-vert">
+				<li>Superfish Menu Alignment:</br><span class="code">left, center, right</span></li>
+				<li>Search block:</br><span class="code">toggle, box</span></li>
+				<li>Radio Form Elements:</br><span class="code">default, custom-options</span></li>
+				<li>Checkbox Form Elements:</br><span class="code">default, custom-options</span></li>
+				<li>Accordions:</br>Colors=<span class="code">grey, red, black</span></br>Expander=<span class="code">plus, caret</span></li>
+				<li>Slider Arrows:</br><span class="code">large-caret, small-caret, triangle</span></li>
+				<li>Footer Style:</br><span class="code">fixed, not-fixed</span></li>
+				<li>Social Media Widget SVG Icons:</br>These macros set the view box for the svg code in both PL and Drupal for each social media icon. These will need to be updated whenever the svg sprite is regenerated (whenever a npm install is run or a new icon is added). The first value is X, the second is Y. The third and fourth values should never be changed.</li>
+			</ul>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,17 @@
+/* ============
+   PAGES GLOBAL
+=============== */
+html > body:not(.is-front):not(.path-node):not(.node-type-page){
+	.layout-content{
+		@include paddedText;
+		&.taxonomy{
+			@include paddedContent;
+		}
+		@include auto;
+		padding: 2em 20px 3em;
+	}
+	.block-page-title-block{
+		margin-bottom: 2em;
+	}
+
+}//end unpanelized pages

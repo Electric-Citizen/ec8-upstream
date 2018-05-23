@@ -1,0 +1,37 @@
+<a name="file-types" id="file-types"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">Pattern Lab File Types</h4>
+		<div class="doc-section-inner">
+			<p>Pattern Lab components are made up of several file types:</p>
+			<p>
+				<ul>
+					<li>SCSS</li>
+					<li>JS</li>
+					<li>TWIG</li>
+					<li>YML</li>
+					<li>MD</li>
+				</ul>
+			</p>
+			{% set library = '{{ attach_library() }}' %}
+			<p><strong>SCSS— </strong>SCSS files hold the SASS theming code that gets compiled into CSS for the site. <strong>SCSS files should never be visible to Pattern Lab and thus should always be preceded by an _.</strong> Each component generally gets its own .scss file even if it doesn't need any of the other file types. Some .scss files hold because they theme at a slightly higher level (example: _widgets.scss).</p>
+			<p><strong>JS— </strong>JS files hold th jQuery scripts for the site. Most JS files should be hidden from Pattern Lab unless they are needed to test/demonstration specific component functionality. <strong>NOTE:</strong> Even if a JS file is visible to Pattern Lab, it will not be functional. It must also be included in theme/components/_meta/_01-foot.twig, assigned to a library in the theme's .libraries.yml and attached in a Twig template.</p>
+			<p>JS files are attached to Twig templates (both in Drupal and Pattern Lab) through the <span class="code">{{ library }}</span> Twig function. When a JS file is assigned to a library, it should also have its specific dependencies assigned.</p>
+			<p><strong>TWIG— </strong>Twig templates form the backbone of both both Drupal and Pattern Labs theming structure. Pattern Lab uses pure .twig templates while Drupal uses .html.twig templates. <a href="https://twig.symfony.com/" target="_blank">Twig</a> is a PHP-based templating engine that compiles code down to PHP. Think of it like the Sass of PHP.</p>
+			<p><strong>YML— </strong><a href="http://www.yaml.org/spec/1.2/spec.html" target="_blank">YML</a> files are commonly used for configuration purposes. Pattern Lab uses it as structure that defines strings and arrays of demonstration content to be transmitted to Twig templates as variables. These variables can then be inherited into Drupal and replaced with Drupal specific content.</p>
+			<p>Some common YML syntax:
+				<ul>
+					<li>Indentation:  Two spaces indented start a sub level of structure. <strong>YML does not accept tabs for indentation.</strong></li>
+					<li>Comments: <span class="code">#</span> is used for comment lines.</li>
+					<li>List items: Can be denoted either by a leading hyphen <span class="code">–</span> or enclosed in square brackets <span class="code">[]</span> and separated by a comma.</li>
+					<li>Array items: Arrays are represented using a semi-colon<span class="code">:</span>. Their key values are either set per indented line after the array variable, or are enclosed in curly brackets <span class="code">{}</span>.</li>
+					<li>Strings: Strings are normally unquoted but can be enclosed in single or double quotes. Double quotes allow special characters within the string to be escaped using a backslash <span class="code">\</span>.
+				</ul>
+			</p>
+			<p><strong>MD— </strong><a href="https://fileinfo.com/extension/md" target="_blank">MD</a> files are text files created in markdown language and used plain text documentation. OC Patterns specifically uses them for component documentation that is shown in Pattern Lab only. Adding documentation in a .md file ensures that the documentation does not get rendered into Drupal either as file comments or as blocks that need to be replaced with empty content in Drupal.</p>
+		</div>
+	</div>
+</div>
+
+

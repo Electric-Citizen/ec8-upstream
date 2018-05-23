@@ -1,0 +1,18 @@
+<a name="drush-commands" id="drush-commands"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">Troubleshooting</h4>
+		<div class="doc-section-inner">
+			<p>OC Patterns normally is pretty bulletproof if you are using the most recent versions of npm and node.js. If you do run into trouble when either installing the theme or running (npm start), follow these steps:</p>
+			<p><ol class="spaced">
+				<li><strong>Update to the most recent version of npm and node.js—</strong> Since this theme is based on <a href="https://github.com/fourkitchens/emulsify" target="_blank">Four Kitchens Emulsify</a> it is best to run the most current versions of both npm and node.js in order to stay even with dependency needs.</li>
+				<li><strong>Make sure non of you files are misnamed or contain incorrect syntax—</strong> ES Lint (JS Linting) will cause the theme to quit running if it detects a JS error. It will give you the error and line to fix. New files (SCSS, JS & Twig) will also often cause the theme to quite running. Clear the site cache and re-run <span class="code">npm start</span>. Twig syntax/variable errors will often cause a white screen with a fatal error message. use the Recent Log Messages report (Config > Reports) to get the specific Twig error, fix it and clear cache.</li>
+				<li><strong>Check the error to see if it has to do with theme dependencies—</strong> Sometimes theme dependencies will fail due to npm/Gulp developers falling behind or version conflicts. Often resolutions to dependency errors can be found in issue queues either in the <a href="https://github.com/fourkitchens/emulsify" target="_blank">Emulsify theme repo</a>, the <a href="https://github.com/fourkitchens/emulsify-gulp" target="_blank">Emulsify Gulp repo</a>, or on the npm package or dependency repo issue queue.</li>
+				<li><strong>Scream for help at the top of your lungs—</strong> When all else fails, the Lead Front-End developer and/or Technical Director can most likely find a solution to your problem.</li>
+			</ol></p>
+		</div>
+	</div>
+</div>
+
+

@@ -1,0 +1,24 @@
+/* ==================
+    PROFILES VIEWS
+==================== */
+
+/* ALL STAFF
+------------- */
+.profiles.all-staff{
+	.view-content{
+		@include safeFlex(row,wrap,null,null);
+	}
+	.views-field-title{
+		h3{
+			font-size: 20px;
+		}
+	}	
+	.views-field-field-profile-image{
+		.view-mode-square{ 
+			@include auto;
+			img{
+				display: block;
+			}
+		}
+	}
+}//end profiles

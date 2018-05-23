@@ -1,0 +1,253 @@
+/* ==============
+	 GLOBAL STYLES
+================= */
+body {
+	background: $siteBack;
+	& > .overflow-guard{
+		overflow-x: hidden;
+	}
+	div{
+		box-sizing: border-box;
+		
+		*{
+			box-sizing: inherit;
+		}
+	}
+}
+
+.container-inline div{
+	display: inline;
+}
+
+
+/* MAP PINS
+-------------- */
+//google api map pins
+.gm-style-iw{
+	strong{
+		font-weight: $heavy;
+	}
+	em{
+		font-style: italic;
+	}
+	h2{
+		font-size: 16px;
+	}
+	h3{
+		font-size: 14px;
+	}
+}
+
+/* PANELS-IPE
+------------------- */
+//save buttons
+#panels-ipe-tray{
+	z-index: 1000;
+	a{
+		padding: 5px 10px;
+		border: 1px solid;
+		&.panelizer-ipe-save-custom{
+			border-color: $greenGood;
+			background: $greenGood;
+			color: $white;
+			&:hover,&:focus{
+				background: transparent;
+				color: darken($greenGood, 10%);
+			}
+		}
+		&.panelizer-ipe-save-default{
+			border-color: $redBad;
+			background: $redBad;
+			color: $white;
+			&:hover,&:focus{
+				background: transparent;
+				color: darken($redBad, 10%);
+			}
+		}
+	}
+}
+.ipe-category-picker-bottom{
+	white-space: initial;
+}
+
+
+/* SKIP NAV
+------------- */
+.overflow-guard > a.focusable{
+	&:focus{
+		position: fixed !important;
+		top: 0;
+		left: 0;
+		z-index: 9999;
+		display: block;
+		width: 100%;
+		background: $white;
+		padding: .25em 1em;
+	}
+}
+
+
+/* KINTING
+-------------- */
+.kint{
+	position: fixed;
+	z-index: 9999;
+	top: 200px;
+	right: 5%;
+	width: 90%;
+	max-width: 800px;
+	@include calc(max-height, "90% - 200px");
+	overflow: scroll;
+}
+
+/* BACK TO TOP
+----------------- */
+//back to table of contents option
+.back-anchor{
+	display: none;
+	position: fixed;
+	bottom: 3%;
+	right: 3%;
+	box-shadow: 3px 3px 5px rgba(35,35,35, 0.35);
+	z-index: 9999;
+	border-radius: 50%;
+	a{
+		display: block;
+		width: 50px;
+		height: 50px;
+		background: rgba(35,35,35,0.85);
+		border-radius: 50%;
+		text-indent: -300vw;
+		position: relative;
+		&:after{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include translate(-50%,-50%);
+			width: 30px;
+			height: 30px;
+			@include backAnchorArrow;
+		}
+	}
+}//end back anchor
+
+
+
+/*  FILE ICONS
+--------------- */
+//pdf
+a[href$='.pdf']{
+	position: relative;
+	padding-left: 22px;
+	&:before{
+		content:'';
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 4px;
+		width: 15px;
+		height: 18px;
+		@include sprite-file-pdf;
+		@include iconSize;
+	}
+	&:hover:before,&:focus:before{
+		@include opacity(.7);
+	}
+}
+//word
+a[href$='.doc'],a[href$=".docx"]{
+	position: relative;
+	padding-left: 22px;
+	&:before{
+		content:'';
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 4px;
+		width: 15px;
+		height: 18px;
+		@include sprite-file-word;
+		@include iconSize;
+	}
+	&:hover:before,&:focus:before{
+		@include opacity(.7);
+	}
+}
+//excel
+a[href$='.xls'],a[href$=".xlsx"]{
+	position: relative;
+	padding-left: 22px;
+	&:before{
+		content:'';
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 4px;
+		width: 15px;
+		height: 18px;
+		@include sprite-file-xls;
+		@include iconSize;
+	}
+	&:hover:before,&:focus:hover{
+		@include opacity(.7);
+	}
+}
+//powerpoint
+a[href$='.ppt'],a[href$=".pptx"]{
+	position: relative;
+	padding-left: 22px;
+	&:before{
+		content:'';
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 4px;
+		width: 15px;
+		height: 18px;
+		@include sprite-file-ppt; 
+		@include iconSize;
+	}
+	&:hover:before,&:focus:hover{
+		@include opacity(.7);
+	}
+}
+
+
+/* ADMIN NODE EDIT TABS
+----------------- */
+.block-local-tasks-block{
+	@include paddedContent;
+	@include auto;
+	margin-top: 2em;
+	.tabs {
+		margin: 1em 0;
+		border-bottom:1px solid $grey;
+
+		ul {
+			padding-left:0;
+			margin:0;
+		}
+		li {
+			margin:0 2px 0 0;
+			background: $white;
+			display: inline-block;
+		}
+
+		a {
+			display: block;
+			padding: 0.2em 1em;
+			&.is-active {
+				background-color: $lightGrey;
+			}
+			&:focus,&:hover {
+				background-color: $offWhite;
+			}
+		}
+	}
+}//end local tasks
+
+
+/* PLAYGROUND
+----------------- */

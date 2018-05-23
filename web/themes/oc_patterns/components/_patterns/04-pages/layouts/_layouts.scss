@@ -1,0 +1,22 @@
+/* ==============
+    LAYOUTS GLOBAL
+================== */
+
+@mixin top{
+	width: 100%;
+	.block-entity-fieldnodetitle{
+		margin-top: 1em;
+		h1{
+			max-width: $maxWidth;
+			padding-left: 20px;
+			padding-right: 20px;
+			@include auto;
+			width: 100%;
+		}
+	}
+}//end top mixin
+
+
+.top,.main,.bottom,.sidebar{
+	clear: both;
+}

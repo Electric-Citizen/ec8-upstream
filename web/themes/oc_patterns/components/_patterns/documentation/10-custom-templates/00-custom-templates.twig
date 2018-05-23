@@ -1,0 +1,17 @@
+<a name="custom-templates" id="custom-templates"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">Custom Twig Templates</h4>
+		<div class="doc-section-inner">
+			<p>Every component in Drupal has a corresponding Twig template or even group of templates. Whenever you need to change or create the HTML structure of a component, need to attach a JS file to it for scripting, or want to add some special classes for theming, you will need to create a new custom template for the element or edit an existing template.</p>
+			<p><strong>Existing Custom Templates—</strong> All existing Drupal custom templates for OC Patterns are stored in /templates/zzz-custom. Any other templates in the theme are default templates from the Stable base theme. If any of these templates need to be edited—it should be moved into one of the sub-folders in the zzz-custom folder. <strong>Make sure you move the whole template instead of just copying a version of it into the zzz-custom folder structure.</strong> NOTE: You may also inherit templates from outside zzz-custom into templates inside of zzz-custom since it is at the end of the /template file hierarchy.</p>
+			<p>Existing Pattern Lab templates are all in the /components/_patterns file structure. Any new templates added to Pattern Lab should be added there in the appropriate component area. If the new Pattern Lab template is going to be inherited into Drupal, a custom template must also be created (or edited) for the inheritance in /templates/zzz-custom.</p>
+			<p>Any Twig template found outside of the OC Patterns theme is either a Drupal core template or one provided by a contributed module. Whenever possible, it is best not to customize these templates because this may cause errors after future core/module updates, but if it is necessary to do so, you should copy the template (not move it like with customizing OC Pattern default templates) into the zzz-custom folder structure.</p>
+			<p>Whenever you create a new template or rename a template, you must clear cache in order for the new template to be read by Drupal or Pattern Lab. Often when you make changes to a template, you may also need to clear cache to get those changes to register on the site (especially when logged out).</p>
+			<p> For more about custom templates read this <a href="https://www.electriccitizen.com/blog/twig-drupal-8-development-twig-templating-part-1" targe="_blank">Electric Citizen Blog Post</a>.
+		</div>
+	</div>
+</div>
+
+

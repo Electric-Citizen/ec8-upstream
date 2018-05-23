@@ -1,0 +1,21 @@
+<a name="drupal-inheritance" id="drupal-inheritance"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">Twig Template Inheritance</h4>
+		<div class="doc-section-inner">
+			<p>Twig template inheritance works both between Pattern Lab and Drupal and within each system itself.  Any template can inherited into any other template as long as the template being inherited comes before the inheriting template in the hierarchy.  This is why atomic design is so crucial. A global paragraphs.html.twig Drupal template can be extended (inherited) into all of the paragraph bundle (widget) specific templates so that the correct classes get picked up without having to be re-written each time.</p>
+			<p>Pattern Lab twig templates can be inherited directly into Drupal templates so that the component theming can be in Pattern Lab without even the need for a working Drupal site and surrounding HTML structure can be tailored as needed and displayed in both the style guide and Drupal.</p>
+			<p><strong>Types of Inheritance—</strong> Templates can be inherited by another by using Extends, Include or Embed. They all function in a pretty similar manner, but there are some key differences:
+				<ul>
+					{% set inclusion = '{% include "my-parent-template-name" %}' %}
+					<li><strong>Extends—</strong> Brings in the entire parent template into the child (inheriting) template. No content outside of the blocks defined in the parent template will be allowed in the child template. Parent blocks can have their content changed in the child template.</li>
+					<li><strong>Include—</strong> Inherits the entire parent template into a specific place in the child template (rather than taking over the whole child template as extends does). The included template is rendered in the place in the child template where the inclusion happens. Included templates may have their variables changed by using <span class="code">with:{ }</span> inside of the <span class="code">{{ inclusion }}</span> call. Included templates may not have their block content structure changed (only variables).</li>
+					<li><strong>Embed—</strong> Works as a sort of hybrid between Extends and Include. Parent templates are inherited into child templates at the place the embed happens. Variables can be changed by using <span class="code">with:{ }</span> like include, but block content can also be replaced like with extend.</li>
+				</ul>
+				For more on template inheritance, read this amazing <a href="https://www.electriccitizen.com/blog/twig-drupal-8-development-twig-templating-part-1" target="_blank">Electric Citizen blog post.
+			</p>
+		</div>
+	</div>
+</div>
+

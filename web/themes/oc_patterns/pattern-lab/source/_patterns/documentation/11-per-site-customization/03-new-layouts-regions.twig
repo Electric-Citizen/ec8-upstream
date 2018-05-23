@@ -1,0 +1,16 @@
+<a name="templates-layouts" id="templates-layouts"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">New Panelizer Layouts & Changing OC Block Layout</h4>
+		<div class="doc-section-inner">
+			<p>New layouts can be created as needed to fit the design (although a lot of designs can be completed with the three basic EC Layouts. <strong>Never delete any existing EC layouts.</strong></p>
+			<p><strong>New Layout Templates—</strong> New Layouts need two templates. The first is a Pattern Lab template. This should be created by adding a new folder in 04-pages/layouts (using an index number) and adding a .twig and .scss file for the template. Regions should be set in region divs with aria roles as blocks that can be replaced when this template is inherited into Drupal. Region placeholder divs are used in PL to provide styling structure. The Scss file can be used to style the layout region placement in Pattern Lab so you can see a visual representation of it before its used in Drupal.</p>
+			<p>The Drupal template is also created in the /components folder but its housed in /components/_layouts in its own folder. This template inherits the Pattern Lab template and replaces the region placeholder div with the content.regionname Drupal region variable. The layout folder also contains the layout icon png and its .css file needed by Panelizer. The layout icon can be created using the panels-layouts.ai Illustrator file in Google Drive > Electric Citizen > zFRONT END ELEMENTS. The .css file is necessary because Panelizer expects it, but it should be blank. Layout theme comes from the Pattern Lab .scss file.</p>
+			<p><strong>Registering New Layouts—</strong> In order for new layouts to be found by Panelizer, they must be registered in oc_patterns.layouts.yml. Enter the template information in the same format as the existing templates. Cache must be cleared afterward.</p>
+			<p><strong>Changing the OC Pattern default block layout—</strong> The default OC Patterns block layout template has regions for Header, Content, and Footer. Sometimes it is necessary to add a new region to this layout. This can be done be entering the new region in oc_patterns.info.yml. Cache must be cleared afterward.</p>
+		</div>
+	</div>
+</div>
+
+

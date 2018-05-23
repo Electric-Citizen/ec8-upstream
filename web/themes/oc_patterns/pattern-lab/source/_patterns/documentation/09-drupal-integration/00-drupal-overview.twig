@@ -1,0 +1,16 @@
+<a name="drupal-overview" id="drupal-overview"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title"></h4>
+		<div class="doc-section-inner">
+			<p>Pattern Lab works alongside Drupal but is not actually a part of Drupal. In order for Drupal to pick up what Pattern Lab is throwing down, OC Patterns needs to let Drupal now to use the files and templates living in Pattern Lab and the /dist folder it is being compiled into.</p>
+			<p><strong>OC Patterns Info File—</strong> This is main file that tells Drupal where to look for Pattern Lab elements. Global/font libraries, CKEditor stylesheets, theme Block Layout regions, and the Component Libraries are all outlined in oc_patterns.info.yml</p>
+			<p><strong>Global/Font libraries—</strong> These are defined in oc_patterns.libraries.yml and tell the theme (and thus Drupal) where to find style.css sheet (that all the Scss files get compiled into) as well as the global JS files and core dependencies.</p>
+			<p><strong>CKEditor Stylesheets—</strong> Tells Drupal where to find the CKEditor (WYSIWYG) stylesheet. This stylesheet needs to be update for any new WYSIWYG styles added to a site and to reflect the site-wide body font.</p>
+			<p><strong>Block Layout Regions—</strong> These are the main regions of the theme (different than Panelizer layout regions. These regions hold the header, main content and footer blocks.</p>
+			<p><strong>Component Libraries—</strong> These tell Drupal where to find the major top level atomic structure of Pattern Lab. The Drupal <a href="https://www.drupal.org/project/components" target="_blank">Component Libraries</a> module reads these and allows Drupal Twig Templates to use the atomic level shorthand when inheriting Pattern Lab Twig templates.</p>
+		</div>
+	</div>
+</div>
+

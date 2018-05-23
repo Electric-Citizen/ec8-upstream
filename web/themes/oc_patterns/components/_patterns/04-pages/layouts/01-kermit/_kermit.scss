@@ -1,0 +1,44 @@
+/* ================
+   KERMIT
+=================== */
+
+.kermit{
+	.top{
+		@include top;
+	}
+	.main{
+		width: 100%;
+		padding: 2em 20px 0;
+		max-width: $maxWidth;
+		@include auto;
+	}
+	.widgets{
+		width: 100%;
+	}
+	.bottom{
+		width: 100%;
+	}
+}
+
+
+
+/* PATTERN LAB SPECIFIC
+------------------ */
+.sg-pattern-example > .kermit{
+	.top{
+		height: 100px;
+		margin-bottom: 1em;
+	}
+	.main{
+		height: 300px;
+		margin-bottom: 1em;
+	}
+	.widgets{
+		height: 300px;
+		margin-bottom: 1em;
+	}
+	.bottom{
+		height: 100px;
+	}
+}
+

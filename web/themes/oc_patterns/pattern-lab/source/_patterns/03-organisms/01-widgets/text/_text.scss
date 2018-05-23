@@ -1,0 +1,9 @@
+/* ==============
+   TEXT WIDGET
+================= */
+
+.paragraph--type--text{
+	max-width: $maxWidthText;
+	@include auto;
+}//end links-files widget
+

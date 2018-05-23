@@ -1,0 +1,23 @@
+/* =============
+	LINKS
+============== */
+
+a {
+	color: $link;
+	text-decoration: none;
+	&:hover,&:focus {
+		color: $hoverLink;
+		text-decoration: underline;
+		.field.body &,.field-oc-long-text &{
+			@include transAll(.3s);
+		}
+	}
+}
+
+/* PATTERN LAB ONLY
+------------------ */
+.pl a.alt{
+	&:hover{
+		@include transAll(.3s);
+	}
+}

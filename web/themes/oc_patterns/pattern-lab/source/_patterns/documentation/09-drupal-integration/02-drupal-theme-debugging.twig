@@ -1,0 +1,20 @@
+<a name="drupal-theme-debug" id="drupal-theme-debug"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">Theme Debugging</h4>
+		<div class="doc-section-inner">
+			{% set kintEx = '{{ kint() }}' %}
+			{% set ksmEx = '{{ ksm() }}' %}
+			{% set ddEx = '{{ dd() }}' %}
+			<p>Theme debugging can be the saving grace of any developer when customizing templates or doing and sort of PHP/Twig work. Thankfully Drupal 8 offers several ways to debug OC Patterns in order to find the variables you need when customizing a template or writing a .theme function.</p>
+			<p><strong>Devel/Kint—</strong> Devel is suite of contrib modules that allow theme debugging and (new for Drupal 8) the powerful <span class="code">{{ kintEx }}</span> Twig function and <span class="code">{{ ksmEx }}</span> PHP function to debug variables.</p>
+			<p><strong>Theme Debug—</strong> Theme dug is something that can be turned on by creating a services.yml file for the site and changing a few variables. Theme debug will list all available template suggestions for each component when using a browser inspector. It will also tell you which template is being used and when it ends. You can also turn off site-cache and turn on auto-reload so you don't have to clear cache every time you change a template (as long as you are logged in to your local site). The services.yml file can be found in the /sites/default/services.yml. If there is not one there, you can copy development.services.yml from the /sites folder and move the copy to sites/default and rename it services.yml.</p>
+			<p>In services.yml, find the twig.conf: section and change <span class="code">debug:</span> to true, <span class="code">auto_reload:</span> to true, and <span class="code">cache:</span> to false. This will allow for an optimal theming environment. <strong>Never commit the services.yml to git.</strong></p>
+			<p><strong>Template variable dumping—</strong> Template variables are piece of Drupal content before they get rendered by Twig templates. Any custom templating of theme functions you do will involve finding and printing template variables.</p>
+			<p>If you are customizing a template, you will use either <span class="code">{{ kintEx }}</span> or <span class="code">{{ ddEx }}</span>. Both will dump all of the available variables for the entity the template belongs to and its parent entity (though use of the <span class="code">'#object'</span> variable). The difference is <span class="code">{{ kintEx }}</span> also gets you all of the available methods for each variable. This makes it much slower and more memory intensive that <span class="code">{{ ddEx }}</span>, but also more powerful. Methods are good ways to find fields and other variables from entity reference fields: <span class="code">get('field_my_field')</span>. We recommend using <span class="code">{{ ddEx }}</span> to get as far as you can and then using <span class="code">{{ kintEx }}</span> if necessary—just for efficiency reasons.</p>
+			<p>When working in the .theme file editing or creating new theme PHP functions, <span class="code">{{ ksmEx }}</span> is the variable dump function you want to use. It works just like <span class="code">{{ kint }}</span></p>
+			<p><strong>DB Log Report—</strong> Often when making Twig or theme function changes, errors are made that results in a white screen and a fatal error message. This is most often due to syntax errors or variable errors. Sometimes but these errors are printed directly on the screen, but often you will need to go to Configuration > Reports > Recent Log Messages to view the error and find out exactly what is wrong.</p>
+		</div>
+	</div>
+</div>

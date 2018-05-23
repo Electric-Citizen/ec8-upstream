@@ -1,0 +1,15 @@
+<a name="admin-wysiwyg" id="admin-wysiwyg"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">WYSIWYG Styles</h4>
+		<div class="doc-section-inner">
+			<p>CKEditor (WYSIWYG) styles should be updated to match the text, headers and any other inline styles required by each site.  WYSIWYG editor styles should match the front-facing output as closely as possible.</p>
+			<p><strong>Updating existing styles—</strong> Existing styles can be changed/removed in the cke.css stylesheet in /components/css. When changing styles, you may need to clear site cache several times or even clear an hour or so of your browser history for the changes to take effect. WYSIWYG font calls can be updated in the oc_patterns.info.yml. See <a href="#site-specific-colors">Site-specific Colors & Fonts</a> for more information.</p>
+			<p><strong>New WSYIWYG styles—</strong> New WYSIWYG styles can be added through custom classes set in Configuration > Text Formats and Editors. Any style set in Basic HTML should also be available in Full HTML. To add a new style, configure the editor and add your style in the Styles Dropdown input area follow the existing formats. If you are adding a style to a new type of element (ul, drupal entity, img, etc) make sure that element is allowed to have styles in the Basic HTML Limit allowed HTML tags section at the bottom.</p>
+			<p>Once your new style is added to the editor, add the style to the cke.css stylesheet and the appropriate theme Scss file (usually 01-Atoms/02-text/_text.scss). Clear cache (and possibly your recent history) to get the style to show up.</p>
+		</div>
+	</div>
+</div>
+
+

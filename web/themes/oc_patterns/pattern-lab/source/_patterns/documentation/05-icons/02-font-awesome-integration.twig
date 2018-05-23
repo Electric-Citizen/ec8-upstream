@@ -1,0 +1,16 @@
+<a name="fa-integration" id="fa-integration"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">Font Awesome Integration</h4>
+		<div class="doc-section-inner">
+			{% set fa_icon = '<i class="fa fa-angle-right">'%}
+			<p><a href="https://fontawesome.com/" target="_blank">Font Awesome is an icon library that is called via CDN in the global library in oc_patterns.libraries.yml. The version that should be called for each site depends on the icons defined in the design. The default version for base icons is FontAwesome 5. Some designs call for a switch to 4.7</p>
+			<p>Font Awesome icons can used in different ways:
+				<ol>
+				<li>The prefer method is bring in through an icon tag: {{ fa_icon }}. NOTE: the preceding 'fa' in that tag can also be fas, far, or fal depending on what version of Font Awesome you are using (<a href="https://fontawesome.com/how-to-use/svg-with-js" target="_blank">see docs</a>).</li>
+				<li>You can also add icons through css pseudo elements (:before, :after).<br>Example:<br><span class="code">.selector:before{<br>font-family: "Font Awesome 5 Regular";<br>content: "\f105";<br>}</span> Remember to change to Font Awesome family to reflect the version you are using.</li>
+			</p>
+		</div>
+	</div>
+</div>

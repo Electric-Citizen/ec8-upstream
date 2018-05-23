@@ -1,0 +1,54 @@
+<a name="site-specific-colors" id="site-specific-colors"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">Site Specific Colors</h4>
+		<div class="doc-section-inner">
+			<p>OC Patterns has some base colors in place that are needed for Pattern Lab theming and testing in between Drupal site spin ups. Obviously, these need to get changed for each site.</p>
+			<p><strong>Site Colors—</strong> Site colors come from the Design Direction sheet provided by the design and from mock-ups as they become finalized. All colors are entered in the 00-base/global/01-colors/_color-vars.scss file as variables. <strong>There should never be a color used on the site that is not a variable.</strong> When a color is added to (or changed in) _color-vars.scss as a variable, it will automatically be picked up by Gulp and added to the colors.yml file which displays the color reference palette in Pattern Lab.</p>
+			<p>Colors should stick with non-fancy color names with light/mid/dark options added as needed (<span class="code">$red</span> and <span class="code">$redDark</span> for instance). If you change one of the base colors to use on a specific site (like <span class="code">$grey</span>), move that variable into the /* Client Colors */ section of _colors-vars.scss. It's not really necessary but its good housing keeping and makes all the site-specific colors easier to find later.</p>
+			<p>Some colors use the non-color names but change every site:
+				<ul>
+					<li>$siteBack == the site background color</li>
+					<li>$borderRule == global color for all borders and rules</li>
+					<li>$link == global link color</li>
+					<li>$linkHover,$linkActive == global colors for link states</li>
+					<li>$buttonBack,$buttonbackHover == global default button colors</li>
+				</ul>
+				These colors should not be moved or renamed—just change the hex colors as needed.
+			</p>
+		</div>
+	</div>
+	<div class="doc-section">
+		<h4 class="doc-section-title">Site Specific Fonts</h4>
+		<div class="doc-section-inner">
+			{% set headerBlock = '{% block headInsert %}' %}
+			<p>OC Patterns loads Open Sans from Google Fonts as the default font for base theming. This font will most likely need to be replaced on a per site basis.</p>
+			<p><strong>Loading Fonts—</strong> Depending on where you are getting the site fonts from, they can be loaded in a few different ways:
+				<ol>
+					<li><p>Using the Fonts library: Open oc_patterns.libraries.yml and scroll all the way to end. You'll see the fonts: library with Open Sans being loaded as a css external sheet from fonts.googleapis.com. If the fonts you are loading use a <span class="code">link rel="stylesheet"</span> header call, you can just replace the Open Sans url with the new font url.</p>
+					<p>If you need a js script tag in the header to load the fonts, you can add js: to the fonts: library and paste in the url to fonts. Just make sure you have <span class="code">{ type: external }</span> after it. Add <span class="code">minified: true</span> after the external notation if you are using a minified font sheet.</p></br></li>
+					<li>If either of these don't work for some reason, you can add the entire head tag needed for the font into the <span class="code">{{ headerBlock }}</span> placeholder in html.html.twig in /template/zzz-custom/layouts.</li>
+					<li><p>Hosting fonts directly on the site is also possible. Add the font files into the /fonts folder in theme. Add <span class="code">@font-face</span> css at the start of 00-base/global/02-fonts/_fonts-vars.scss:</p>
+						Example:<br>
+						@font-face {<br>
+					      font-family: 'myFont';<br>
+					      src: url('../fonts/myfont.eot');<br>
+					      src: url('../fonts/myfont.eot?#iefix') format('embedded-opentype'),<br>
+					         url('../fonts/myfont.woff') format('woff'),<br>
+					         url('../fonts/myfont.ttf') format('truetype'),<br>
+					         url('../fonts/myfont.svg#myfont') format('svg');<br>
+					   	font-weight: normal;<br>
+					   	font-style: normal;<br>
+						}<br>
+					</li>
+				</ol>
+			</p>
+			<p>If you used one of the first two methods to load the fonts, you can test to see if they are loading by inspecting any page of the site in a browser and checking the head and foot tags to see if you link and script tags are there.</p>
+			<p><strong>Font Variables—</strong> Once the fonts are loading on the site (or if you used the third method), replace the font variables in _fonts-vars.scss with the new font-families to use them in Scss.  Heading sizes and colors are updated in 01-atoms/text/00-headings/_headings.scss but they always use the <span class="code">$header</span> font-family variable (except h1 which may use <span class="code">$displayHeader</span>). Text styles are updated in 01-atoms/02-text/text/_text.scss.</p>
+			<p><strong>CKE Editor WYSIWYG font–</strong> It is a good practice to match styles in WYSIWYG fields as closely to the rendered results as possible to help editors visualize how they are building the page. To that end, when new fonts are added, the fonts for CKE editor should be updated as well. You can load the fonts in oc_patterns.info.yml under <span class="code">ckeditor_stylesheets:</span> the same way you would load the regular fonts—except you don't need to specify external. Then update the necessary styles in /components/css/cke.css to reflect the new fonts and header styles.</p>
+		</div>
+	</div>
+</div>
+
+

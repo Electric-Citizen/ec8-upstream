@@ -1,0 +1,16 @@
+<a name="templates-naming" id="templates-naming"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">Template Naming Conventions & File Locations</h4>
+		<div class="doc-section-inner">
+			<p><strong>Drupal Template Naming—</strong> Drupal templates follow certain naming conventions. Each template starts with the entity type. A block template will start with <span class="code">block</span> while a field template will start with <span class="code">field</span> and so on and so forth. Every single Drupal entity has a template associated with it.</p>
+			<p>Template names go from the global entity level to the specific instance of that entity. The <span class="code">block.html.twig</span> affects all blocks on the site while <span class="code">block--menu-block.html.twig</span> would only affect all menu blocks on the site. More specifically, <span class="code">block--menu-block--footer.html.twig</span> would affect only the menu block for the footer menu. <strong>File name entity levels are always separated by two hyphens.</strong> The words in the machine name of an entity level (example: main-menu) are always separate by a single hyphen.</p>
+			<p>Unless you know that the custom template you are creating is something that will be used at a high level (adding block name classes to all blocks for theming purposes), name your template as specifically as possible in order to prevent the customization from spilling over into other instances of that entity later on. You would never want to use something like <span class="code">block--basic.html.twig</span> to add some special HTML structure to a basic block you created to add social media links in the footer because that code would be inherited by any other basic blocks created on the site.</p>
+			<p>Available template names are provided by green theme suggestions seen when using a browser inspector if <a href="#drupal-theme-debug">theme debugging</a> is turned on. If you do not see a template name suggestion that fits the template you need to create, you can add more through <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_theme_suggestions_alter/8.2.x" target="_blank">theme suggestions hook</a> functions in the <span class="code">oc_patterns.theme</span> file.</p>
+			<p>Custom Drupal templates must always go in the /templates folder because a template can only get inherited into a template below it in the file structure. Having all custom templates in zzz-custom means that templates can be inherited from both Pattern Lab (using the Drupal Component Libraries module) and from the default Stable templates in /templates.</p>
+		</div>
+	</div>
+</div>
+
+

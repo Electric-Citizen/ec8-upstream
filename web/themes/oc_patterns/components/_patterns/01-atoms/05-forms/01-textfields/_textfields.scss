@@ -1,0 +1,30 @@
+/* =================
+   TEXTFIELD
+================= */
+
+.js-form-type-textfield {
+	input{
+		@include textInput;
+	}
+}
+.js-form-type-email{
+	input{
+		@include textInput;
+	}
+}
+.js-form-type-password,.form-item-password{
+	input{
+		@include textInput;
+	}
+}
+.js-form-type-tel{
+	input{
+		@include textInput;
+		max-width: 250px;
+	}
+}
+.js-form-type-textarea{
+	textarea{
+		@include textInput;
+	}
+}

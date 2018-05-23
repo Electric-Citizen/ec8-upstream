@@ -1,0 +1,15 @@
+<a name="misc-dev" id="misc-dev"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">Dev Specific Configuration</h4>
+		<div class="doc-section-inner">
+			<p>Electric Citizen uses a full-site configuration export workflow (Continuous Integration). This means that ANY configuration changes on your local site (except those specifically limited to local environments) is pushed to the development environments when you export you work.</p>
+			<p>However, some configuration is tied to content—which is not exported. Paragraph file icons and custom blocks used in block layout and Panelizer regions are prime examples. If you create a new custom block and add it to the footer locally then export your configuration, your block will show as missing or broken on the dev site—because the block does no exist there. In these cases, it is necessary to some configuration on dev (or whatever the highest level of environment is currently). <strong>When doing non-local configuration work, make sure that you alert all developers who may be working on the site before you start so that they do not push work that will override your dev changes before you get them into the workflow.</strong></p>
+			<p><strong>Paragraph Icon dev config—</strong> Paragraph icons need to be added in two places: a) custom-node.css in the OC Custom module (for the add buttons); b) the edit for of the paragraph bundle itself (for the small icon shown when the paragraph is closed on the node editing form). This second icon needs to be added to both local and dev simultaneously and then your local config should be exported to dev.</p>
+			<p><strong>Custom Block dev config—</strong> Custom blocks should be created and placed where they are needed directly on dev (or whatever the current highest level environment is. Dev should then be imported to your local (through site:refresh or whatever the current workflow command is to sync your local database and code with dev) and re-exported back up to dev. This gets the correct block ID in assigned to the block in both environments and gets the configuration into the workflow stream.</p>
+		</div>
+	</div>
+</div>
+
+

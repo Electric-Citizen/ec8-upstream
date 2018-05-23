@@ -1,0 +1,20 @@
+<a name="drupal-best-practices" id="drupal-best-practices"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">Drupal Integration Best Practices</h4>
+		<div class="doc-section-inner">
+			{% set kintEx = '{{ kint() }}' %}
+			{% set ksmEx = '{{ ksm() }}' %}
+			{% set ddEx = '{{ dd() }}' %}
+			<ol class="big-number">
+			<li>Always use theme debugging locally, but never have the Devel/Kint modules or the services.yml active on dev, stage, or live sites.</li>
+			<li>When debugging, <span class="code">{{ kintEx }}</span>, <span class="code">{{ ddEx }}</span>, and <span class="code">{{ ksmEx }}</span> will get you all of the available variables to work with. <span class="code">{{ ddEx }}</span> is the fastest and generally best to use. <span class="code">{{ ksmEx }}</span> is used only in the .theme file.</li>
+			<li>Templates for entities re-used site after site should be created in Pattern Lab and inherited into Drupal. Site specific templates can just exist in Drupal unless there is time in the project for a full site specific style guide.</li>
+			<li>When creating custom templates in Pattern Lab, it is best to use Twig blocks around component sections. Even if the template is not currently going to inherited into anything else. Using blocks will future proof for later inheritance possibilities.</li>
+			</ol>
+		</div>
+	</div>
+</div>
+
+

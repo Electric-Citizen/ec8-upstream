@@ -1,0 +1,30 @@
+<a name="templates-twig" id="templates-twig"></a>
+
+<div class="doc-text">
+	<div class="doc-section">
+		<h4 class="doc-section-title">Twig Overview</h4>
+		<div class="doc-section-inner">
+			{% set execute = '{% %}' %}
+			{% set expression = '{{ }}' %}
+			{% set comment = '{# #}' %}
+			{% set commentEx = '{# My great Twig block does this... #}' %}
+			{% set expressionEx ="{{ content.field_background_colors.0.value|clean_class }}" %}
+			{% set executeEx = '{% if content.field_background_colors.0.value|clean_class == "white" %} is-white {% endif %}'%}
+			<p>Drupal 8 and Pattern Lab both use Twig templates. Twig is a PHP templating engine which is part of the <a href="https://symfony.com/" target="_blank">Symfony</a> framework. Twig is sort of like the Sass of PHP.</p>
+			<p>Twig has thee main delimiters that are used to build code. You can write expressions (variable outputs, strings, Twig functions, etc) using <span class="code">{{ expression }}</span>. You can execute statements with tags such as if, for (loops) and set (define variable) using <span class="code">{{ execute }}</span>. Comments are adding using <span class="code">{{ comment }}</span>. Whenever using a Twig delimiter in a template, it is preferable to separate the opening and closing part of the delimiter from the content using a space on each side: <span class="code">{{ expressionEx }}</span> or <span class="code">{{ executeEx }}</span></p>
+			<p>Twig templates should be commented use descriptive comments (<span class="code">{{ commentEx }}</span></span>) the same as you would JS or Scss to explain your code to other developers (or future you from 6 months from now). Template name comments are not needed since templates are not compiled into single files like Scss. Component section name comments are recommended when using <a href="https://twig.symfony.com/doc/2.x/functions/block.html" target="_blank">Twig blocks</a>.</p>
+			<p>Contrib modules like <a href="https://www.drupal.org/project/twig_tweak" target="_blank">Twig Teak</a> and <a href="https://www.drupal.org/project/twig_extensions" target="_blank">Twig Extensions</a> help expand the native Drupal Twig functions. Twig Tweak is an OC Patterns dependency and used to insert media entities with the <span class="code">drupal_entity()</span> function and Drupal Blocks with <span class="code">drupal_block()</span>. Twig tweak is also what proves the <span class="code">dd()</span> variable dump function used in custom templating.</p>
+			<p>Twig Extensions is used on as needed basis to introduce text and array functions and filters like <span class="code">|truncate</span> and <span class="code">|shuffle</span>.</p>
+			<p><strong>References—</strong>
+				<ul>
+					<li><a href="https://www.electriccitizen.com/blog/twig-drupal-8-development-twig-templating-part-1" target="_blank">EC Blog - Twig for Drupal Development, pt 1</a></li>
+					<li><a href="https://www.electriccitizen.com/blog/twig-drupal-8-development-twig-templating-part-2" target="_blank">EC Blog - Twig for Drupal Development, pt 2</a></li>
+					<li><a href="https://twig.symfony.com/doc/2.x/filters/index.html" target="_blank">Twig Filters</a></li>
+					<li><a href="https://www.drupal.org/docs/develop/coding-standards/twig-coding-standards" target="_blank">Drupal Twig Coding Standards</a></li>
+				</ul>
+			</p>
+		</div>
+	</div>
+</div>
+
+

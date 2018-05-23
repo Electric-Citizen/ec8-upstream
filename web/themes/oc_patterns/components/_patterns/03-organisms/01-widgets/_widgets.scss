@@ -1,0 +1,237 @@
+/* ===================
+	WIDGETS GLOBAL
+===================== */
+
+//widgets parent field
+.field--name-field-oc-widgets {
+	//use flex to support layout field
+	@include safeFlex(row,wrap,null,null);
+	//override layout padding
+	@include edgeToEdge;
+	// preserve layout padding and prevent backgrounds from overflowing when next to sidebars
+	.beaker .main &,.bunsen .main &{
+		overflow: hidden;
+		@include tab{
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}	
+}
+
+
+/* ===========
+SECTION LAYOUTS
+============= */
+
+/* WIDGETS FLEX ITEMS
+--------------------- */
+.section{
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	position: relative;
+
+	&:not(.background){
+		padding-top: 3em;
+		padding-bottom: 3em;
+		& + .section:not(.background){
+			padding-top: 0;
+		}
+	}
+	&.background{
+		padding-bottom: 3em;
+		padding-top: 3em;
+	}
+
+	.section-holder{
+		max-width: $maxWidth + 40px;
+		padding-left: 20px;
+		padding-right: 20px;
+		@include auto;
+	}
+
+	//default section layout
+	.field-section-widgets{
+		position: relative;
+		z-index: 4;
+		@include safeFlex(row,wrap,null,null);
+		& > .section-item{
+			width: 100%;
+			//need mins so that js can calculate width and height (for slider)
+			min-height: 0;
+			min-width: 0;
+			&:not(:last-child){
+				@include spacer(2);
+			}
+		}
+	}
+
+	&.columned{
+		.field-section-widgets{
+			& > .section-item{
+				@include tab{
+					width: 50%;
+					&:nth-child(odd):not(:only-of-type){
+						padding-right: 30px;
+					}
+					&:nth-child(even){
+						padding-left: 30px;
+					}
+					&:nth-last-child(2){
+						@include spacer(0);
+					}
+				}
+			}
+		}
+	}//end columned
+
+	&.left{
+		.field-section-widgets{
+			& > .section-item{
+				@include tab{
+					width: 50%;
+					margin-right: 100px;
+					padding-right: 30px;
+				}
+			}
+		}
+	}//end left
+
+	&.right{
+		.field-section-widgets{
+			@include safeFlex(row,wrap,end,null);
+			& > .section-item{
+				@include tab{
+					width: 50%;
+					margin-left: 100px;
+					padding-left: 30px;
+				}
+			}
+		}
+	}//end right
+
+	/* background styles
+	--------------------- */
+	&.grey{
+		background: $lightGrey;
+	}
+
+	&.image{
+		position: relative;
+		background-size: cover;
+		@include darkBack;
+		& > *{
+			position: relative;
+			z-index: 1;
+		}
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: $imgOverlay;
+		}
+	}
+
+}//end section
+
+
+//Anchor Links
+.widget-anchors{
+	max-width: $maxWidth;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 1em;
+	padding-bottom: 1em;	
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	@include spacer(2);
+	@include auto;
+	&:after{
+		@include fullBack($lightGrey);
+	}
+	@include onlySmall{
+		h2:not(.block-title):not(.widget-title){
+			font-size: 24px;
+			color: $black;
+			cursor: pointer;
+			font-weight: $regular;
+			margin-bottom: 0;
+			span{
+				font-size: 36px;
+				margin-right: .25em;
+			}
+		}
+	}
+	@include tab{
+		margin-bottom: 2em;
+		h2{
+			display: none;
+		}
+	}
+	.anchors{
+		display: none;
+		padding-top: 1em;
+		@include tab{
+			display: block !important;
+			@include bleed(20px);
+			padding-bottom: 1em;
+		}
+	}
+	a{
+		padding: 15px 10px;
+		position: relative;
+		display: block;
+		font-family: $header;
+		&:not(:last-child):after{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 100%;
+			right: 50%;
+			width: 100px;
+			margin-right: -50px;
+			background: $black;
+			height: 1px;
+		}
+		@include tab{
+			display: inline-block;
+			padding: 0 10px;
+			font-size: 22px;
+			&:not(:last-child):after{
+				height: 70%;
+				width: 1px;
+				top: 18%;
+				right: -.5px;
+				margin-right: 0;
+			}
+		}
+		@include maxWidth{
+			font-size: 24px;
+		}
+	}//end a 
+
+	//snug up first section if it has a background
+	& + .field--name-field-oc-widgets > .section:first-child.background{
+		margin-top: -2em;
+	}
+
+}//end widget anchors (in this section)
+
+
+
+/* WIDGETS WITHOUT SPECIFIC PL FOLDERS
+--------------------- */
+
+//admin view-placer
+.paragraph--type--admin-view-placer{
+	.wrapper{
+		max-width: 100% !important;
+	}
+}
+
+

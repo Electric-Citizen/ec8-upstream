@@ -1,0 +1,11 @@
+/* ==================
+    NEWS VIEWS
+==================== */
+
+/* ALL NEWS
+------------- */
+.news.all-news{
+	.view-content{
+		@include safeFlex(row,wrap,null,null);
+	}
+}

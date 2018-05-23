@@ -1,0 +1,19 @@
+/* ===============
+   LINKS N FILES WIDGET
+================== */
+
+.paragraph--type--links-files{
+	max-width: $maxWidthText;
+	@include auto;
+	//set margins for links and files lists
+	.links-files{
+		margin-top: 1em;
+		@include smallTab{
+			@include cssColumns(2,2em);
+		}
+		& > div{
+			margin-bottom: .25em;
+		}
+	}
+}//end links-files widget
+

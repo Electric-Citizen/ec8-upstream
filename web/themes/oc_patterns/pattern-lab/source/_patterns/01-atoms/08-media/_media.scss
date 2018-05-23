@@ -1,0 +1,70 @@
+/* ================
+	 MEDIA
+============== */
+
+img{
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+//constrain images with smaller sizes (commonly embedded)
+.view-modemediasmall,.view-mode-small{
+	width: 300px;
+	max-width: 100%;
+	&.left,&.right{
+		@include tab{
+			max-width: 50%;
+		}
+	}
+}
+.view-modemediamedium,.view-mode-medium{
+	max-width: 500px;
+	&.left,&.right{
+		@include tab{
+			max-width: 50%;
+		}
+	}
+}
+.view-modemediasquare,.view-mode-square{
+	max-width: 350px;
+	&.left,&.right{
+		@include tab{
+			max-width: 50%;
+		}
+	}
+}
+.view-modemedialarge,.view-mode-large{
+	max-width: 800px;
+	&.left,&.right{
+		@include tab{
+			max-width: 50%;
+		}
+	}
+}
+
+/* MEDIA IN WYSIWYG 
+------------------- */
+.oc-media{
+	margin-bottom: 2em;
+
+	//embedded alignment (images only )
+	&.right:not(.has-video){
+		@include tab {
+			float: right;
+			margin-left: 1em;
+		}
+	}
+	&.left:not(.has-video){
+		@include tab {
+			float: left;
+			margin-right: 1em;
+		}
+	}
+	&.center{
+		@include auto;
+	}
+	.player .vp-player-layout{
+		width: 100% !important;
+	}
+}//end oc-media

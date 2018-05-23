@@ -1,0 +1,99 @@
+/* =================
+	 PAGE MENU
+===================== */
+
+
+.block--system-menu.page-menu{
+
+	/* NON-KERMIT DESKTOP MENU
+	-------------- */ 
+
+	//top level
+	& > ul:not(.contextual-links){
+		@include listReset;
+
+		//child menus
+		ul:not(.contextual-links){
+			margin: .25em 0;
+			display: none;
+			padding-left: 12px;
+			@include transAll(.3s);
+			li{
+				//reset sub menus to base font size
+				@include baseFontSize;
+				a:hover{
+					@include transAll(.3s);
+				}
+			}
+		}
+		//set first livel to larger size
+		& > li{
+			font-size: 20px;
+		}
+	}//end first level ul
+
+
+	//global menu items
+	li{
+		padding-top: 4px;
+		padding-bottom: 4px;
+		list-style: none;
+		//shift non parents over to match expander spacing
+		&:not(.parent){
+			padding-left: .8em;
+		}
+
+		//parents
+		&.parent{
+			.expander{
+				@include browserWipe;
+				color: $link;
+				border: 0;
+				padding: 0;
+				background: none;
+				cursor: pointer;
+				&:hover,&:focus,&:active{
+					color: $hoverLink;
+				}
+				&:before{
+					content: "+";
+				}
+			}
+			&.expanded{
+				.expander{
+					color: $hoverLink;
+					&:before{
+						content: "–";
+					}
+				}
+				//show next menu level
+				& > ul:not(.contextual-links){
+					display: block;
+					height: 0;
+					@include animation(slideDown .2s 1 forwards);
+					@include backfaceVisibility(hidden);
+				}
+				& > a{
+					color: $black;
+				}
+			}//end when expanded
+		}//end parent
+
+	}//end global li
+
+	//active link
+	a.is-active{
+		color: $black;
+	}
+
+	
+}//end .block--system-menu.page-menu nav
+
+
+/* PATTERN LAB ONLY
+-------------------- */
+.pl .page-menu{
+	& > ul:not(:first-of-type){
+		display: none;
+	}
+} 

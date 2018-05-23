@@ -1,0 +1,30 @@
+/* =============
+	 BREADCRUMBS
+------------------- */
+
+.breadcrumb{
+	max-width: $maxWidth;
+	@include auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 1em;
+	ol {
+		@include listReset;
+	}
+
+	li{
+		display: inline-block;
+		color: $grey;
+		@include xSmaller;
+		a{
+			padding-right: .25em;
+			@include transAll(.3s);
+		}
+		&:not(:last-of-type){
+			&:after{
+				content: "\00BB";
+			}
+		}
+	}
+
+}//end breadcrumb 

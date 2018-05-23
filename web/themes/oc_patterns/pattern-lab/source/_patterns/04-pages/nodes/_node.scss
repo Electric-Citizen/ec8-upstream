@@ -1,0 +1,36 @@
+/* ===============
+   NODES GLOBAL
+=================== */
+@mixin mainContentSide{
+	//body
+	.block-entity-fieldnodebody{
+		max-width: $maxWidth;
+		@include auto;
+		margin-bottom: 2em;
+	}
+	.block-entity-fieldnodefield-oc-widgets{
+		max-width: $maxWidth;
+		@include auto
+	}
+}
+
+@mixin mainContent{
+	//body
+	.block-entity-fieldnodebody{
+		max-width: $maxWidthText;
+		@include auto;
+		margin-bottom: 2em;
+	}
+	.block-entity-fieldnodefield-oc-widgets{
+		max-width: $maxWidth;
+		@include auto
+	}
+}
+
+
+/* unpub NODES
+---------------------- */
+.node--unpub{
+	background: $unpub;
+	border-top: 20px solid $unpubDark;
+}

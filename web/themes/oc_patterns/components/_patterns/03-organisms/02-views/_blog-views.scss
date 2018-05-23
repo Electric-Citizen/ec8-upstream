@@ -1,0 +1,42 @@
+/* ==================
+    BLOG VIEWS
+==================== */
+
+
+/* ALL POSTS
+------------- */
+.blog.all-posts{
+
+	.view-content{
+		@include safeFlex(row,wrap,null,null);
+	}
+	.views-row{
+		width: 100%;
+		@include safeFlexSize(0,0,auto);
+		margin-bottom: 2em;
+		@include tab{
+			width: 50%;
+			&:nth-child(odd){
+				padding-right: 15px;
+			}
+			&:nth-child(even){
+				padding-left: 15px;
+			}
+		}
+	}
+
+	.views-field-field-banner{
+		margin-bottom: 1em;
+		img{
+			display: block;
+		}
+	}
+
+	//date and author
+	.views-field-nothing{
+		.metatext{
+			@include textDate;
+			margin-bottom: 1em;
+		}
+	}
+}//end all posts

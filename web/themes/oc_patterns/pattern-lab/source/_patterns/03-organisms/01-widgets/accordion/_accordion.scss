@@ -1,0 +1,87 @@
+/* ===============
+   ACCORDION WIDGET
+================= */
+
+.paragraph--type--accordion-group{
+	max-width: $maxWidthText;
+	@include auto;
+}
+
+
+/* ITEM STYLING
+------------------- */
+.accordion-item{
+
+	//accordion header bar
+	.accordion-header{
+		border: 1px solid;
+		border-color: $darkGrey;
+		color: $darkGrey;
+		margin-bottom: 0;
+		position: relative;
+		padding: 10px 10px 10px 30px;
+		display: block;
+		margin-top: -1px;
+		cursor: pointer;
+		&:after{
+			position: absolute;
+			right: 30px;
+			top: 10px;
+			z-index: 2;
+			content: "+";
+		}
+		&:hover,&:focus{
+			background: $darkGrey;
+			color: $white;
+			@include transAll(.3s);
+		}
+	}
+
+	//accordion content
+	.field-oc-long-text{
+		display: none;
+		padding: 1em 2em;
+	}
+
+	//active accordion
+	&.accord-active{
+		.accordion-header{
+			background: $darkGrey;
+			color: $white;
+			border-bottom: 0;
+			&:after{
+				content: "–";
+			}
+		}
+	}//end active
+
+	//no-js fallback
+	.no-js &{
+		&:hover,&:focus{
+			.field-oc-long-text{
+				display: block;
+			}
+		}
+	}
+
+}//end accordion-item
+
+
+/* PATTERN LAB ONLY
+-------------------- */
+.pl{
+	.accordion-item{
+		max-width: 800px;
+		margin: 2em auto 0;
+	}
+}
+.pl #organisms-accordion-group .sg-pattern-example > .flex-wrap{
+	padding: 1em 0;
+	.accordion-item{
+		margin: 0 auto;
+	}
+}
+
+
+
+

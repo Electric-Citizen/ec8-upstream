@@ -1,0 +1,31 @@
+<a name="drush-commands" id="drush-commands"></a>
+
+<div class="doc-text">
+	
+	<div class="doc-section">
+		<h4 class="doc-section-title">Common Terminal Commands</h4>
+		<div class="doc-section-inner">
+			<p><strong>Common D8 drush commands—</strong> Below are some common/useful drush commands for Drupal 8. <strong>NOTE:</strong> Always look at the readme file for each site repo to find site-specific import and export commands. All local drush commands must be followed by the site alias for that VM or preceded by 'lando' if on a lando VM.</p>
+			<p><ul class="spaced">
+				<li><strong><span class="code">drush cr all</span>—</strong> Clears the site cache. Needs to be done when new files are added, Twig code is changed, new modules are added, or as first defense against fatal errors/warnings.</li>
+				<li><strong><span class="code">drush -y config-set system.performance css.preprocess 0 && drush -y config-set system.performance js.preprocess 0</span>—</strong> Turns off the site CSS and JS file aggregation settings. This is usually done automatically during the site:refresh process.</li>
+				<li><strong><span class="code">drush sql-sync @pantheon.alias.dev @self</span>—</strong> Fetches the database from the dev environment and syncs it to your local.</li>
+				<li><strong><span class="code">drush sql-dump --result-file=../database-dump.sql</span>—</strong> Dumps you local database to an archive file to be shared with another developer.</li>
+				<li><strong><span class="code">drush pm-uninstall module_name</span>—</strong> Uninstalls a module. <strong>NOTE: </strong>after being uninstalled module must be composer removed if no longer needed by the site. Modules uninstalled only on local environments but still used on dev/live environments do not get composer removed.</li>
+				<li><strong><span class="code">drush pm-enable module_name</span>—</strong> Installs a module. <strong>NOTE:</strong> A module should be composer required before being installed (unless it is used on a different environment and is already required in the composer.json file).</li>
+				<li><strong><span class="code">drush upwd --password="admin" "admin" </span>—</strong> Changes the admin (user 1) password to 'admin'. <strong>NOTE:</strong> This can also be done using <span class="code">drush uli</span>.</li>
+				<li><strong><span class="code">drush config-delete module_name.settings</span>—</strong> Fixes 'configuration already exists' module errors that sometimes happen when re-installing a module previously used on the site or upgrading a module. <strong>NOTE: </strong>This is a very rare case and if you are not entirely sure of what you are doing, the Technical Director or Lead Front End Developer should be consulted.</li>
+			</ul></p>
+			<p><strong>Common composer commands—</strong> Below are some common/useful composer commands for Drupal 8.</p>
+			<p><ul class="spaced">
+				<li><strong><span class="code">composer install</span>—</strong> Installs all of the site dependencies listed in the composer.json file in the repo root. This is done when a site is first setup or is refreshed (done automatically on refresh).</li>
+				<li><strong><span class="code">composer update</span>—</strong> Updates all of the site dependencies listed in the composer.json file in the repo root to their latest versions. <strong>NOTE: This should never be done globally using just the '<span class="code">composer update</span>' command.</strong> Instead this should be on a module by module basis as needed: <span class="code">composer update drupal/module_name</span>. You can specify a specific version to update to by adding the version number at the end: <span class="code">composer update drupal/module_name:1x-dev</span>.</li>
+				<li><strong><span class="code">composer require drupal/module_name</span>—</strong> Adds a module and its dependencies to the site. You can specify a specific version to update to by adding the version number at the end: <span class="code">composer update drupal/module_name:1x-dev</span>. <strong>NOTE: </strong>A module msut be enabled using either <span class="code">drush en module_name</span> or through the Extends UI after it is required. You can also use composer require to add external git repos or other libraries as site dependencies if needed although it is preferred that this is done through npm in the theme package.json or through a CDN as an external library if possible.</li>
+				<li><strong><span class="code">composer remove drupal/module_name</span>—</strong> Removes a module and its dependencies from the site. <strong>NOTE:</strong> Any module removed from the site must be first uninstalled using <span class="code">drush pm-uninstall module_name</span> of through the Extend UI.</li>
+			</ul></p>
+
+		</div>
+	</div>
+</div>
+
+

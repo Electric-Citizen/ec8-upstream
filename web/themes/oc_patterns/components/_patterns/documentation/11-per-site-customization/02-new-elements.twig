@@ -1,0 +1,81 @@
+<a name="site-specific-elements" id="site-specific-elements"></a>
+
+<div class="doc-text">
+
+	<div class="doc-section">
+		<h4 class="doc-section-title">New Elements</h4>
+		<div class="doc-section-inner">
+			<p>Every new site with come with needs for new elements in order to build the design. The goal is to have pretty much every element on the page easily editable by a client without allowing them to break the design. For that, we rely heavily on paragraphs and block types—rather than creating non-editable content in Twig templates, blocks, or WYSIWYG HTML.</p>
+			<p><strong>Creating New Elements—</strong> Just about every new element you create (other than content types) will need a Twig template so that you can create the best HTML structure will still using variables so that editors can control the content. All of these templates will go into the applicable folder in /templates/zzz-custom. Not all of these templates need to created in Pattern Lab first then inherited into Drupal. Usually that is only done with elements that will be part of the base build (unless the project allows time for a full site-specific style guide).</p>
+			<p><strong>New Scss Files—</strong> Pretty much every element should have a new Scss file to itself—even if it doesn't need a template. Depending on the element type, you'll create a Pattern Lab folder and an Scss file for it in the following locations:
+				<ul>
+					<li>Block:  02-molecules/blocks</li>
+					<li>View:  03-organisms/02-views</li>
+					<li>Paragraph (widget):  03-organisms/01-widgets</li>
+					<li>Layout:  04-pages/layouts</li>
+					<li>Content Type:  04-pages/nodes</li>
+				</ul>
+				When creating new Scss templates—you will need to restart Pattern Lab to register the new template.
+			</p>
+		</div>
+	</div>
+	<div class="doc-section">
+		<h4 class="doc-section-title">Blocks</h4>
+		<div class="doc-section-inner">
+			<p>New blocks should created on an as needed basis for elements with content that is repeated throughout the site. Example: A photo, text and button element is used as a call to action above the footer in multiple areas of the site. This would be a new custom block type with a block created for that element which could them be inserted where needed using the block placer widget.</p>
+			<p><strong>Custom Block Types—</strong> Custom block types in DB are fieldable entities that are re-usable through the site. They can be added to pages either through the Block Layout UI, Panelizer, or the block placer paragraph widget. <strong>When a new custom block type is created, it must be added to the allowed blocks in the block placer paragraph bundle block field in order for it to be used by editors.</strong></p>
+			<p><strong>Basic Blocks—</strong> Basic blocks are the default blocks in Drupal that allow just a description (block title) and a body field. These are generally just used simple bits of repeatable text.</p>
+			<p><strong>Restricted Blocks—</strong> Restricted blocks are blocks custom to OC Patterns base build. They are just like Basic Blocks, except they are not available to editors through the block placer widget and editors can never change their descriptions (because block descriptions are turned into theme classes). These blocks are used for site-wide content like the footer address, copyright, mission statement, etc.</p>
+		</div>
+	</div>
+	<div class="doc-section">
+		<h4 class="doc-section-title">Content Types</h4>
+		<div class="doc-section-inner">
+			<p>Every site will need content types to hold the client's custom content. New content types will be defined by the project manager.</p>
+			<p><strong>Creating new content types—</strong> You can create new content types by going to Structure > Content Types in Drupal and adding a new one. Enter a name and description and choose your settings:
+				<ul>
+					<li>Submission: Leave as is</li>
+					<li>Publishing Options: Only use Published and Create New Revision</li>
+					<li>Display: Do not display author and date</li>
+					<li>Add Another: Leave as is</li>
+					<li>Menu: Add to main menu only if directed by the Project Manager.</li>
+				</ul>
+			Add your fields in manage fields and set the display as needed. If the content type is going to be displayed to an end user, it should always be panelized. You may need to <a href="#templates-layouts">create a new Panelizer layout</a> for it, depending on design.
+			</p>
+			<p>New content types that are going to be shown to an end user also need to have URL Pattern set. This can be created in Configuration > URL Aliases > Patterns. Add a new pattern and set it following the existing conventions. Usually the pattern is <span class="code">content-type-name/[node:title])</span> unless it is in a menu. Then use <span class="code">[node:menu-link:parents:join-path]/[node:title]</span>.</p>
+			<p>New content types also need to have their editing permissions set in People > Permissions. Follow the existing conventions for nodes—unless directed otherwise.</p>
+			<p><strong>Unused default content types—</strong> Not every site needs all of the default OC Patterns content types. Best practice is not to delete them (as some are tied into the site through dependencies so heavily that you can crash the site by deleting them). The client may also later want one they did not originally need. Instead just turn off non-admin editing permissions for all unneeded content types. No client will ever have administrator roles so they will never see them.</p>
+		</div>
+	</div>
+	<div class="doc-section">
+		<h4 class="doc-section-title">Paragraphs (widgets)</h4>
+		<div class="doc-section-inner">
+			{% set widgetContent = '{% block widgetContent %}' %}
+			<p>The bulk of new elements created for a site are paragraphs (interchangeably called widgets). Some paragraphs may even be created that an editor will never use solely to ease the life of the site builder (such as View Placer & Custom Code).</p>
+			<p><strong>New Widgets—</strong> New widgets can be created at Structure > Paragraph types. Add the fields you need (pretty much every widget uses a Widget Title field and an Admin description field), set the form display and display settings you need. NOTE: you should always create a Preview display that shows only the Admin description and any special styling choices.</p>
+			<p>New paragraph types also need to have their permissions set in People > permissions. All roles use the View Content permission and Admins, Senior Editors, and Editors generally all can Create, Edit and Delete each widget—unless it is for site building use only (then just admins get these permissions).</p>
+			<p>Next, each new paragraph gets added the OC Widgets field on the content types it will be used in.</p>
+			<p><strong>Paragraph templates—</strong> Generally, all new paragraphs will get their own custom template in /templates/zzz-custom/widgets. This is so that the HTML structure can be optimized and any special styling keys (select list or boolean fields) can be added as classes for theming. <strong>All new paragraphs templates should inherit the <span class="code">paragraph.html.twig</span> base template.</strong> This ensures that they get the proper flex, type, and id classes needed for theming. All new paragraph content in the template then goes inside the <span class="code">{{ widgetContent }}</span> block. Most new paragraphs don't need a Pattern Lab template unless there is time in the project for a full site-specific style guide.</p>
+			<p><strong>Paragraph Scss & JS files—</strong> All new paragraphs should have their own folder and Scss file Pattern Lab. This file goes in 03-organisms/01-widgets. Any specific js file would also go in this folder and would be <a href="#js-component">attached as a library</a> in <span class="code">{{ widgetContent }}</span> in the paragraph template.</p>
+		</div>
+	</div>
+
+	<div class="doc-section">
+		<h4 class="doc-section-title">Image Styles & Responsive Media</h4>
+		<div class="doc-section-inner">
+			{% set mediaEntity = "{{ drupal_entity('media', content.field_oc_image.0.target_id, 'my_new_style') }}" %}
+			<p>Many designs will need new image styles. These can be created in Configuration > Image Styles.</p>
+			<p><strong>New Image Styles—</strong> New image styles should be named something specific to their size, aspect ratio, or specific place in which they will be used. If the new image style is one that will be cropped, it should be cropped using the Focal Point Scale and Crop effect. If the image is a retina 2x size, it should also have and Image Style Quality effect of around 30-40%.</p>
+			<p><strong>Responsive Image Styles—</strong> All small images (less than 600px) should also have a retina 2x style. This is a style exactly twice the size as the original with _2x at the end of the image style name. Every 2x style should have an Image Style Quality effect. Larger 2x styles (500-600px) should have a lower quality setting (30%) while lesser (100-200px) use a higher setting (40%). Reducing the quality significantly lowers the file size, but since it is retina and run through breakpoints, the visual difference is not noticeable.</p>
+			<p>Once the 2x style is created, a responsive image style needs to be created in Configuration > Responsive Image Styles. The responsive image style should be named the same as the original (1x) style and should always use the Open Citizen Patterns breakpoint group. Fallback image style is set to the original 1px style. Set the 1x and 2x styles for the number of breakpoints you need starting at mobile and going up to the size of the original image. (not all styles need all breakpoints). NOTE: You can also use different image styles for different breakpoints (example: medium 500 uses small 300 (1x and 2x) on mobile and medium 500 (1x and 2x) at tablet).</p>
+			<p>Breakpoints are set in oc_patterns.breakpoints.yml and generally should not be edited or added to since they match the theme styling breakpoints. If you need a new breakpoint for some reason, talk to the lead developer first.</p>
+			<p><strong>Media View Modes—</strong> After you create you image styles and responsive image styles, you need to create a Media View Mode in order to display the images on the site. View modes can be created in Structure > Display Modes > View Modes. The view mode should be named some similar to the image/responsive image style.</p>
+			<p><strong>Media Bundles—</strong> Once the view mode for the new style is created, you must add it to the display settings in the Image Media Bundle. This is the media entity that controls how images are displayed on the site. You can added new fields here (example: media categories), change the form display for new images and define the view modes they can be displayed as. To use your new style on a field, create a new Custom Display by checking the box for your view mode on the Default tab of the image media bundle. Save, then you can edit your new display setting to display either the image style or the responsive image style you create. You can choose to display a caption (or other fields) or not. Most images do not display captions. NOTE: Documents and Video can have their display settings set in the same method (though they do not use image styles).</p>
+			<p><strong>Display new image styles on a field—</strong> Once the display mode is set up in the image bundle, you can set the display settings for and image field to be: Rendered Entity > Your New Display. To set the new display in a custom template use the Twig Tweak function: <span class="code">{{ mediaEntity }}</span>.</p>
+			<p>Learn more about the <a href="https://www.electriccitizen.com/blog/media-libraries-drupal-8" target="_blank">OC Patterns media setup</a>.</p>
+		</div>
+	</div>
+	
+</div>
+
+

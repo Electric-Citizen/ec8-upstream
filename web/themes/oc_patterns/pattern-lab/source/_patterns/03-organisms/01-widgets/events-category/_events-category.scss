@@ -1,0 +1,20 @@
+/* ===============
+   EVENTS BY CATEGORY WIDGET
+================== */
+
+.paragraph--type--event-by-category{
+	max-width: $maxWidthText;
+	@include auto;
+
+	//add a bit more space before start of view if there is a title
+	h3.widget-title{
+		margin-bottom: 1.5em;
+	}
+
+	.date{
+		@include textDate;
+		@include spacer(.5);
+	}
+	
+}//end news by category
+
